@@ -13,8 +13,7 @@
         <title>home</title>
     </head>
     <body>
-        <%@include  file="CommonModules/navbar.jsp" %>
-        
+        <%@include  file="JSP/Common Pages/navbar.jsp" %>
         
         
         <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
@@ -47,6 +46,6 @@
 
     
     
-        <%@include file="CommonModules/footer.jsp"%>
+<%@include file="JSP/Common Pages/footer.jsp"%>
     </body>
 </html>
