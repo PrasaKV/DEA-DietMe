@@ -9,12 +9,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CommonModules/Styles/global.css"/>
+        <link rel="stylesheet" href="Common Resources/Styles/global.css"/>
         <title>home</title>
     </head>
     <body>
-        <%@include  file="CommonModules/navbar.jsp" %>
-        
+        <%@include  file="JSP/Common Pages/navbar.jsp" %>
         
         
         <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
@@ -47,6 +46,6 @@
 
     
     
-        <%@include file="CommonModules/footer.jsp"%>
+<%@include file="JSP/Common Pages/footer.jsp"%>
     </body>
 </html>

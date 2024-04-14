@@ -9,13 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="CommonModules/Styles/footer.css"/>
+        <link rel="stylesheet" href="Common Resources/Styles/footer.css"/>
     </head>
     <body>
         <div class="footerDiv">
         <div class="footerFlexDiv">
             <div class="footerInsideDiv">
-            <img  class="footerLogo" src="CommonModules/Assets/DEA-Logo.png" alt="Logo">
+            <img  class="footerLogo" src="Common Resources/Assets/DEA-Logo.png" alt="Logo">
             </div>
             <div class="footerTextDiv"> 
             <div class="footerInsideDiv">
@@ -29,9 +29,9 @@
             <div class='footerInsideDiv'>
                 <h1 class='header' >Connect</h1>
                 <div class="socialMediaDiv">
-                    <img class="footerIcons"  src="CommonModules/Assets/facebook.png" alt='facebook image'>
-                    <img class="footerIcons" src="CommonModules/Assets/instergram.png" alt='instergram image'>
-                    <img class="footerIcons" src="CommonModules/Assets/whatsapp.png" alt='whatsapp image'>
+                    <img class="footerIcons"  src="Common Resources/Assets/facebook.png" alt='facebook image'>
+                    <img class="footerIcons" src="Common Resources/Assets/instergram.png" alt='instergram image'>
+                    <img class="footerIcons" src="Common Resources/Assets/whatsapp.png" alt='whatsapp image'>
                 </div>
                 <h2 class="openHours">Open Hours</h2>
                 <p class='footerDis'>06.00 AM - 08.00 PM</p>
