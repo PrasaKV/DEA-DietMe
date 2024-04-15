@@ -4,6 +4,10 @@
 
 */
 
+/* Imports */
+@import url('global.css');
+
+
 /* Classes */
 .footerDiv {
   position: absolute;

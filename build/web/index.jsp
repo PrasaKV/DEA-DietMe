@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -15,34 +16,31 @@
     <body>
         <%@include  file="JSP/Common Pages/navbar.jsp" %>
         
-        
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div> 
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>  
-        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1></div>
+
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1> 
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1> 
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1> 
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>  
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1> 
+        <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
 
     
     

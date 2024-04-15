@@ -4,24 +4,30 @@
   Author     : Prasad
 --%>
 
+<%--
+        Importing assetsUrl class to point to the correct url
+--%>
+
+<%@ page import="com.teamhydra.util.assetsUrl" %>
+
 <%@ page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="Common Resources/Styles/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="<%= assetsUrl.giveUrl(request,"Common Resources/Styles/navbar.css") %>" />
 </head>
 <body>
     <div class="navbarDiv" id="navbar">
         <div class="logoDiv">
-            <a href="#" ><img class="logo" src="Common Resources/Assets/DEA-Logo.png" loading="lazy" height="35px" alt="logo"></a>
+            <a href="#" ><img class="logo" src="<%= assetsUrl.giveUrl(request,"Common Resources/Assets/DEA-Logo.png") %>" loading="lazy" height="35px" alt="logo"></a>
         </div>
         <div class="selectionsDiv">
             <a class="selection selectionUnderline" href="#navbar">Home</a>
             <a class="selection selectionUnderline" href="meals.jsp">Meals</a>
             <a class="selection selectionUnderline" href="#">Create Your Meal</a>
             <a class="selection" href="#">
-                <img class="navCartButton" src="Common Resources/Assets/cart.png" loading="lazy" width="24px" height="24px">
+                <img class="navCartButton" src="<%= assetsUrl.giveUrl(request,"Common Resources/Assets/cart.png") %>" loading="lazy" width="24px" height="24px">
             </a>
             <button class="selection" id="navLogin">
                 <a href="#" class="" id="loginButton">Login</a>

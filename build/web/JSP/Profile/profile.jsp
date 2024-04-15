@@ -12,7 +12,10 @@
         <title>Profile</title>
     </head>
     <body>
-                  
+        <%@include file="../Common Pages/navbar.jsp"  %>
         
+        
+        
+        <%@include file="../Common Pages/footer.jsp"  %>
     </body>
 </html>
