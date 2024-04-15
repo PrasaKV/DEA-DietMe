@@ -1,0 +1,1 @@
+මෙ Folder එකේ  Profile එකට අදාල Jsp ටික හදන්න
