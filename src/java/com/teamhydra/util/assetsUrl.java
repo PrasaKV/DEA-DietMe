@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class assetsUrl {
     
-             public static String giveUrl(HttpServletRequest req, String path)
+             public static String giveUrl(HttpServletRequest request, String path)
              {
                  
                     
-                    String fileUrl = req.getScheme() + "://" + req.getServerName()+ ":" + req.getServerPort() + "/"+ req.getServletContext().getContextPath() + "/";
+                    String fileUrl = request.getScheme() + "://" + request.getServerName()+ ":" + request.getServerPort() + "/"+ request.getServletContext().getContextPath() + "/";
                     
                     String url = fileUrl + path;
                     

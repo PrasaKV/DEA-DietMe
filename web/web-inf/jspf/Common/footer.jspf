@@ -1,20 +1,7 @@
-<%-- 
-    Document   : Footer
-    Created on : Apr 12, 2024, 7:19:41 PM
-    Author     : Prasad
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ page pageEncoding="UTF-8" %>
 <%@ page import="com.teamhydra.util.assetsUrl" %>
 
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="<%= assetsUrl.giveUrl(request, "Common Resources/Styles/footer.css") %>"/>
-    </head>
-    <body>
-        <div class="footerDiv">
+  <div class="footerDiv">
         <div class="footerFlexDiv">
             <div class="footerInsideDiv">
             <img  class="footerLogo" src="<%= assetsUrl.giveUrl(request, "Common Resources/Assets/DEA-Logo.png") %>" alt="Logo">
@@ -43,6 +30,3 @@
         <div class="footerPlaceHolder"></div>
             <p class='alrightRecived' >Alright Received @ Team Hydra 2024</p>
     </div>
-        
-    </body>
-</html>

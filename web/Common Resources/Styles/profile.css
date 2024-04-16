@@ -1,0 +1,102 @@
+/* 
+    Created on : Apr 15, 2024, 1:15:11 AM
+    Author     : Prasad
+*/
+
+/* Imports */
+@import url('global.css');
+
+/* Tags */
+body
+{
+    background-color: black;
+}
+
+/* Id */
+
+#profile {
+  display: flex;
+  width: 100%;
+
+  background-color: black;
+}
+
+/* -------- Left Div -------- */
+
+/* Class */
+.profileDiv
+{
+  background-color: #F0EFF4;
+
+  border: 2px solid #404040;
+  border-radius: 15px;
+
+  margin: 10px;
+}
+
+.profileDivLeft {
+  height: 100%;
+  width: 25%;
+}
+
+.profileImageDiv {
+  height: 200px;
+  width: 200px;
+
+  border: 3px solid #01ca5e;
+  border-radius: 100%;
+
+  margin: 0px auto;
+  margin-top: 20px;
+
+  text-align: center;
+
+}
+
+.profileImage {
+  height: 100%;
+  width: 100%;
+
+  border-radius: 100%;
+  object-fit: cover;
+
+}
+
+.addImage 
+{
+    height: 50px;
+    width: 50px;
+
+    transform: translateY(-125px);
+}
+
+.profileTabsDiv
+{
+    margin:20px 0px 30px 0px;
+
+    border-bottom: 2px solid #404040;
+}
+
+.profileTabs
+{
+  font-family: Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  font-weight: lighter;
+
+  padding: 10px;
+
+  margin: 0px;
+
+  text-align: center;
+
+  border-top: 2px solid #404040;
+}
+
+/* -------- Right Div -------- */
+
+/* Class */
+
+.profileDivRight {
+  min-height: 100%;
+  width: 75%;
+}

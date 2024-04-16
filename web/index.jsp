@@ -14,7 +14,7 @@
         <title>home</title>
     </head>
     <body>
-        <%@include  file="JSP/Common Pages/navbar.jsp" %>
+        <%@include file="WEB-INF/jspf/Common/navbar.jspf" %>
         
 
         <h1 style="text-align: center; margin-top: 80px; font-family: 'Teko';" > Page Content Goes Here</h1>
@@ -44,6 +44,6 @@
 
     
     
-<%@include file="JSP/Common Pages/footer.jsp"%>
+        <%@include file="WEB-INF/jspf/Common/footer.jspf"  %>
     </body>
 </html>
