@@ -2,10 +2,10 @@
 <%@ page import="com.teamhydra.util.assetsUrl" %>
 <div class="navbarDiv" id="navbar">
         <div class="logoDiv">
-            <a href="#" ><img class="logo" src="<%= assetsUrl.giveUrl(request,"Common Resources/Assets/DEA-Logo.png") %>" loading="lazy" height="35px" alt="logo"></a>
+            <a href="<%= assetsUrl.giveUrl(request, "index.jsp") %>" ><img class="logo" src="<%= assetsUrl.giveUrl(request,"Common Resources/Assets/DEA-Logo.png") %>" loading="lazy" height="35px" alt="logo"></a>
         </div>
         <div class="selectionsDiv">
-            <a class="selection selectionUnderline" href="#navbar">Home</a>
+            <a class="selection selectionUnderline" href="<%= assetsUrl.giveUrl(request, "index.jsp") %>">Home</a>
             <a class="selection selectionUnderline" href="meals.jsp">Meals</a>
             <a class="selection selectionUnderline" href="#">Create Your Meal</a>
             <a class="selection" href="#">
@@ -28,7 +28,7 @@
             </div>
             <div class="menuDiv">
                 <div class="menuSelectionDiv">
-                    <a class="menuSelection display" href="#navbar">Home</a>
+                    <a class="menuSelection display" href="<%= assetsUrl.giveUrl(request, "index.jsp") %>r">Home</a>
                     <a class="menuSelection display" href="meals.jsp">Meals</a>
                     <a class="menuSelection display" href="#">Create Your Meal</a>
                     <a class="menuSelection display" href="#">Login</a>

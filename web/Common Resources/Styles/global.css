@@ -124,6 +124,7 @@ body
 }
 
 #loginButton {
+  cursor: pointer;  
   color: black;
   text-shadow: none;
   text-decoration: none;
