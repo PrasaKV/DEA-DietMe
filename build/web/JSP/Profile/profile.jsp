@@ -12,6 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profile.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notification.css")%>" />
         <title>Profile</title>
     </head>
     <body>
@@ -33,8 +34,8 @@
                     <h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1>
                 </div>
             </div>
-                    <div class="profileDivRight profileDiv">
-                        <%--<%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>--%>
+                    <div class="profileDivRight profileDiv ">
+                         <%@include file="../../WEB-INF/jspf/Profile/Notification.jspf" %>
                     </div>
         </div>
 
