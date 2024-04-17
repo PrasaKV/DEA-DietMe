@@ -34,7 +34,7 @@
                 </div>
             </div>
                     <div class="profileDivRight profileDiv">
-                        <%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>
+                        <%--<%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>--%>
                     </div>
         </div>
 
