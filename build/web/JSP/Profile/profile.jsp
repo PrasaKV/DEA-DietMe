@@ -11,7 +11,11 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/global.css")%>"/>
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profile.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profileInfo.css")%>" />
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%>" defer></script>
         <title>Profile</title>
     </head>
     <body>
@@ -34,7 +38,7 @@
                 </div>
             </div>
                     <div class="profileDivRight profileDiv">
-                        <%--<%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>--%>
+                        <%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>
                     </div>
         </div>
 
