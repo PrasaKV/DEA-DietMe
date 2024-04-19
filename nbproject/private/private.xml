@@ -3,16 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/WEB-INF/jspf/Profile/PurchaseHistoryMassage.jspf</file>
+            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/JSP/Meals/meals.jsp</file>
             <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/WEB-INF/jspf/Profile/NotificationMassage.jspf</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/Common%20Resources/Styles/profile.css</file>
             <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/Common%20Resources/Styles/notificationMassage.css</file>
+            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
             <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/Common%20Resources/Styles/notification.css</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/WEB-INF/jspf/Profile/PurchaseHistory.jspf</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/Common%20Resources/Styles/PurchaseHistory.css</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/Common%20Resources/Styles/PurchaseHistoryMassage.css</file>
             <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/WEB-INF/jspf/Profile/Notification.jspf</file>
+            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/Common%20Resources/Scripts/notification.js</file>
         </group>
     </open-files>
 </project-private>
