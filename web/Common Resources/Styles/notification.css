@@ -15,38 +15,34 @@ body {
   }
   
   .container {
-    width: 100%;
-    margin: 30px;
-    border: 1px solid #ddd;
+    width: 95%;
+    margin: 15px;
+    margin-bottom: -15px;
     border-radius: 5px;
     padding: 20px;
+    
   }
   
   .header {
     text-align: justify;
-    margin-bottom: 20px;
-    
+    margin-bottom: 10px;
+    border-bottom: 3px solid #01CA5E;
+    display: flex;
+      
+  }
+
+  h1{
+    color: black;
+    font-size: 30px;
   }
   
   .notification {
   margin-bottom: 0;
-  border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
   border-spacing: 5px 0;
 }
   
   
-  .notification-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 5px;
-  }
-  
-  .notification-title h2 {
-    font-size: 18px;
-    margin: 0;
-  }
   
   .mark-as-read {
     color: #fff;
@@ -55,27 +51,15 @@ body {
     border-radius: 3px;
     padding: 5px 10px;
     background-color: #01CA5E;
+    font-size: 14px;
+    
+  }
+  
 
-  }
-  
-  .notification-body {
-    margin-bottom: 10px;
-  }
-  
-  .notification-date {
-    text-align: right;
-    font-size: 12px;
-    color: #aaa;
-  }
-  
   .mark-all-as-read {
     text-align: center;
     margin-top: 20px;
+    text-align: right;
+
   }
   
-  .mark-all-as-read span {
-    color: #aaa;
-    cursor: pointer;
-  }
-
-
