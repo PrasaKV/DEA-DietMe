@@ -31,7 +31,7 @@
                     <a class="menuSelection display" href="<%= assetsUrl.giveUrl(request, "index.jsp") %>">Home</a>
                     <a class="menuSelection display" href="<%= assetsUrl.giveUrl(request, "JSP/Meals/meals.jsp")%>">Meals</a>
                     <a class="menuSelection display" href="#">Create Your Meal</a>
-                    <a class="menuSelection display" href="#">Login</a>
+                    <a class="menuSelection display" href="<%= assetsUrl.giveUrl(request, "JSP/Profile/profile.jsp") %>">Login</a>
                 </div>
             </div>
         </div>
