@@ -1,0 +1,65 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 18, 2024, 12:08:56 AM
+    Author     : Nimeshi
+*/
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 95%;
+    margin: 15px;
+    margin-bottom: -15px;
+    border-radius: 5px;
+    padding: 20px;
+    
+  }
+  
+  .header {
+    text-align: justify;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #01CA5E;
+    display: flex;
+      
+  }
+
+  h1{
+    color: black;
+    font-size: 30px;
+  }
+  
+  .notification {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  border-spacing: 5px 0;
+}
+  
+  
+  
+  .mark-as-read {
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid #01CA5E;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: #01CA5E;
+    font-size: 14px;
+    
+  }
+  
+
+  .mark-all-as-read {
+    text-align: center;
+    margin-top: 20px;
+    text-align: right;
+
+  }
+  

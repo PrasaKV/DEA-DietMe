@@ -14,11 +14,15 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/global.css")%>"/>
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profile.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profileInfo.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notification.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notificationMessage.css")%>" />
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profile.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%>" defer></script>
         <title>Profile</title>
     </head>
     <body>
+
         <%@include file="../../WEB-INF/jspf/Common/navbar.jspf" %>
 
         <div id="profile">
@@ -38,7 +42,7 @@
                 </div>
             </div>
                     <div class="profileDivRight profileDiv">
-                        <%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>
+                        <%@include file="../../WEB-INF/jspf/Profile/Notification.jspf"  %>
                     </div>
         </div>
 
