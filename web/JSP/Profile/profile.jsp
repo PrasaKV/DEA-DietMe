@@ -43,10 +43,9 @@
                     <h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1>
                 </div>
             </div>
-
-
+                        
                     <div class="profileDivRight profileDiv">
-                        <%@include file="../../WEB-INF/jspf/Profile/Notification.jspf"  %>
+                        <%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>
                     </div>
           
         </div>
