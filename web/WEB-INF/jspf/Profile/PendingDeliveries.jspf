@@ -3,7 +3,7 @@
 
 
     <div class="container">
-        <div class="notification">
+        <div class="notifications">
             <div class="header">
                   <h1>Pending Deliveries</h1>
             </div>
@@ -15,5 +15,6 @@
             
         </div>
         
+       
     </div>
  

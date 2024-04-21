@@ -16,7 +16,12 @@ body {
     padding: 0;
   }
 
-
+ 
+.Massage {
+  display: none;
+}
+ 
+ 
 notification-container {
     width: 101.5%;
     margin: 10px;
@@ -28,6 +33,9 @@ notification-container {
     margin-left: -4px;
   }
   
+  .Massage{
+      margin-top: -20px;
+  }
   
   
 h3{
@@ -45,6 +53,7 @@ h3{
     font-size: 12px;
     border: 2px solid #01CA5E;
     border-radius: 5px;
+    height: 350px;
     
   }
   
@@ -54,7 +63,7 @@ h3{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
-    border-bottom: 3px solid #01CA5E;
+    
   }
   
   
@@ -65,7 +74,8 @@ h3{
   }
 
   
-  .see-more-btn {
+  .see-more-btn,
+  .see-less-btn{
     color: #fff;
     cursor: pointer;
     border: 1px solid #01CA5E;
@@ -77,9 +87,11 @@ h3{
     top: 22px;
     right: 0;
     display: inline-block;
-    
-    
+    width: 80px;
+     
   }
+  
+  
   
   .timestamp {
     font-weight: bold;
@@ -87,4 +99,24 @@ h3{
     margin-top: 10px;
     text-align: right;
   }
+  
+  
+  .meal-list{
+   font-weight: bold;
+   text-decoration: underline;
+   text-decoration-color: #01CA5E;  
+   text-decoration-thickness: 1.5px; 
+  
+}
+
+  
+td{
+    padding-right: 10px 0;
+    margin-right: 40px;
+}
+
+  
+  
+  
+  
   
