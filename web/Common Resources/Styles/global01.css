@@ -1,0 +1,37 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 20, 2024, 11:11:39 AM
+    Author     : Sandali
+*/
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-istok-web: "Istok Web";
+
+  /* font sizes */
+  --font-size-6xl: 25px;
+  --font-size-xs: 12px;
+  --font-size-xl: 20px;
+  --font-size-mini: 15px;
+
+  /* Colors */
+  --color-whitesmoke: #eff0f3;
+  --color-mediumspringgreen: #01ca5e;
+  --color-black: #000;
+  --color-limegreen: #6cdf25;
+  --color-red: #f10000;
+  --color-white: #fff;
+
+  /* Border radiuses */
+  --br-3xs: 10px;
+}

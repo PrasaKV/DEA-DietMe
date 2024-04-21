@@ -1,0 +1,161 @@
+/* Classes */
+
+.profileInfoDiv
+{
+  margin: 20px;
+}
+
+.profileInfoHeader
+{
+  font-size: 1.3rem;
+  font-family:Tahoma, Geneva, Verdana, sans-serif;
+  
+  border-bottom: 3px solid #01ca5e ;
+}
+
+.profileInfoContent
+{
+  height: 100%;
+  display: flex;
+
+  padding-top: 20px;
+}
+
+.profileInfoContentLeft
+{
+  width: 400px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.profileInfoContentRight
+{
+  width: 400px;
+}
+
+.profileInfoInputDiv
+{
+  width: 100%;
+  transform: translateY(-20px);
+  /* border: 2px solid black; */
+}
+
+.profileInfoLable
+{
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #444444;
+}
+
+.profileInfoInsideDiv
+{
+  margin-bottom: 10px;
+
+  display: flex;
+  align-items: center;  
+  height: 50px;
+}
+
+.profileInfoEdit
+{
+  background-image: url("../Assets/edit.png");
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+
+  transform: translateY(-2px);
+
+  cursor: pointer;
+  display: initial;
+}
+
+.profileInfoSave
+{
+  /* margin-left: 20px; */
+  transform: translateY(5px);
+  cursor: pointer;
+  display: none;
+}
+
+.buttonX
+{
+  transform: translateY(5px);
+  
+}
+
+.profileInfoAddressInput
+{
+    pointer-events: none;
+}
+
+.profileInfoAddressInput:nth-child(1),
+.profileInfoAddressInput:nth-child(2)
+{
+  margin-bottom: 50px;
+}
+
+.passwordChangeDiv
+{
+  height: 200px;
+}
+
+.currentPasswordDiv
+{
+  margin: 30px 0px;
+}
+.passwordInput
+{
+  margin-right: 20px;
+}
+
+
+/* ID */
+
+#profileInfoAddressDiv
+{
+  transform: translateX(-20px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#profileInfoAddressLable
+{
+  margin-left: 70px;
+}
+
+#profileNameInput
+{
+  pointer-events: none;
+}
+
+#profileEmailInput
+{
+  pointer-events: none;
+}
+
+#profilePhoneInput
+{
+  pointer-events: none;
+}
+
+#profileInfoAddressInput
+{
+  pointer-events: none;
+}
+
+
+#addressSaveButton
+{
+  display: none;
+}
+
+#changePasswordShowDiv
+{
+  display: none;
+}
+
+
+#newPassword, #confirmPassword, #changePasswordSave
+{
+  pointer-events: none;
+}
