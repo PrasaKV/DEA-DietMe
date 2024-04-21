@@ -4,9 +4,14 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Apr 18, 2024, 12:08:56 AM
-    Author     : Nimeshi
+    Created on : Apr 21, 2024, 4:16:20 PM
+    Author     :Nimeshi
 */
+
+@import url('global.css');
+
+
+
 
 body {
     font-family: sans-serif;
@@ -33,10 +38,10 @@ body {
 
   h1{
     color: black;
-    font-size: 30px;
+    font-size: 25px;
   }
   
-  .notification {
+  .notifications {
   margin-bottom: 0;
   padding-bottom: 10px;
   border-spacing: 5px 0;
