@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notificationMessage.css")%>" />
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profile.js")%>" defer></script>
-        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%>"></script>
 
         <title>Profile</title>
     </head>
@@ -45,7 +45,8 @@
             </div>
                         
                     <div class="profileDivRight profileDiv">
-                        <%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>
+                        <%--<%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>--%>
+                        <%= request.getAttribute("jspf") %>
                     </div>
           
         </div>
