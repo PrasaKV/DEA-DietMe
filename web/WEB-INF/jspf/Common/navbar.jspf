@@ -11,7 +11,7 @@
             <a class="selection" href="#">
                 <img class="navCartButton" src="<%= assetsUrl.giveUrl(request,"Common Resources/Assets/cart.png") %>" loading="lazy" width="24px" height="24px">
             </a>
-                <a href="<%= assetsUrl.giveUrl(request, "JSP/Profile/profile.jsp") %>" class="" id="navLogin">
+                <a href="<%= assetsUrl.giveUrl(request, "JSP/Signup/Sign_In.jsp") %>" class="" id="navLogin">
             <button class="selection" id="loginButton">
                 Login
             </button>
@@ -31,7 +31,7 @@
                     <a class="menuSelection display" href="<%= assetsUrl.giveUrl(request, "index.jsp") %>">Home</a>
                     <a class="menuSelection display" href="<%= assetsUrl.giveUrl(request, "JSP/Meals/meals.jsp")%>">Meals</a>
                     <a class="menuSelection display" href="#">Create Your Meal</a>
-                    <a class="menuSelection display" href="<%= assetsUrl.giveUrl(request, "JSP/Profile/profile.jsp") %>">Login</a>
+                    <a class="menuSelection display" href="<%= assetsUrl.giveUrl(request, "JSP/Signup/Sign_In.jsp") %>">Login</a>
                 </div>
             </div>
         </div>

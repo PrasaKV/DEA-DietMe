@@ -1,0 +1,87 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 22, 2024, 7:12:01 PM
+    Author     : adipasith
+*/
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.card {
+  border-radius: 2.5%; 
+  background-color: rgb(218, 213, 213);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border: 2px solid #ccc; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 10px; 
+}
+
+.carousel-card {
+  border-radius: 2.5%; 
+  background-color: rgb(218, 213, 213);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border: 2px solid #ccc; /* Border around the card */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+h2, h4 {
+  margin: 0;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1.5px solid #4b4a4a;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px; 
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+button.green-btn {
+  background-color: rgb(63, 159, 63);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-text {
+  margin-top: 20px;
+}
+
+.forgot-password-link {
+  padding-right: 180px; 
+}
+
+
