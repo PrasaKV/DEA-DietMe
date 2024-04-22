@@ -1,6 +1,6 @@
 <%-- 
-    Document   : Sign_In
-    Created on : Apr 20, 2024, 7:44:55 PM
+    Document   : Sign_up
+    Created on : Apr 22, 2024, 7:57:08 PM
     Author     : adipasith
 --%>
 
@@ -10,29 +10,33 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sign In Form</title>
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/styles.css")%>"/>
+        <title>Sign Up Form</title>
+         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/styles.css")%>"/>
     </head>
     <body>
-        <div class="center">
+       <div class="center">
             <div class="card">
-                <h2>Welcome</h2>
-                <h4>Sign in to continue</h4>
+                <h2>Sign Up to continue</h2>
                 <hr>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder=""></label>
+                
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder=""></label>
                 
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="">
                 
-                <a href="forgot_password.html" class="forgot-password-link">Forgot password?</a>
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirmpassword" placeholder="">
                 
-                <button class="green-btn">Log In</button>
+                
+                <button class="green-btn">Sign Up</button>
                 <div class="register-text">
-                    <p>Haven't registered yet? <a href="Sign_up.jsp">Register</a></p>
+                    <p>Already have an account? <a href="Sign_In.jsp">Login</a></p>
                 </div>
             </div>
-            
+           
             <div class="carousel-card">
                 <label for="email">Email:</label>
                 <input type="password" id="password" name="password" placeholder="">
@@ -40,6 +44,5 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="">
             </div>
-        </div>
     </body>
 </html>
