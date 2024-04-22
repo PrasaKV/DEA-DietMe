@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notificationMessage.css")%>" />
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profile.js")%>" defer></script>
-        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%>"></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%> " defer></script>
 
         <title>Profile</title>
     </head>
@@ -34,19 +34,27 @@
                     <button class="addImage"></button>
                 </div>
                 <div class="profileTabsDiv">
-                    <h1 class="profileTabs" id="personalInfo">Personal Info</h1>
-                    <h1 class="profileTabs" id="customMeals">Custom Meals</h1>
-                    <h1 class="profileTabs" id="cart">Cart</h1>
-                    <h1 class="profileTabs" id="favourites">Favourites</h1>
-                    <h1 class="profileTabs" id="notifications">Notifications</h1>
-                    <h1 class="profileTabs" id="purchaseHistory">Purchase History</h1>
-                    <h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1>
+                    <a href="/DEA-DietMe/ProfileTabsController?fileName=profileInfo" ><h1 class="profileTabs" id="personalInfo">Personal Info</h1></a>
+                     <a href="/DEA-DietMe/ProfileTabsController?fileName=profileInfo" ><h1 class="profileTabs" id="customMeals">Custom Meals</h1></a>
+                    <a href="/DEA-DietMe/ProfileTabsController?fileName=profileInfo" ><h1 class="profileTabs" id="cart">Cart</h1></a>
+                    <a href="/DEA-DietMe/ProfileTabsController?fileName=profileInfo" ><h1 class="profileTabs" id="favourites">Favourites</h1></a>
+                    <a href="/DEA-DietMe/ProfileTabsController?fileName=notifications" ><h1 class="profileTabs" id="notifications">Notifications</h1></a>
+                    <a href="/DEA-DietMe/ProfileTabsController?fileName=profileInfo" ><h1 class="profileTabs" id="purchaseHistory">Purchase History</h1></a>
+                    <a href="/DEA-DietMe/ProfileTabsController?fileName=pendingDeliveries" ><h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1></a>
                 </div>
             </div>
                         
                     <div class="profileDivRight profileDiv">
-                        <%--<%@include file="../../WEB-INF/jspf/Profile/profileInfo.jspf"  %>--%>
-                        <%= request.getAttribute("jspf") %>
+                        <%
+                                        String name = (String) request.getAttribute("fileName");
+                                        if (name == null || name.isEmpty())
+                                        {
+                                            name = "profileInfo";
+                                        }
+                                        
+                                        String path = "../../WEB-INF/jspf/Profile/" +  name + ".jspf";
+                        %>
+                        <jsp:include page="<%= path %>" />
                     </div>
           
         </div>

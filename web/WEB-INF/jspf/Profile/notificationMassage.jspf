@@ -1,6 +1,3 @@
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
-
 <div class="notification-container">
     
         <div class="notificationss">
