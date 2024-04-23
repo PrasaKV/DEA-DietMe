@@ -4,6 +4,7 @@
     Author     : Prasad
 --%>
 
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -12,13 +13,13 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/global.css")%>"/>
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/index.css")%>"/>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
 
         <title>home</title>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/Common/navbar.jspf" %>
-        
+        <jsp:include page="WEB-INF/jspf/Common/navbar.jspf" />
 
          <div class="homePageDiv">
         <div class="mainVideoDiv">
@@ -55,6 +56,6 @@
     </div>
     
     
-        <%@include file="WEB-INF/jspf/Common/footer.jspf"  %>
+        <jsp:include page="WEB-INF/jspf/Common/footer.jspf" />
     </body>
 </html>

@@ -1,14 +1,7 @@
-<<<<<<< HEAD:web/WEB-INF/jspf/Profile/pendingDeliveries.jspf
+
+
 <div class="container">
-        <div class="notification">
-=======
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
-
-
-    <div class="container">
         <div class="notifications">
->>>>>>> 3423f0b759256515ec63a1d7614b69f04dbebdc3:web/WEB-INF/jspf/Profile/PendingDeliveries.jspf
             <div class="header">
                   <h1>Pending Deliveries</h1>
             </div>

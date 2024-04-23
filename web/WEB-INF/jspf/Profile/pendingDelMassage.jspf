@@ -1,13 +1,7 @@
-<<<<<<< HEAD:web/WEB-INF/jspf/Profile/pendingDelMassage.jspf
+
+
 <div class="notification-container">
-=======
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
 
-
-
-    <div class="notification-container">
->>>>>>> 3423f0b759256515ec63a1d7614b69f04dbebdc3:web/WEB-INF/jspf/Profile/PendingDelMassage.jspf
 
         <div class="notification">
             <div class="Massage1">

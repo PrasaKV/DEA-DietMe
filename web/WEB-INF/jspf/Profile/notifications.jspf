@@ -1,4 +1,4 @@
-<<<<<<< HEAD:web/WEB-INF/jspf/Profile/notifications.jspf
+
  <div class="container">
     <div class="notification">
         <div class="header">
@@ -17,33 +17,3 @@
         <button class="mark-as-read">Mark All As Read</button>
     </div>
 </div>
-=======
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
-
-
-
-
-<div class="container">
-        <div class="notifications">
-            <div class="header">
-                  <h1>Notifications</h1>
-            </div>
-        </div>
-        
-    
-        <div class="notification-Massage">
-            
-            <%@include file="../../jspf/Profile/NotificationMassage.jspf" %>
-            
-        </div>
-    
-    
-        <div class="mark-all-as-read">
-               <button class="mark-as-read">Mark All As Read</button>
-        </div>
-
-    
-        
-  </div>
->>>>>>> 3423f0b759256515ec63a1d7614b69f04dbebdc3:web/WEB-INF/jspf/Profile/Notification.jspf
