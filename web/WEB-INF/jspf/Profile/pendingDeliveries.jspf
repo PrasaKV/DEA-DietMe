@@ -1,9 +1,7 @@
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
 
 
-    <div class="container">
-        <div class="notification">
+<div class="container">
+        <div class="notifications">
             <div class="header">
                   <h1>Pending Deliveries</h1>
             </div>
@@ -11,9 +9,11 @@
         
         <div class="notification-container">
             
-            <%@include file="../../jspf/Profile/PendingDelMassage.jspf" %>
+            
+            <jsp:include page="../../jspf/Profile/PendingDelMassage.jspf"/>
             
         </div>
         
+       
     </div>
  

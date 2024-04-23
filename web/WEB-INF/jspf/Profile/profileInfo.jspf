@@ -1,4 +1,3 @@
-<%@ page pageEncoding="UTF-8" %>
 <div class="profileInfoDiv">
     <h1 class="profileInfoHeader">Profile Info</h1>
     <div class="profileInfoContent">

@@ -1,18 +1,17 @@
-
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
 /* 
-    Created on : Apr 18, 2024, 10:46:14 PM
+    Created on : Apr 22, 2024, 12:32:09 PM
     Author     : Nimeshi
 */
 
 
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding:0;
-  }
 
-.notification-Massages {
-    width: 101.5%;
+.notification-Purchase {
+   width: 101.5%;
     margin: 10px;
     margin-top: -1px;
     margin-bottom: 5px;
@@ -21,22 +20,21 @@ body {
     padding-left: 5px;
     margin-left: -4px;
     
-    
   }
   
-  .notificationss {
+  .PURnotification {
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     font-size: 12px;
     border: 2px solid #01CA5E;
     border-radius: 5px;
-        
+    
   }
   
-  .notification-header {
+  .PURnotification-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,13 +42,13 @@ body {
     border-bottom: 3px solid #01CA5E;
   }
   
-  .notification-header h3 {
-    font-size: 18px;
+  .PURnotification-header h3 {
+    font-size: 21px;
     font-weight: bold;
     margin: 0;
   }
-  
-  .mark-as-read-btnn {
+
+  .see-more-btn {
     color: #fff;
     cursor: pointer;
     border: 1px solid #01CA5E;
@@ -59,16 +57,16 @@ body {
     background-color: #01CA5E;
     font-size: 13px;
     position: relative;
-    top: -3px;
+    top: 22px;
     right: 0;
+    display: inline-block;
     
   }
   
-  .timesstamp {
+  .timestamp {
     font-size: 12px;
     font-weight: bold;
     color: #01CA5E;
     margin-top: 10px;
     text-align: right;
   }
-  
