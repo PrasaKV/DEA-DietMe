@@ -37,12 +37,6 @@
                 </div>
             </div>
            
-            <div class="carousel-card">
-                <label for="email">Email:</label>
-                <input type="password" id="password" name="password" placeholder="">
-                
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="">
-            </div>
+            
     </body>
 </html>

@@ -25,7 +25,7 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" placeholder="">
                 
-                <a href="forgot_password.html" class="forgot-password-link">Forgot password?</a>
+                <a href="Forgot_password.jsp" class="forgot-password-link">Forgot password?</a>
                 
                 <button class="green-btn">Log In</button>
                 <div class="register-text">
@@ -34,11 +34,7 @@
             </div>
             
             <div class="carousel-card">
-                <label for="email">Email:</label>
-                <input type="password" id="password" name="password" placeholder="">
                 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="">
             </div>
         </div>
     </body>
