@@ -3,20 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
+            <file>file:/D:/Diet_Me/DEA-DietMe/web/JSP/Signup/Sign_In.jsp</file>
+            <file>file:/D:/Diet_Me/DEA-DietMe/web/Common%20Resources/Styles/styles.css</file>
+            <file>file:/D:/Diet_Me/DEA-DietMe/web/JSP/Signup/Sign_up.jsp</file>
+
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/Common%20Resources/Scripts/profileInfo.js</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/Common%20Resources/Scripts/profile.js</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/src/java/com/teamhydra/servlets/FetchJspf.java</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/WEB-INF/jspf/Profile/profileInfo.jspf</file>
-=======
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/WEB-INF/jspf/Profile/PurchaseHisMassage.jspf</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/WEB-INF/jspf/Profile/PurchaseHistory.jspf</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/Common%20Resources/Styles/PurchaseHistory.css</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/Common%20Resources/Styles/PurchaseHisMassage.css</file>
-            <file>file:/C:/Users/ASUS/Documents/Java/netbeans/DEA-DietMe/web/WEB-INF/jspf/Profile/Notification.jspf</file>
->>>>>>> 3423f0b759256515ec63a1d7614b69f04dbebdc3
         </group>
     </open-files>
 </project-private>
