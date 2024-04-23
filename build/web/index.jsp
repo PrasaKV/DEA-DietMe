@@ -19,8 +19,7 @@
         <title>home</title>
     </head>
     <body>
-        <jsp:include page="WEB-INF/jspf/Common/navbar.jspf" />
-
+        <%@include file="WEB-INF/jspf/Common/navbar.jspf" %>
          <div class="homePageDiv">
         <div class="mainVideoDiv">
             <img class="mainVideo" src="Common Resources/Images/Diet video.jpg" alt="Video">
@@ -55,7 +54,7 @@
         </div>
     </div>
     
-    
-        <jsp:include page="WEB-INF/jspf/Common/footer.jspf" />
+
+        <%@include file="WEB-INF/jspf/Common/footer.jspf"%>
     </body>
 </html>
