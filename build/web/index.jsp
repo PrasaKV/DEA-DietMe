@@ -35,7 +35,7 @@
 
         <div class="discriptionDiv">
             <div class="firstParagraphDiv">
-                <p class="para1">Sri Lanka's First Diet Food Market Palce Where You Can Buy Or Create Your Own Meals For An Affordable Price With Island Wide Delivery.</p>
+                <p class="para1">Sri Lanka's First Diet Food Market Place Where You Can Buy Or Create Your Own Meals For An Affordable Price With Island Wide Delivery.</p>
             </div>
             <div class="secondParagraphDiv">
                 <p class="para2">A gym diet meal plan is a highly structured nutritional regimen designed to support your fitness goals and optimize your performance during workouts. It emphasizes a balance of macro-nutrients such as carbohydrates, proteins, and fats tailored to your needs and fitness objectives.</p>
@@ -46,7 +46,7 @@
         </div>
 
         <div class="mealsDiv">
-
+            <h2 class="topic2">Popular Meals</h2>
         </div>
 
         <div class="feedbackDiv">
