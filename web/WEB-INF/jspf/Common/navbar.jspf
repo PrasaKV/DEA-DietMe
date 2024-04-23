@@ -2,7 +2,7 @@
 <%@ page import="com.teamhydra.util.assetsUrl" %>
 <div class="navbarDiv" id="navbar">
         <div class="logoDiv">
-            <a href="<%= assetsUrl.giveUrl(request, "index.jsp") %>" ><img class="logo" src="<%= assetsUrl.giveUrl(request,"Common Resources/Assets/DEA-Logo.png") %>" loading="lazy" height="35px" alt="logo"></a>
+            <a href="<%= assetsUrl.giveUrl(request, "index.jsp") %>" ><img class="logo" src="<%= assetsUrl.giveUrl(request,"Common Resources/Assets/DEA-Logo.png") %>" loading="lazy" height="50px" alt="logo"></a>
         </div>
         <div class="selectionsDiv">
             <a class="selection selectionUnderline" href="<%= assetsUrl.giveUrl(request, "index.jsp") %>">Home</a>
