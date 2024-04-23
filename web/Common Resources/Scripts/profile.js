@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded" , function() {
+
     // <====================================== Defined Variables ======================================>
 
 const personalInfo = document.getElementById("personalInfo");
@@ -17,14 +17,6 @@ const profileTabs = document.querySelectorAll(".profileTabs");
 
 
 // <====================================== Functions Calling ======================================>
-
-
-personalInfo.addEventListener("click", () => {
-		 changeOnTabClick("profileInfo");
-});
-customMeals.addEventListener("click", () => {
-		 changeOnTabClick("Notification");
-});
 
 
 profileImageDiv.addEventListener("mouseover", () => {
@@ -48,38 +40,3 @@ profileImageDiv.addEventListener("mouseover", () => {
 
 
 
-// <====================================== Defined Function ======================================>
-
-
-				function changeOnTabClick(fileName) {
-                                                                                                fetch ("/DEA-DietMe/fetchJspf",
-                                                                                                {
-                                                                                                    headers:
-                                                                                                            {
-                                                                                                                "Content-Type": "application/json",
-                                                                                                                "fileName":fileName
-                                                                                                            }
-                                                                                                })
-						.then (res => {
-							if(res.ok)
-							{
-								return res.text();
-							}
-							else
-							{
-								throw new Error(res.statusText);
-							}
-						})
-
-						.then(data => {
-                                                    
-							profileDivRight.innerHTML = data;
-						})
-
-						.catch(err => {
-							alert("Somthing Unexpected Happens While Fetching Data");
-							console.log(err);
-						})
-
-			}
-});
