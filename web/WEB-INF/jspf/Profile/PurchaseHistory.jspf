@@ -1,0 +1,22 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+
+
+
+<div class="Pcontainer">
+        <div class="Pnotification">
+            <div class="Pheader">
+                  <h1>Purchase History</h1>
+            </div>
+        </div>
+        
+    
+    <div class="notification-Purchase">
+            
+        <%@include file="../../jspf/Profile/PurchaseHisMassage.jspf" %>
+            
+        </div>
+    
+    
+       
+    </div>

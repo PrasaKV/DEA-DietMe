@@ -4,14 +4,12 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Apr 21, 2024, 4:16:20 PM
-    Author     :Nimeshi
+    Created on : Apr 21, 2024, 9:48:43 PM
+    Author     : Nimeshi
 */
 
+
 @import url('global.css');
-
-
-
 
 body {
     font-family: sans-serif;
@@ -19,8 +17,8 @@ body {
     padding: 0;
   }
   
-  .container {
-    width: 95%;
+  .Pcontainer{
+    width: 97%;
     margin: 15px;
     margin-bottom: -15px;
     border-radius: 5px;
@@ -28,7 +26,7 @@ body {
     
   }
   
-  .header {
+  .Pheader {
     text-align: justify;
     margin-bottom: 10px;
     border-bottom: 3px solid #01CA5E;
@@ -41,30 +39,9 @@ body {
     font-size: 25px;
   }
   
-  .notifications {
+  .Pnotification {
   margin-bottom: 0;
   padding-bottom: 10px;
   border-spacing: 5px 0;
 }
-  
-  
-  
-  .mark-as-read {
-    color: #fff;
-    cursor: pointer;
-    border: 1px solid #01CA5E;
-    border-radius: 3px;
-    padding: 5px 10px;
-    background-color: #01CA5E;
-    font-size: 14px;
-    
-  }
-  
-
-  .mark-all-as-read {
-    text-align: center;
-    margin-top: 20px;
-    text-align: right;
-
-  }
   

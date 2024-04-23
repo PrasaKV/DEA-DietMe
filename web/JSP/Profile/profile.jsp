@@ -16,11 +16,28 @@
 
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profileInfo.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notification.css")%>" />
+<<<<<<< HEAD
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notificationMessage.css")%>" />
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profile.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%> " defer></script>
 
+=======
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notification.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notificationMassage.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDeliveries.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDelMassage.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistory.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistoMg.css")%>" />
+        
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notification.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notificationMassage.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/PendingDelMassage.js")%>" defer></script>
+        
+        
+        
+        
+>>>>>>> 3423f0b759256515ec63a1d7614b69f04dbebdc3
         <title>Profile</title>
     </head>
     <body>
@@ -43,6 +60,11 @@
                     <a href="/DEA-DietMe/ProfileTabsController?fileName=pendingDeliveries" ><h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1></a>
                 </div>
             </div>
+<<<<<<< HEAD
+=======
+                    /*<div class="profileDivRight profileDiv ">
+                        <%@include file="../../WEB-INF/jspf/Profile/PurchaseHistory.jspf" %>
+>>>>>>> 3423f0b759256515ec63a1d7614b69f04dbebdc3
                         
                     <div class="profileDivRight profileDiv">
                         <%
