@@ -1,0 +1,154 @@
+/*Imports*/
+@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+
+
+
+.homePageDiv {
+    background-image: url("../Images/Diet image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  
+    /*background-position: right top;*/
+  }
+  
+  .mainVideoDiv {
+    height: 700px;
+    width: 100%;
+  
+  .mainVideo {
+    height: 700px;
+    width: 100%;
+  }
+  }
+  
+  .topicDiv {
+    width: 100%;
+    height: 550px;
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .topicTextDiv {
+    margin-left: 100px;
+    margin-right: 800px;
+
+    color: rgba(255, 255, 255, 0.8);
+    /*text-shadow: 15px 15px 20px white;*/
+
+    font-family: "Whisper", cursive;
+    font-weight: 10;
+    font-style: normal;      
+    font-size: 50px;
+
+    .text1 {
+        width: 100%;
+        height: 150px;
+        word-spacing: 30px;
+        letter-spacing: 5px;
+    }
+      
+    .text2{
+        width: 100%;
+        height: 150px;
+        text-align: center;
+        word-spacing: 30px;
+        letter-spacing: 5px;
+    }
+    
+    .text3{
+        width: 100%;
+        height: 150px;
+        text-align: right;
+        word-spacing: 30px;
+        letter-spacing: 5px;
+    }
+  }
+
+  .discriptionDiv{
+    height: 850px;
+    width: 100%;
+    background-color: white;
+    border: 10px solid #444444;
+
+    .firstParagraphDiv{
+      height: 450px;
+      width: 450px;
+      margin-top: 120px;
+      margin-left: 95px;
+      margin-right: 75px;
+    }
+    
+    .para1{
+      font-family: monospace;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      line-height: 70px;
+    }
+
+    .secondParagraphDiv{
+      height: 800px;
+      width: 700px;
+      background-color: white;
+      position: absolute;
+      right: 150px;
+      top: 1185px;
+      border-top: 7px solid #01ca5e;
+      box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .para2{
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 30px;
+      font-weight: lighter;
+      text-align: center;
+      line-height: 55px;
+      margin-top: 80px;
+      margin-left: 45px;
+      margin-right: 45px;
+      margin-bottom: 100px;
+    }
+
+    .buttonDiv{
+      text-align: center;
+
+      .buttonGreen{
+        background-color: #01ca5e;
+        color: rgb(355, 255, 255);
+  
+        height: 75px;
+        width: 250px;
+        border: none;
+        padding: 0px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+  
+        font-size: 35px;
+        font-family: Arial, Helvetica, sans-serif;    
+      }
+
+      .buttonGreen:hover{
+        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .buttonGreen:active{
+        background-color: #01ca5e;
+        transform: translateY(3px);
+      }
+    }
+
+    
+  }
+
+  .mealsDiv{
+    height: 850px;
+    width: 100%;
+    background-color: white;
+  }
+  
+  .feedbackDiv{
+    height: 850px;
+    width: 100%;
+    background-color: white;
+  }
+  

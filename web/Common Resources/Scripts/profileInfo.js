@@ -81,18 +81,7 @@ function buttonBehavior(input, edit, save, flagEdit = true) {
             });
         } else {
             input.style.pointerEvents = "initial";
-        }
-        edit.style.display = "none";
-        save.style.display = "initial";
-    } else {
-        if (input.length) {
-            input.forEach(item => {
-                item.style.pointerEvents = "none";
-            });
-        } else {
-            input.style.pointerEvents = "none";
-        }
-        edit.style.display = "initial";
-        save.style.display = "none";
-    }
+       
+       }
+   }
 }
