@@ -20,10 +20,10 @@
                 <h4>Sign in to continue</h4>
                 <hr>
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder=""></label>
+                <input type="email" id="email" name="email" placeholder="" required=""></label>
                 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="">
+                <input type="password" id="password" name="password" placeholder="" required="">
                 
                 <a href="Forgot_password.jsp" class="forgot-password-link">Forgot password?</a>
                 
