@@ -8,8 +8,6 @@
      
      <div class="notification-container">
 
-         <jsp:include page="../../jspf/Profile/notificationMessage.jspf" />
-
      </div>
      
      

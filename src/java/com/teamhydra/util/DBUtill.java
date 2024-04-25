@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 public class DBUtill {
     
+    
+    
      /* oyalage Mysql Database ekata connect weddi  'jdbc:mysql://localhost:3306/users'   me URL eke  '//localhost:3306/users' eke indan 
     wenas karanna thiye nm witharak wenas karanna, 'users' kiyanne Mysql Database eke name eka*/
     

@@ -15,6 +15,7 @@
     </head>
     <body>
         <div class="card">
+            <a href="Sign_In.jsp" class="back-arrow">&#8592;</a>
             <h2>Reset Your Password</h2>
             <hr>
             <h4>A 6 Digit Code Is Sent To The:</h4>

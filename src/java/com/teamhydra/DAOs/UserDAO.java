@@ -1,18 +1,24 @@
 package com.teamhydra.DAOs;
 
-import java.util.List;
-import javax.xml.registry.infomodel.User;
-import com.teamhydra.Objects.userInfo;
+import com.teamhydra.Objects.UserInfo;
 import com.teamhydra.util.DBUtill;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
 
 /**
  *
  * @author Prasad
  */
 public class UserDAO {
+                    
+                        private static int userId;
+                        private static String name;
+                        private static String email;
+                        private static String password;
+                        private static String address;
+                        private static int phone;
+                        private static String profileImage;
+                        
                 
 //                    public List<User> getAllUsers(){
 //                        
@@ -35,7 +41,7 @@ public class UserDAO {
                                      System.out.println(email);
                                      System.out.println(password);
                                      
-                                    String sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
+                                    String sql = "INSERT INTO users (name, email, password) VALUES (?, ?, ?)";
                                     
                                     PreparedStatement stmt = DBUtill.setStatment(sql);
                                     
@@ -45,6 +51,7 @@ public class UserDAO {
 //                                    stmt.setInt(4, 123456789);
 //                                    stmt.setString(5,"abc Street");
                                     
+
                                     int affectedrows = stmt.executeUpdate();
                                     
                                     if (affectedrows > 0) {
@@ -65,10 +72,9 @@ public class UserDAO {
                             return signedUp;
                         }
                         
-                        public static String signInUser(String email)
+                        public static UserInfo signInUser(String email)
                         {
-                                    String results = "not in the databse";
-                                    userInfo user = new userInfo();
+                                    UserInfo userInfo = new UserInfo();
                             
                                     try
                                     {
@@ -80,14 +86,37 @@ public class UserDAO {
                                             PreparedStatement stmt = DBUtill.setStatment(sql);
 
                                             stmt.setString(1, email);
-
+                                            
                                             ResultSet rs = stmt.executeQuery();
                                             
-                                           while(rs.next())
-                                           {
-                                                  
-                                           }
-                                          
+                                            
+                                            
+                                           while(rs.next()) {
+                                               
+                                                userId = rs.getInt("userId");
+                                                name = rs.getString("name");
+                                                password = rs.getString("password");
+
+                                                phone = rs.getInt("phone") != 0 ? rs.getInt("phone") : 0;
+
+                                                address = rs.getString("address");
+                                                if(address == null || address.isEmpty()) {
+                                                    address = "1/2, abc Street, colombo";
+                                                }
+
+                                                profileImage = rs.getString("profileImage");
+                                                if(profileImage == null || profileImage.isEmpty()) {
+                                                    profileImage = "default_profile_image_url"; 
+                                                }
+
+                                                userInfo.setId(userId);
+                                                userInfo.setName(name);
+                                                userInfo.setEmail(email);
+                                                userInfo.setPassword(password);
+                                                userInfo.setAddress(address);
+                                                userInfo.setPhone(phone);
+                                                userInfo.setprofileImage(profileImage);
+                                            }
 
                                         }
                                 }
@@ -96,6 +125,8 @@ public class UserDAO {
 
                                         }
 
-                                    return results;
+//                                    System.out.println(UserInfo.getEmail() +  " - DAO");
+                                    
+                                    return userInfo;
                                 }
 }
