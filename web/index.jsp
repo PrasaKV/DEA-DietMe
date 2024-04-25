@@ -1,9 +1,10 @@
-<%-- 
+<%--
     Document   : index
     Created on : Apr 12, 2024, 7:21:44 PM
     Author     : Prasad
 --%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page import="javax.servlet.http.HttpServletRequest" %>
 <%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -43,7 +44,7 @@
             <div class="secondParagraphDiv">
                 <p class="para2">A gym diet meal plan is a highly structured nutritional regimen designed to support your fitness goals and optimize your performance during workouts. It emphasizes a balance of macro-nutrients such as carbohydrates, proteins, and fats tailored to your needs and fitness objectives.</p>
                 <div class="buttonDiv">
-                    <button class="buttonGreen">Order Now</button>
+                    <button class="buttonGreen">Order Now </button>
                 </div>
             </div>
         </div>

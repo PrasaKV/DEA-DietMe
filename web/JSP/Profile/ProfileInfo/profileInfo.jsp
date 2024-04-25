@@ -1,21 +1,31 @@
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%
+
+%>
+
 <div class="profileInfoDiv">
-    <h1 class="profileInfoHeader">Profile Info</h1>
+    <h1 class="profileInfoHeader">Profile Info</h1> 
     <div class="profileInfoContent">
         <div class="profileInfoContentLeft">
             <div class="profileInfoInputDiv" id="profileInfoNameDiv">
                 <label for="profileInfoInsideDiv" class="profileInfoLable"
-                       >Full Name:</label
+                       >Full Name: </label
                 >
                 <div class="profileInfoInsideDiv">
+                    <form action="/" method="POST">
                     <input
                         type="text"
                         class="profileInfoInput customInput"
                         id="profileNameInput"
-                        placeholder="Jhone Doe"
+                        placeholder="Jhone Doe "
                         />
                     <button class="profileInfoEdit" id="nameEditButton"></button>
                     <button class="profileInfoSave buttonGreen" id="nameSaveButton">Save</button>
+                    </form>
                 </div>
+                
             </div>
             <div class="profileInfoInputDiv" id="profileInfoEmailDiv">
                 <label for="profileInfoInsideDiv" class="profileInfoLable"

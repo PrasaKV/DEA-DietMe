@@ -6,6 +6,8 @@
 
 <%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,19 +21,33 @@
                 <h2>Welcome</h2>
                 <h4>Sign in to continue</h4>
                 <hr>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder=""></label>
-                
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="">
-                
-                <a href="Forgot_password.jsp" class="forgot-password-link">Forgot password?</a>
-                
-                <button class="green-btn">Log In</button>
+                <form action="/DEA-DietMe/UserController?request=signin" method="post" class="login-form">
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+
+
+                <div class="forgot-password-link">
+                    <a href="Forgot_password.jsp">Forgot password?</a>
+                </div>
+
+
+                <div class="form-group">
+                    <button type="submit" class="green-btn">Log In</button>
+                </div>
+
+
                 <div class="register-text">
                     <p>Haven't registered yet? <a href="Sign_up.jsp">Register</a></p>
                 </div>
-            </div>
+            </form>
+
             
             <div class="carousel-card">
                 

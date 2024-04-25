@@ -106,6 +106,6 @@ button.green-btn {
 
   .forgot-password-link {
     padding-right: 0; /* Remove padding for forgot password link on smaller screens */
-    text-align: right; /* Align forgot password link to the right on smaller screens */
+    text-align: center; /* Align forgot password link to the right on smaller screens */
   }
 }
