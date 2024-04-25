@@ -4,6 +4,7 @@
     Author     : Prasad
 --%>
 
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -22,6 +23,7 @@
         
 
     <div class="homePageDiv">
+
         <div class="mainVideoDiv">
             <img class="mainVideo" src="Common Resources/Images/Diet video.jpg" alt="Video">
         </div>    
@@ -63,7 +65,7 @@
         </div>
     </div>
     
-    
-        <%@include file="WEB-INF/jspf/Common/footer.jspf"  %>
+
+        <%@include file="WEB-INF/jspf/Common/footer.jspf"%>
     </body>
 </html>

@@ -11,11 +11,11 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     var markAsReadButton = document.querySelector('.mark-as-read');
-    var markAllAsReadButton = document.querySelector('.mark-all-as-read'); // Assuming this is your "mark all as read" button
-    var notificationConDiv = document.querySelector('.notification-container');
+    var markAllAsReadButton = document.querySelector('.mark-all-as-read'); 
+    var notificationConDiv = document.querySelector('.notification-Massages');
   
     markAsReadButton.addEventListener('click', function() {
         notificationConDiv.style.display = 'none';
-        markAllAsReadButton.style.display = 'none'; // Hide the "mark all as read" button
+        markAllAsReadButton.style.display = 'none'; 
     });
 });
