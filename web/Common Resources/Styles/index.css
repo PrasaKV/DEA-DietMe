@@ -13,12 +13,14 @@
   }
   
   .mainVideoDiv {
-    height: 700px;
+    height: 610px;
     width: 100%;
   
   .mainVideo {
     height: 700px;
     width: 100%;
+    position: absolute;
+    top: 0;
   }
   }
   
@@ -96,7 +98,7 @@
       background-color: white;
       position: absolute;
       right: 150px;
-      top: 1100px;
+      top: 1050px;
       border-top: 7px solid #01ca5e;
       box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
     }
@@ -118,7 +120,7 @@
 
       .buttonGreen{
         background-color: #01ca5e;
-        color: rgb(355, 255, 255);
+        color: rgb(255, 255, 255);
   
         height: 75px;
         width: 250px;
@@ -161,8 +163,55 @@
   }
   
   .feedbackDiv{
-    height: 850px;
+    height: 700px;
     width: 100%;
     background-color: white;
+    
+      .feedbackground{
+        height: 600px;
+        width: 1000px;
+
+        background-image: url("../Images/Feedback image.png");
+        background-size: 800px 700px;
+        background-repeat: no-repeat;
+        background-position: right;
+
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
+        margin-left: auto;
+        margin-right: auto;
+
+      .backblur{
+        height: 600px;
+        width: 1000px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+      }
+      
+      .commentbar{
+        height: 150px;
+        width: 1000px;
+        position: absolute;
+        bottom: 0;
+
+        background-image: url("../Images/Feedback image.png");
+        background-size: 800px 530px;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+        margin-left: auto;
+        margin-right: auto;
+
+      .backblur2{
+        height: 150px;
+        width: 1000px;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        position: absolute;
+        bottom: 0;
+      }
+      }
+    }
+    
   }
   

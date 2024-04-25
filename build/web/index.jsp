@@ -21,7 +21,10 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/Common/navbar.jspf" %>
-         <div class="homePageDiv">
+        
+
+    <div class="homePageDiv">
+
         <div class="mainVideoDiv">
             <img class="mainVideo" src="Common Resources/Images/Diet video.jpg" alt="Video">
         </div>    
@@ -51,7 +54,15 @@
         </div>
 
         <div class="feedbackDiv">
-
+            <div class="feedbackground">
+                <div class="backblur">
+                    <div class="commentbar">
+                        <div class="backblur2">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
