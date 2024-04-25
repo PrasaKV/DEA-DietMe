@@ -3,80 +3,78 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.teamhydra.util;
+package com.teamhydra.Objects;
 
 /**
  *
  * @author adipasith
  */
 public class User {
-    int id;
-    String fullname;
-    String email;
-    String password;
-    String confirmpassword;
+    
+    private int userId;
+    private String name;
+    private String email;
+    private String password;
+    private int phone;
+    private List address;
     
     public User() {
     }
     
-    public User(int id, String fullname, String email, String password, String confirmpassword ) {
-        this.id = id;
-        this.fullname = fullname;
+    public User(int id, String fullname, String email, String password, int phone, List address) {
+        this.id = userId;
+        this.fullname = name;
         this.email = email;
         this.password = password;
-        this.confirmpassword = confirmpassword;
+        this.phone = phone;
+        this.address = address;
     }
     
-    public User(String fullname, String email, String password, String confirmpassword) {
-        this.fullname = fullname;
-        this.email = email;
-        this.password = password;
-        this.confirmpassword = confirmpassword;
-    }
-    
-    public User(String email, String password, String confirmpassword) {
-        this.email = email;
-        this.password = password;
-        this.confirmpassword = confirmpassword;
-    }
-    
+
     public int getId() {
-        return id;
+        return userId;
     }
     
     public void setId(int id) {
-        this.id = id;
+        this.userId = userId;
     }
     
-    public String getfullname() {
-        return fullname;
+    public String getName() {
+        return name;
     }
     
-    public void setfullname(String fullname) {
-        this.fullname = fullname;
+    public void setName(String name) {
+        this.name = name;
     }
     
-    public String getemail() {
+    public String getEmail() {
         return email;
     }
     
-    public void setemail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
     
-    public String getpassword() {
+    public String getPassword() {
         return password;
     }
     
-    public void setpassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
-    
-    public String getconfirmpassword() {
-        return confirmpassword;
+    public int getPhone() {
+        return phone;
     }
     
-    public void setconfirmpassword(String confirmpassword) {
-        this.confirmpassword = confirmpassword;
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
+    public List getAddress() {
+        return address;
+    }
+    
+    public void setAddress (List address) {
+        this.address = address;
+    }
+    
 }
