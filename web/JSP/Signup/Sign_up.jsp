@@ -18,7 +18,7 @@
             <div class="card">
                 <h2>Sign Up to continue</h2>
                 <hr>
-                <form action="/DEA-DietMe/UserController?request=register" method="POST">
+                <form action="/DEA-DietMe/SignUpController" method="POST">
                     
                     <label for="fullname">Full Name:</label>
                     <input type="text" id="fullname" name="name" placeholder="">

@@ -39,9 +39,7 @@
         <%@include file="../../WEB-INF/jspf/Common/navbar.jspf" %>
 
        <% 
-           HttpSession Session = request.getSession(false);
-           
-           System.out.println(Session.getAttribute("name") + "= Jsp"); 
+
        %> 
         
         <div id="profile">
@@ -70,7 +68,7 @@
                                             name = "profileInfo";
                                         }
                                         
-                                        String path = "ProfileInfo/" +  name + ".jsp";
+                                        String path = "ProfileFrag/" +  name + ".jsp";
                         %>
                         <jsp:include page="<%= path %>" />
                     </div>
@@ -79,5 +77,7 @@
 
         <%@include file="../../WEB-INF/jspf/Common/footer.jspf"  %>
 
+        
+        
     </body>
 </html>

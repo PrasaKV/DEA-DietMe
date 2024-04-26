@@ -41,6 +41,16 @@ changePasswordSave.addEventListener("click", () => {
     }
 });
 
+
+nameSaveButton.addEventListener("submit", function(event) {
+   event.preventDefault(); 
+    submitForm();
+});
+
+
+
+
+
 nameEditButton.addEventListener("click", () => {
     buttonBehavior(profileNameInput, nameEditButton, nameSaveButton, true);
 });
@@ -66,12 +76,24 @@ phoneSaveButton.addEventListener("click", () => {
 });
 
 addressEditButton.addEventListener("click", () => {
-    buttonBehavior(profileAddressInputs, addressEditButton, addressSaveButton, true);
+   addressButtonBehavior(profileAddressInputs, addressEditButton, addressSaveButton, true);
+});
+
+addressEditButton.addEventListener("click", () => {
+   addressButtonBehavior(profileAddressInputs, addressEditButton, addressSaveButton, true);
 });
 
 addressSaveButton.addEventListener("click", () => {
-    buttonBehavior(profileAddressInputs, addressEditButton, addressSaveButton, false);
+    addressButtonBehavior(profileAddressInputs, addressEditButton, addressSaveButton, false);
 });
+
+
+
+
+
+
+
+
 
 function buttonBehavior(input, edit, save, flagEdit = true) {
     if (flagEdit) {
@@ -80,7 +102,7 @@ function buttonBehavior(input, edit, save, flagEdit = true) {
                 item.style.pointerEvents = "initial";
             });
         }
-//            input.style.pointerEvents = "initial";
+            input.style.pointerEvents = "initial";
             edit.style.display = "none";
             save.style.display="initial";
             
@@ -92,7 +114,30 @@ function buttonBehavior(input, edit, save, flagEdit = true) {
                 item.style.pointerEvents = "none";
             });
        }
-//            input.style.pointerEvents = "none";
+            input.style.pointerEvents = "none";
+            edit.style.display = "initial";
+            save.style.display="none";
+}
+}
+
+function addressButtonBehavior(input, edit, save, flagEdit = true) {
+    if (flagEdit) {
+        if (input.length) {
+            input.forEach(item => {
+                item.style.pointerEvents = "initial";
+            });
+        }
+            edit.style.display = "none";
+            save.style.display="initial";
+            
+        }
+        if(!(flagEdit))
+        {
+            if (input.length) {
+            input.forEach(item => {
+                item.style.pointerEvents = "none";
+            });
+       }
             edit.style.display = "initial";
             save.style.display="none";
 }

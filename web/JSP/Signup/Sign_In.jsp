@@ -21,7 +21,7 @@
                 <h2>Welcome</h2>
                 <h4>Sign in to continue</h4>
                 <hr>
-                <form action="/DEA-DietMe/UserController?request=signin" method="post" class="login-form">
+                <form action="/DEA-DietMe/SignInController" method="post" class="login-form">
 
                 <div class="form-group">
                     <label for="email">Email:</label>
