@@ -1,6 +1,3 @@
-<%-- any content can be specified here e.g.: --%>
-<%@ page pageEncoding="UTF-8" %>
-
 
 
 <div class="Pcontainer">
@@ -13,7 +10,7 @@
     
     <div class="notification-Purchase">
             
-        <%@include file="../../jspf/Profile/PurchaseHisMassage.jspf" %>
+        <jsp:include page ="../../jspf/Profile/PurchaseHisMassage.jspf" />
             
         </div>
     
