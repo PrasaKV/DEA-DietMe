@@ -19,10 +19,14 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDelMassage.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistory.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistoMg.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/Cart.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/CartMealsMg.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/CartCheckoutMg.css")%>" />
         
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notification.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notificationMassage.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/PendingDelMassage.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/Cart.js")%>" defer></script>
         
         
         
@@ -49,7 +53,7 @@
                 </div>
             </div>
                     /*<div class="profileDivRight profileDiv ">
-                        <%@include file="../../WEB-INF/jspf/Profile/PurchaseHistory.jspf" %>
+                        <%@include file="../../WEB-INF/jspf/Profile/Cart.jspf" %>
                         
                         
                      </div>*/
