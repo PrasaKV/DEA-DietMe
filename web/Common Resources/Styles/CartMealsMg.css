@@ -1,0 +1,141 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 25, 2024, 8:06:11 PM
+    Author     : Nimeshi
+*/
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.border {
+    border: 2px solid #01CA5E;
+    border-radius: 5px 5px 5px 5px;
+    background-color: white;
+    position: relative;
+    top: -13px;
+    width: 100%;
+    
+}
+
+.info-header {
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: left;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.content {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: flex-start;
+    border-top: 2px solid #01CA5E;
+}
+
+.image-container {
+    flex: 0 0 40%;
+    margin-right: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 10px;
+    border: 2px solid #01CA5E;
+    text-align: left;
+    
+  }
+  
+.bold{
+    font-weight: bold;
+}
+
+.normal{
+   font-weight: lighter; 
+}
+
+  th {
+    background-color: white;
+    font-weight: bold;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: white;
+  }
+  
+  tfoot {
+    font-weight: bold;
+  }
+  
+
+
+.total-calories {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.descriprion {
+    border-top: 2px solid #01CA5E;
+    font-size: 20px;
+    
+}
+
+.descriprionPadding{
+    padding: 10px;
+}
+
+.linefooter{
+    border-bottom: 2px solid #01CA5E; 
+    font-size: 12px;
+}
+    
+
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    position: relative;
+    top: -8px;
+    padding: 10px;
+}
+
+.cancel-btn,
+.close-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background-color: #E72929;
+    color: white;
+}
+
+.close-btn {
+    background-color: #01CA5E;
+    color: white;
+}

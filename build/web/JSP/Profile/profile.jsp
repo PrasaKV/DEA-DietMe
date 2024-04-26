@@ -16,17 +16,22 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profileInfo.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notification.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notificationMassage.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDeliveries.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDelMassage.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/purchaseHistory.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/purchaseHistoMg.css")%>" />
+
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDeliveries.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDelMassage.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistory.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistoMg.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/Cart.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/CartMealsMg.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/CartCheckoutMg.css")%>" />
+
         
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profile.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%> " defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notification.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notificationMassage.js")%>" defer></script>
-        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/pendingDelMassage.js")%>" defer></script>
+
         
         
         
@@ -60,7 +65,6 @@
                     <a href="/DEA-DietMe/ProfileTabsController?fileName=pendingDeliveries" ><h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1></a>
                 </div>
             </div>
-
                         
                     <div class="profileDivRight profileDiv">
                         <%
