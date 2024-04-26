@@ -12,7 +12,7 @@ public class assetsUrl {
                  
                     
                     String fileUrl = request.getScheme() + "://" + request.getServerName()+ ":" + request.getServerPort() + "/"+ request.getServletContext().getContextPath() + "/";
-                    
+//                    String fileUrl = request.getScheme() + "://" + request.getServerName() + "/" + request.getServletContext().getContextPath() + "/";
                     String url = fileUrl + path;
                     
                  return url;

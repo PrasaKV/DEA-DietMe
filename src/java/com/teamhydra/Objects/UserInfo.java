@@ -5,25 +5,27 @@
  */
 package com.teamhydra.Objects;
 
+
 /**
  *
  * @author adipasith
  */
-public class User {
+public class UserInfo {
     
     private int userId;
     private String name;
     private String email;
     private String password;
     private int phone;
-    private List address;
+    private String address;
+    private String profileImage;
     
-    public User() {
+    public UserInfo() {
     }
     
-    public User(int id, String fullname, String email, String password, int phone, List address) {
-        this.id = userId;
-        this.fullname = name;
+    public UserInfo(int userId, String name, String email, String password, int phone, String address) {
+        this.userId = userId;
+        this.name = name;
         this.email = email;
         this.password = password;
         this.phone = phone;
@@ -35,7 +37,7 @@ public class User {
         return userId;
     }
     
-    public void setId(int id) {
+    public void setId(int userId) {
         this.userId = userId;
     }
     
@@ -69,12 +71,19 @@ public class User {
     public void setPhone(int phone) {
         this.phone = phone;
     }
-    public List getAddress() {
+    public String getAddress() {
         return address;
     }
     
-    public void setAddress (List address) {
+    public void setAddress (String address) {
         this.address = address;
     }
     
+    public String getprofileImage() {
+        return profileImage;
+    }
+    
+    public void setprofileImage (String profileImage) {
+        this.profileImage = profileImage;
+    }
 }

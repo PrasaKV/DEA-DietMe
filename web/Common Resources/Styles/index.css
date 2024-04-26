@@ -1,5 +1,5 @@
 /*Imports*/
-@import url('https://fonts.googleapis.com/css2?family=Whisper&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Rye&display=swap');
 
 
 
@@ -13,43 +13,49 @@
   }
   
   .mainVideoDiv {
-    height: 700px;
+    height: 610px;
     width: 100%;
   
   .mainVideo {
     height: 700px;
     width: 100%;
+    position: absolute;
+    top: 0;
   }
   }
   
   .topicDiv {
     width: 100%;
-    height: 550px;
+    height: 475px;
     background: rgba(255, 255, 255, 0.3);
   }
 
   .topicTextDiv {
     margin-left: 100px;
-    margin-right: 800px;
+    /*margin-right: 800px;*/
+    height: 200px;
+    width: 600px;
+    padding: 55px;
 
     color: rgba(255, 255, 255, 0.8);
     /*text-shadow: 15px 15px 20px white;*/
 
-    font-family: "Whisper", cursive;
+    font-family: "Protest Revolution", sans-serif;
     font-weight: 10;
     font-style: normal;      
-    font-size: 50px;
+    font-size: 35px;
 
     .text1 {
         width: 100%;
-        height: 150px;
+        height: 120px;
+        text-align: left;
         word-spacing: 30px;
         letter-spacing: 5px;
     }
       
     .text2{
         width: 100%;
-        height: 150px;
+        height: 120px;
         text-align: center;
         word-spacing: 30px;
         letter-spacing: 5px;
@@ -57,7 +63,7 @@
     
     .text3{
         width: 100%;
-        height: 150px;
+        height: 120px;
         text-align: right;
         word-spacing: 30px;
         letter-spacing: 5px;
@@ -92,7 +98,7 @@
       background-color: white;
       position: absolute;
       right: 150px;
-      top: 1185px;
+      top: 1050px;
       border-top: 7px solid #01ca5e;
       box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
     }
@@ -114,14 +120,14 @@
 
       .buttonGreen{
         background-color: #01ca5e;
-        color: rgb(355, 255, 255);
+        color: rgb(255, 255, 255);
   
         height: 75px;
         width: 250px;
         border: none;
         padding: 0px 10px;
         border-radius: 10px;
-        cursor: pointer;
+        cursor: pointer;
   
         font-size: 35px;
         font-family: Arial, Helvetica, sans-serif;    
@@ -144,11 +150,68 @@
     height: 850px;
     width: 100%;
     background-color: white;
+    
+    .topic2{
+      font-family: "Rye", serif;
+      font-size: 30px;
+      font-weight: bold;
+      font-style: normal;
+
+      padding: 70px;
+      text-align: center;
+    }
   }
   
   .feedbackDiv{
-    height: 850px;
+    height: 700px;
     width: 100%;
     background-color: white;
+    
+      .feedbackground{
+        height: 600px;
+        width: 1000px;
+
+        background-image: url("../Images/Feedback image.png");
+        background-size: 800px 700px;
+        background-repeat: no-repeat;
+        background-position: right;
+
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
+        margin-left: auto;
+        margin-right: auto;
+
+      .backblur{
+        height: 600px;
+        width: 1000px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+      }
+      
+      .commentbar{
+        height: 150px;
+        width: 1000px;
+        position: absolute;
+        bottom: 0;
+
+        background-image: url("../Images/Feedback image.png");
+        background-size: 800px 530px;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+        margin-left: auto;
+        margin-right: auto;
+
+      .backblur2{
+        height: 150px;
+        width: 1000px;
+        background-color: rgba(0, 0, 0, 0.3);
+
+        position: absolute;
+        bottom: 0;
+      }
+      }
+    }
+    
   }
   

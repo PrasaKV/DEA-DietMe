@@ -143,12 +143,6 @@
   pointer-events: none;
 }
 
-
-#addressSaveButton
-{
-  display: none;
-}
-
 #changePasswordShowDiv
 {
   display: none;

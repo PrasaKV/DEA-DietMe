@@ -38,6 +38,12 @@
 
         <%@include file="../../WEB-INF/jspf/Common/navbar.jspf" %>
 
+       <% 
+           HttpSession Session = request.getSession(false);
+           
+           System.out.println(Session.getAttribute("name") + "= Jsp"); 
+       %> 
+        
         <div id="profile">
             <div class="profileDivLeft profileDiv">
                 <div class="profileImageDiv">
@@ -64,7 +70,7 @@
                                             name = "profileInfo";
                                         }
                                         
-                                        String path = "../../WEB-INF/jspf/Profile/" +  name + ".jspf";
+                                        String path = "ProfileInfo/" +  name + ".jsp";
                         %>
                         <jsp:include page="<%= path %>" />
                     </div>

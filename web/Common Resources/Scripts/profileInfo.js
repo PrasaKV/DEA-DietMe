@@ -79,9 +79,21 @@ function buttonBehavior(input, edit, save, flagEdit = true) {
             input.forEach(item => {
                 item.style.pointerEvents = "initial";
             });
-        } else {
-            input.style.pointerEvents = "initial";
-       
+        }
+//            input.style.pointerEvents = "initial";
+            edit.style.display = "none";
+            save.style.display="initial";
+            
+        }
+        if(!(flagEdit))
+        {
+            if (input.length) {
+            input.forEach(item => {
+                item.style.pointerEvents = "none";
+            });
        }
-   }
+//            input.style.pointerEvents = "none";
+            edit.style.display = "initial";
+            save.style.display="none";
+}
 }
