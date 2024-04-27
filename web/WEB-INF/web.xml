@@ -4,9 +4,17 @@
         <servlet-name>Usercontroller</servlet-name>
         <servlet-class>Usercontroller</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>com.teamhydra.Sign_UpIn_Controller.RegisterServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Usercontroller</servlet-name>
         <url-pattern>/Usercontroller</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
