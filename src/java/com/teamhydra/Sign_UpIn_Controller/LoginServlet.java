@@ -7,6 +7,7 @@ package com.teamhydra.Sign_UpIn_Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.lang.System.out;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author adipasith
  */
-public class RegisterServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,10 +37,10 @@ public class RegisterServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet RegisterServlet</title>");            
+            out.println("<title>Servlet LoginServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet RegisterServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet LoginServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -71,28 +72,22 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
-       
-       String fullname = request.getParameter("fullname");
-       String email = request.getParameter("email");
-       String password = request.getParameter("password");
-       String confirmpassword = request.getParameter("confirmpassword");
-       
-       User userModel = new User(fullname, email, password, confirmpassword);
-       
-       UserDatabase regUser = new UserDatabase(ConnectionPro.getConnection());
-       
-       
-       // Change the navigate page
-       if (regUser.saveUser(userModel)) {
-         response.sendRedirect("index.jsp");
-       } else {
-         String errorMessage = "User Available";
-         HttpSession regSession = request.getSession();
-         regSession.setAttribute("RegError", errorMessage);
-         // Change navigate page correclty 
-         response.sendRedirect("Sign_up.jsp");
-       }
+        //processRequest(request, response);
+        
+            String logemail = request.getParameter("email");
+            String logpass = request.getParameter("password");
+            
+            UserDatabase db =  new UserDatabase(ConnectionPro.getConnection());
+            User user = db.logUser(logemail, logpass);
+            
+            if(user!=null){
+                HttpSession session = request.getSession();
+                session.setAttribute("logUser", user);
+                // Change navigate page correclty 
+                response.sendRedirect("welcome.jsp");
+            }else{
+                out.println("user not found. Please check your email or password again.");
+            }
     }
 
     /**
