@@ -32,6 +32,8 @@
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notification.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notificationMassage.js")%>" defer></script>
 
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/PendingDelMassage.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/Cart.js")%>" defer></script>
         
         
         
@@ -65,7 +67,7 @@
                     <a href="/DEA-DietMe/ProfileTabsController?fileName=pendingDeliveries" ><h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1></a>
                 </div>
             </div>
-                        
+        
                     <div class="profileDivRight profileDiv">
                         <%
                                         String name = (String) request.getAttribute("fileName");
