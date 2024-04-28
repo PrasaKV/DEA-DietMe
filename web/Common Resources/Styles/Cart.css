@@ -1,0 +1,198 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 23, 2024, 11:30:27 PM
+    Author     : Nimeshi
+*/
+
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .Cartcontainer {
+    width: 96%;
+    margin: 30px;
+    border-radius: 5px;
+    padding: 20px;
+    height: 200%;
+    
+  }
+  
+  h1{
+    color: black;
+    font-size: 30px;
+}
+
+
+.CartHeader {
+    text-align: justify;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #01CA5E;
+    justify-content: space-between;
+    
+}
+  
+.cart{
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  border-spacing: 5px 0;
+}
+
+
+.mealsContainer {
+    display: flex;
+    
+  }
+  
+  .meal-list {
+    flex: 1;
+    margin-right: 20px;
+    height: 450px;
+    
+  }
+
+
+.select-btn {
+    background-color:#01CA5E; 
+    border: none;
+    color: white;
+    padding: 3px 1px;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 4px;
+    height: 25px;
+    width: 25px;
+  }
+
+  
+  .meal-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color:#C7C8CC;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .meal-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+  }
+  
+  .Meals-details {
+    padding: 10px;
+  }
+  
+  .Meals-details h4 {
+    margin: 0;
+    font-size: 18px;
+    color: black;
+  }
+  
+  .Meals-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: black;
+  }
+  
+  .order-summary {
+    width: 300px;
+    height: 450px;
+    background-color: #C7C8CC;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  
+
+  .order-summary h2 {
+    margin-top: 0;
+  }
+  
+  .order-summary ul {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  .order-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .total {
+    margin-top: 20px;
+    border-top: 2px solid #01CA5E;
+    padding-top: 10px;
+  }
+  
+  .total p {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+  }
+  
+  .total h3 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+
+  .spase1{
+    border-bottom: 2px solid #01CA5E;
+  }
+  
+  .spase2{
+    border-bottom: 4px solid #01CA5E;
+    
+  }
+
+
+  .spase3{
+    border-bottom: 2px solid #01CA5E;
+  }
+  
+.spase4{
+    border-top:2px solid #01CA5E;
+}
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .cancel {
+    background-color: #E72929;
+    color: #ffffff;
+  }
+  
+  .checkout {
+    background-color: #01CA5E;
+    color: #ffffff;
+  }
+
+  .dustbin-button{
+    height: 10px;
+    width: 40px;
+  }

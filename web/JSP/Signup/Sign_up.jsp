@@ -12,13 +12,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sign Up Form</title>
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/styles.css")%>"/>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/Sign_up_in.js")%>"></script>
     </head>
     <body>
         <div class="center">
             <div class="card">
                 <h2>Sign Up to continue</h2>
                 <hr>
-                <form action="/DEA-DietMe/UserController?request=register" method="POST">
+                <form action="/DEA-DietMe/UserController?request=register" method="POST" onsubmit="return validate()">
                     
                     <label for="fullname">Full Name:</label>
                     <input type="text" id="fullname" name="name" placeholder="">

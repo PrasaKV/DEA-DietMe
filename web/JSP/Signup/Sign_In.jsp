@@ -14,6 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sign In Form</title>
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/styles.css")%>"/>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/Sign_up_in.js")%>"></script>
     </head>
     <body>
         <div class="center">
@@ -21,15 +22,16 @@
                 <h2>Welcome</h2>
                 <h4>Sign in to continue</h4>
                 <hr>
-                <form action="/DEA-DietMe/UserController?request=signin" method="post" class="login-form">
+                <form action="/DEA-DietMe/UserController?request=signin" method="post" class="login-form" onsubmit="return validate()">
 
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required="required">
                 </div>
+                    
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required="required">
                 </div>
 
 
@@ -49,9 +51,7 @@
             </form>
 
             
-            <div class="carousel-card">
-                
-            </div>
+            
         </div>
     </body>
 </html>
