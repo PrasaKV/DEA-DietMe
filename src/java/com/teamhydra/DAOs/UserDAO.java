@@ -2,10 +2,9 @@ package com.teamhydra.DAOs;
 
 import com.teamhydra.Objects.UserInfo;
 import com.teamhydra.util.DBUtill;
-import static java.lang.Integer.parseInt;
-import static java.rmi.server.LogStream.log;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -21,13 +20,7 @@ public class UserDAO {
     private static int phone;
     private static String profileImage;
 
-//                    public List<User> getAllUsers(){
-//                        
-//                        List <User> users = new ArrayList <>();
-//                        
-//                        
-//                        
-//                        }
+
     public static boolean signUpUser(String name, String email, String password) {
         boolean signedUp = false;
         
@@ -74,20 +67,14 @@ public static UserInfo signInUser(String email) {
         ResultSet rs = stmt.executeQuery();
         
         if (rs.next()) {
-            int userId = rs.getInt("userId");
-            String name = rs.getString("name");
-            String password = rs.getString("password");
-            int phone = rs.getInt("phone");
-            String address = rs.getString("address");
-            String profileImage = rs.getString("profileImage");
-            
-            userInfo.setId(userId);
-            userInfo.setName(name);
+
+            userInfo.setId( rs.getInt("userId"));
+            userInfo.setName(rs.getString("name"));
             userInfo.setEmail(email);
-            userInfo.setPassword(password);
-            userInfo.setPhone(phone != 0 ? phone : 0);
-            userInfo.setAddress(address != null && !address.isEmpty() ? address : "1/2, abc Street, colombo");
-            userInfo.setprofileImage(profileImage != null && !profileImage.isEmpty() ? profileImage : "default_profile_image_url");
+            userInfo.setPassword(rs.getString("password"));
+            userInfo.setPhone(rs.getString("phone"));
+            userInfo.setAddress(rs.getString("address"));
+            userInfo.setProfileImage( rs.getString("profileImage"));
             
             System.out.println(userInfo.getId() + "= UserDAO userinfo id");
             System.out.println(rs.getInt("userId") + "= UserDAO Rs id");
@@ -104,10 +91,14 @@ public static UserInfo signInUser(String email) {
 }
 
     
-    public static int singleUpdate(Object obj, String column, int userId) {
+    public static int singleUpdate(String value, String column, int userId) {
+        
+        System.out.println(value + " UserDAO - SingleUpdate");
+        System.out.println(column + " UserDAO - SingleUpdate");
+        System.out.println(userId + " UserDAO - SingleUpdate");
+         
         
         int success = 0;
-        String value;
         int num;
         
         String sql = "UPDATE `users` SET " + column + "  = ? WHERE `users`.`userId` = ?";
@@ -116,27 +107,18 @@ public static UserInfo signInUser(String email) {
             
             PreparedStatement stmt = DBUtill.setStatment(sql);
             
-            if (obj instanceof String) {
-                value = obj.toString();
-                
-                stmt.setString(1, value);
-            }
-            if (obj instanceof Integer) {
-                num = (Integer) obj;
-                
-                stmt.setInt(1, num);
-            }
-            
+            stmt.setString(1, value);
             stmt.setInt(2, userId);
             
-            success = stmt.executeUpdate();
-            
+            if(userId > 0)
+            {
+                success = stmt.executeUpdate();
+            }
+
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        
         return success;
-        
     }
     
     public static String passwordConfirm(int userId) {
@@ -153,10 +135,48 @@ public static UserInfo signInUser(String email) {
             rs.next();
             password = rs.getString("password");
             
-        } catch (Exception e) {
+        } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
         
         return password;
     }
+    
+    
+    public static String profileImageUpload(int userId, String filePath) 
+    {
+                String msg = "failed";
+        try
+        {
+            String sql = "UPDATE users SET profileImage = ? WHERE userId = ?";
+            PreparedStatement stmt = DBUtill.setStatment(sql);
+            
+            stmt.setString(1, filePath);
+            stmt.setInt(2, userId);
+            
+             int row = stmt.executeUpdate();
+             
+             if(row > 0)
+             {
+                 msg = "success";
+             }
+        }
+        catch (SQLException e)
+        {
+            System.out.println(e.getMessage());
+        }
+        
+        return msg;
+        
+    }
+    
+    
+    
+    
+    
+    
 }
+
+        
+
+        

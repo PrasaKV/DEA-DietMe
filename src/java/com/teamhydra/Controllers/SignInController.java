@@ -1,11 +1,9 @@
 
 package com.teamhydra.Controllers;
 
-import com.teamhydra.util.assetsUrl;
 import com.teamhydra.DAOs.UserDAO;
 import com.teamhydra.Objects.UserInfo;
 import java.io.IOException;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -20,10 +18,18 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet("/SignInController")
 public class SignInController extends HttpServlet{
+   
     
                        @Override
                        public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
                        {                                 
+                           
+                                        res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); 
+                                        res.setHeader("Pragma", "no-cache"); 
+                                        res.setHeader("Expires", "0");
+
+
+
                                        String email = req.getParameter("email");
                                        String password = req.getParameter("password");
                                        
@@ -37,21 +43,27 @@ public class SignInController extends HttpServlet{
 
                                                           if(userInfo.getName().equals("Wrong Email"))
                                                           {
-                                                              session.setAttribute("Wrong Email", "Wrong Email");
-                                                               req.getRequestDispatcher("/JSP/Signup/Sign_In.jsp").forward(req, res);
+                                                               res.sendRedirect("/JSP/Signup/Sign_In.jsp");
                                                           }
                                                            else
                                                           {
                                                             if(userInfo.getPassword().equals(password))
                                                             {
-                                                                session.setAttribute("userInfo", userInfo);
+                                                                session.setAttribute("userId", userInfo.getId());
+                                                                session.setAttribute("userName", userInfo.getName());
+                                                                session.setAttribute("userEmail", userInfo.getEmail());
+                                                                session.setAttribute("userPhone", userInfo.getPhone());
+                                                                session.setAttribute("userAddress", userInfo.getAddress());
+                                                                session.setAttribute("profileImage", userInfo.getProfileImage());
                                                                 
-                                                                 req.getRequestDispatcher("/JSP/Profile/ProfileFrag/profileInfo.jsp").forward(req, res);
+                                                                
+                                                                System.out.println(session.getAttribute("userName") + " = SignInController SessionUName");
+                                                                
+                                                                req.getRequestDispatcher("/JSP/Profile/ProfileFrag/profileInfo.jsp").forward(req, res);
                                                             }
                                                             else
                                                             {
-                                                                session.setAttribute("Wrong Password", "Wrong Password");
-                                                               req.getRequestDispatcher("/JSP/Signup/Sign_In.jsp").forward(req, res);
+                                                                 res.sendRedirect("/JSP/Signup/Sign_In.jsp");
                                                             }
                                                             }
                                                            

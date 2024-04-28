@@ -160,7 +160,7 @@
 }
 
 
-#newPassword, #confirmPassword, #changePasswordSave
+#newPasswordInput, #confirmPasswordInput, #changePasswordSave
 {
-  pointer-events: none;
+  display: none;
 }

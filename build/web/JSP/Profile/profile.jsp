@@ -7,6 +7,32 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
+<%  
+            Integer userId = 0 ;
+            String userName = "";
+            String url="";
+    
+    try
+    {
+ 
+        
+         userId = (Integer) session.getAttribute("userId");
+         userName = (String) session.getAttribute("userName");
+         url = (String) session.getAttribute("profileImage");
+            
+                       if(userId< 1 && userName == null)
+                        {
+                                response.sendRedirect("/DEA-DietMe/index.jsp");
+                                System.out.println("Profile If Redirect");
+                        }
+    }
+    catch(Exception e)
+    {
+            System.out.println(e.getMessage() + " = Profile Exception");
+    }
+
+%>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,17 +42,24 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profileInfo.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notification.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notificationMassage.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDeliveries.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDelMassage.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/purchaseHistory.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/purchaseHistoMg.css")%>" />
+
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDeliveries.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDelMassage.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistory.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistoMg.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/Cart.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/CartMealsMg.css")%>" />
+        <!--<link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/CartCheckoutMg.css")%>" />-->
+
         
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profile.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/profileInfo.js")%> " defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notification.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notificationMassage.js")%>" defer></script>
-        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/pendingDelMassage.js")%>" defer></script>
+
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/PendingDelMassage.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/Cart.js")%>" defer></script>
         
         
         
@@ -45,11 +78,14 @@
         <div id="profile">
             <div class="profileDivLeft profileDiv">
                 <div class="profileImageDiv">
-                    <img src="<%=assetsUrl.giveUrl(request, "Common Resources/Assets/avatar.png")%>" alt="Profile Image" class="profileImage" />
-                    <button class="addImage"></button>
+                    <img src="<%=assetsUrl.giveUrl(request, url )%>" alt="Profile Image" id="profileImage"  class="profileImage" />
+                    <form action="/DEA-DietMe/FileController?userId=<%= userId%>&userName=<%= userName%>" method="POST" enctype="multipart/form-data" id="profileImageForm">
+                        <button id="addImageInputCover"></button>
+                        <input id="addImageInput" type="file" accept="image/*" name="image" />
+                    </form>
                 </div>
                 <div class="profileTabsDiv">
-                    <a href="/DEA-DietMe/ProfileTabsController?fileName=profileInfo" ><h1 class="profileTabs" id="personalInfo">Personal Info</h1></a>
+                    <a href="/DEA-DietMe/ProfileTabsController?fileName=profileInfo" ><h1 class="profileTabs" id="personalInfo">Personal Info </h1></a>
                      <a href="/DEA-DietMe/ProfileTabsController?fileName=customMeals" ><h1 class="profileTabs" id="customMeals">Custom Meals</h1></a>
                     <a href="/DEA-DietMe/ProfileTabsController?fileName=cart" ><h1 class="profileTabs" id="cart">Cart</h1></a>
                     <a href="/DEA-DietMe/ProfileTabsController?fileName=favourites" ><h1 class="profileTabs" id="favourites">Favourites</h1></a>
@@ -58,11 +94,11 @@
                     <a href="/DEA-DietMe/ProfileTabsController?fileName=pendingDeliveries" ><h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1></a>
                 </div>
             </div>
-
-                        
+        
                     <div class="profileDivRight profileDiv">
                         <%
                                         String name = (String) request.getAttribute("fileName");
+                                       
                                         if (name == null || name.isEmpty())
                                         {
                                             name = "profileInfo";
