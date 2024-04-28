@@ -36,7 +36,7 @@
 
 
                 <div class="forgot-password-link">
-                    <a href="Forgot_password.jsp">Forgot password?</a>
+                    <a href="Forgot_password.jsp?email=<%= request.getParameter("email") %>">Forgot password?</a>
                 </div>
 
 

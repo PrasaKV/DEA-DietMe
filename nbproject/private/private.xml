@@ -7,9 +7,11 @@
             <file>file:/D:/DEA-DietMe-develop/DEA-DietMe/src/java/com/teamhydra/Sign_UpIn_Controller/RegisterServlet.java</file>
             <file>file:/D:/DEA-DietMe-develop/DEA-DietMe/src/java/com/teamhydra/Sign_UpIn_Controller/UserDatabase.java</file>
             <file>file:/D:/DEA-DietMe-develop/DEA-DietMe/web/Common%20Resources/Scripts/Sign_up_in.js</file>
+            <file>file:/D:/DEA-DietMe-develop/DEA-DietMe/src/java/com/teamhydra/Sign_UpIn_Controller/LoginServlet.java</file>
             <file>file:/D:/DEA-DietMe-develop/DEA-DietMe/src/java/com/teamhydra/Sign_UpIn_Controller/ConnectionPro.java</file>
             <file>file:/D:/DEA-DietMe-develop/DEA-DietMe/src/java/com/teamhydra/Sign_UpIn_Controller/User.java</file>
             <file>file:/D:/DEA-DietMe-develop/DEA-DietMe/web/JSP/Signup/Sign_up.jsp</file>
+            <file>file:/D:/DEA-DietMe-develop/DEA-DietMe/web/JSP/Signup/Forgot_password.jsp</file>
         </group>
     </open-files>
 </project-private>
