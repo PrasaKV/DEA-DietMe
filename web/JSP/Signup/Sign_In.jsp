@@ -23,7 +23,7 @@
                 <h4>Sign in to continue</h4>
                 <hr>
 
-                <form action="/DEA-DietMe/SignInController" method="post" class="login-form">
+                <form action="/DEA-DietMe/SignInController" method="post" class="login-form" onsubmit="return validate();">
 
 
                 <div class="form-group">

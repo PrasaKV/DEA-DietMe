@@ -20,7 +20,7 @@
                 <h2>Sign Up to continue</h2>
                 <hr>
 
-                <form action="/DEA-DietMe/SignUpController" method="POST">
+                <form action="/DEA-DietMe/SignUpController" method="POST" onsubmit="return validate();">
 
                     
                     <label for="fullname">Full Name:</label>
