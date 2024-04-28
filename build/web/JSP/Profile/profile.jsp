@@ -37,19 +37,26 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/global.css")%>"/>
+        
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profile.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/profileInfo.css")%>" />
+        
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/cart.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/cartMealsMg.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/cartCheckoutMg.css")%>" />
+         
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notification.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/notificationMassage.css")%>" />
-
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDeliveries.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PendingDelMassage.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistory.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/PurchaseHistoMg.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/Cart.css")%>" />
-        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/CartMealsMg.css")%>" />
-        <!--<link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/CartCheckoutMg.css")%>" />-->
+        
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/purchaseHistory.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/purchaseHistoMg.css")%>" />
+        
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDeliveries.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDelMassage.css")%>" />
+       
+        
 
         
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
@@ -58,8 +65,7 @@
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notification.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notificationMassage.js")%>" defer></script>
 
-        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/PendingDelMassage.js")%>" defer></script>
-        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/Cart.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/cart.js")%>" defer></script>
         
         
         
@@ -104,7 +110,7 @@
                                             name = "profileInfo";
                                         }
                                         
-                                        String path = "ProfileFrag/" +  name + ".jsp";
+                                        String path = "ProfileFrag/"+ name+".jsp";
                         %>
                         <jsp:include page="<%= path %>" />
                     </div>
