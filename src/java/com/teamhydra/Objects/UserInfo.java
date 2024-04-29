@@ -24,13 +24,14 @@ public class UserInfo {
     public UserInfo() {
     }
     
-    public UserInfo(int userId, String name, String email, String password, int phone, String address) {
+    public UserInfo(int userId, String name, String email, String password, int phone, String address,String profileImage) {
         this.userId = userId;
         this.name = name;
         this.email = email;
         this.password = password;
         this.phone = phone;
         this.address = address;
+        this.profileImage = profileImage;
     }
 
     public UserInfo(String name, String email, String password, int phone, String address) {

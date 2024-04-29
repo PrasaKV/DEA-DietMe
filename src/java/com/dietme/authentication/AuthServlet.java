@@ -12,10 +12,13 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.SQLException;
 import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns = {
     "/auth/register", "/auth/login","/auth/loginMethod","/auth/registerMethod"})
 public class AuthServlet extends HttpServlet {
+    
+   
 
     private authDao authDao;
 
@@ -102,6 +105,8 @@ public class AuthServlet extends HttpServlet {
         // Get login credentials from request
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        
+         HttpSession session = request.getSession();
 
         try {
             UserInfo user = authDao.loginUser(email, password);
@@ -109,7 +114,12 @@ public class AuthServlet extends HttpServlet {
 
             if (user != null) {
                 // User login successful, set session attributes and redirect
-                request.getSession().setAttribute("name", user.getName());
+                session.setAttribute("userId", user.getId());
+                session.setAttribute("userName", user.getName());
+                session.setAttribute("userEmail", user.getEmail());
+                session.setAttribute("userPhone", user.getPhone());
+                session.setAttribute("userAddress", user.getAddress());
+                session.setAttribute("profileImage", user.getProfileImage());
                response.sendRedirect("/DEA-DietMe/Home");
 
             } else if (admin != null) {

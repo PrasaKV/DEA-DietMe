@@ -9,19 +9,19 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%  
-            Integer userId = 0 ;
+            String  userId = "" ;
             String userName = "";
-            String url="";
+            String profileImage="";
     
     try
     {
- 
         
-         userId = (Integer) session.getAttribute("userId");
+        
+         userId = session.getAttribute("userId").toString();
          userName = (String) session.getAttribute("userName");
-         url = (String) session.getAttribute("profileImage");
+         profileImage = (String) session.getAttribute("profileImage");
             
-                       if(userId< 1 && userName == null)
+                       if(userName == null)
                         {
                                 response.sendRedirect("/DEA-DietMe/index.jsp");
                                 System.out.println("Profile If Redirect");
@@ -85,7 +85,7 @@
         <div id="profile">
             <div class="profileDivLeft profileDiv">
                 <div class="profileImageDiv">
-                    <img src="<%=assetsUrl.giveUrl(request, url )%>" alt="Profile Image" id="profileImage"  class="profileImage" />
+                    <img src="<%=assetsUrl.giveUrl(request, profileImage )%>" alt="Profile Image" id="profileImage"  class="profileImage" />
                     <form action="/DEA-DietMe/FileController?userId=<%= userId%>&userName=<%= userName%>" method="POST" enctype="multipart/form-data" id="profileImageForm">
                         <button id="addImageInputCover"></button>
                         <input id="addImageInput" type="file" accept="image/*" name="image" />

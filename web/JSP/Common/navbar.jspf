@@ -1,3 +1,4 @@
+
 <%@ page pageEncoding="UTF-8" %>
 <%@ page import="com.teamhydra.util.assetsUrl" %>
 <div class="navbarDiv" id="navbar">
@@ -14,7 +15,9 @@
         
         
         <%
-            if (session.getAttribute("name") == null) {
+            if (session.getAttribute("userName") == null) {
+                
+            
         %>
           <a href="${pageContext.request.contextPath}/auth/login" class="" id="navLogin">
             <button class="selection" id="loginButton">
@@ -23,12 +26,14 @@
           </a>
         <%
         } else {
-            String userName = session.getAttribute("name").toString();
+            String userName = session.getAttribute("userName").toString();
+            String profileImage = session.getAttribute("profileImage").toString();
         %>
         <a href="/DEA-DietMe/Profile" class="" id="navLogin">
             <button class="selection loggedName" id="loginButton">
                 <%=userName%>
             </button>
+                <img class="navProfileImage" src="<%=assetsUrl.giveUrl(request, profileImage) %>" loading="lazy" width="24px" height="24px">
           </a>
         <%
             }

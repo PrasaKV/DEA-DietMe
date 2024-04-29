@@ -3,25 +3,24 @@
 <%@page import="com.teamhydra.Objects.UserInfo"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
-            Integer userId = 0 ;
+            String  userId = "" ;
             String userName = "redirect" ;
             String userEmail  = "";
             String userPhone = "";
             String userAddress = "";
             
-        
-    
+
     try {
         
-                        userId = (Integer) session.getAttribute("userId");
+                       userId = session.getAttribute("userId").toString();
                         userName = (String) session.getAttribute("userName");
                         userEmail = (String) session.getAttribute("userEmail");
-                        userPhone = (String) session.getAttribute("userPhone");
+                        userPhone = String.valueOf(session.getAttribute("userPhone"));
                         userAddress = (String) session.getAttribute("userAddress");
                         
                        
             
-                       if(userId< 1 && userName == null)
+                       if(userName == null)
                         {
                                 response.sendRedirect("/DEA-DietMe/index.jsp");
                                 System.out.println("ProfileInfo If Redirect");

@@ -6,6 +6,16 @@
         <jsp-file>/index.jsp</jsp-file>
     </servlet>
     
+   <servlet>
+        <servlet-name>SignIn</servlet-name>
+        <jsp-file>/JSP/Signup/Sign_In.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>SignUp</servlet-name>
+        <jsp-file>/JSP/Signup/Sign_up.jsp</jsp-file>
+    </servlet>
+    
     <servlet>
         <servlet-name>Usercontroller</servlet-name>
         <servlet-class>Usercontroller</servlet-class>
@@ -64,6 +74,16 @@
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/Home</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SignIn</servlet-name>
+        <url-pattern>/SignIn</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>SignUp</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>
