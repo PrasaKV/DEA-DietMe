@@ -3,6 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package com.teamhydra.Sign_UpIn_Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,12 +11,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author adipasith
  */
-public class Usercontroller extends HttpServlet {
+public class RegisterServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,10 +36,10 @@ public class Usercontroller extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Usercontroller</title>");            
+            out.println("<title>Servlet RegisterServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Usercontroller at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet RegisterServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -69,7 +71,28 @@ public class Usercontroller extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+       // processRequest(request, response);
+       
+       String fullname = request.getParameter("fullname");
+       String email = request.getParameter("email");
+       String password = request.getParameter("password");
+       String confirmpassword = request.getParameter("confirmpassword");
+       
+       User userModel = new User(fullname, email, password, confirmpassword);
+       
+       UserDatabase regUser = new UserDatabase(ConnectionPro.getConnection());
+       
+       
+       // Change the navigate page
+       if (regUser.saveUser(userModel)) {
+         response.sendRedirect("index.jsp");
+       } else {
+         String errorMessage = "User Available";
+         HttpSession regSession = request.getSession();
+         regSession.setAttribute("RegError", errorMessage);
+         // Change navigate page correclty 
+         response.sendRedirect("Sign_up.jsp");
+       }
     }
 
     /**

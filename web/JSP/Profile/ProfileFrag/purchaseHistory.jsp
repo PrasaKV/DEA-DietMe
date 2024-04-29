@@ -10,7 +10,7 @@
     
     <div class="notification-Purchase">
             
-        <jsp:include page ="../../jspf/Profile/PurchaseHisMassage.jspf" />
+        <%--<jsp:include page ="../../jspf/Profile/PurchaseHisMassage.jspf" />--%>
             
         </div>
     

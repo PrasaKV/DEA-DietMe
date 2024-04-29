@@ -1,11 +1,4 @@
-<%-- any content can be specified here e.g.: --%>
 <%@page import="com.teamhydra.util.assetsUrl"%>
-<%@ page pageEncoding="UTF-8" %>
-
-
-
-
-
 
  <div class="Cartcontainer">
         <div class="cart">
@@ -100,11 +93,11 @@
             
             
             <div>
-                <%@include file="../../jspf/Profile/CartMealsMg.jspf" %>
+                <%--<%@include file="../../jspf/Profile/CartMealsMg.jspf" %>--%>
             </div>
             
             <div>
-                <%@include file="../../jspf/Profile/CartCheckoutMg.jspf" %>
+                <%--<%@include file="../../jspf/Profile/CartCheckoutMg.jspf" %>--%>
             </div>
             
             
