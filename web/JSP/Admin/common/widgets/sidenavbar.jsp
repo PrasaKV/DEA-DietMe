@@ -4,7 +4,7 @@
     Author     : kavin
 --%>
 
-<%@page import="com.dietme.utill.PathProvider"%>
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <!-- Sidebar  -->
 <nav id="sidebar">
     <div class="sidebar-header">
@@ -22,7 +22,7 @@
             </li>
 
             <li class="dashboard">
-                <a href="<%=PathProvider.giveUrl(request, "index.jsp")%>" class="<%= request.getParameter("page") == null || request.getParameter("page").equals("dashboard") ? "active" : "" %>">
+                <a href="<%=assetsUrl.giveUrl(request, "index.jsp")%>" class="<%= request.getParameter("page") == null || request.getParameter("page").equals("dashboard") ? "active" : "" %>">
                     <i class="material-icons">dashboard</i><span>Dashboard</span></a>
             </li>
 

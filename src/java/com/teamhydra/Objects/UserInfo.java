@@ -31,6 +31,18 @@ public class UserInfo {
         this.phone = phone;
         this.address = address;
     }
+
+    public UserInfo(String name, String email, String password, int phone, String address) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.address = address;
+    }
+
+  
+
+  
     
 
     public int getId() {

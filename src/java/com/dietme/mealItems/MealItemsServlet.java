@@ -79,14 +79,14 @@ public class MealItemsServlet extends HttpServlet {
         List<MealItems> mIDList = mIDDao.findAll();
         request.setAttribute("mIDList", mIDList);
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("/jsp/mealItems/displayMealIngredianDetails.jsp");
+                = request.getRequestDispatcher("/JSP/Admin/mealItems/displayMealIngredianDetails.jsp");
         dispatcher.forward(request, response);
     }
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("/jsp/mealItems/addMealIngredianDetails.jsp");
+                = request.getRequestDispatcher("/JSP/Admin/mealItems/addMealIngredianDetails.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -167,7 +167,8 @@ public class MealItemsServlet extends HttpServlet {
         } else {
             request.setAttribute("status", "InsertFailed");
         }
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/mealItems/addMealIngredianDetails.jsp");
+        RequestDispatcher dispatcher =
+                request.getRequestDispatcher("/JSP/Admin/mealItems/addMealIngredianDetails.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -178,7 +179,7 @@ public class MealItemsServlet extends HttpServlet {
         // Fetch the item from the database using the DAO
         MealItems mealItem = mIDDao.findById(Integer.parseInt(id));
         request.setAttribute("MealItem", mealItem);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/mealItems/addMealIngredianDetails.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Admin/mealItems/addMealIngredianDetails.jsp");
         dispatcher.forward(request, response);
     }
 
