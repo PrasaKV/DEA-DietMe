@@ -17,12 +17,12 @@ public class authDao {
         PreparedStatement statement = DBUtill.setStatment(query);
         statement.setString(1, user.getName());
         statement.setString(2, user.getEmail());
-        statement.setString(3, user.getPassword()); // Consider hashing the password for security
+        statement.setString(3, user.getPassword()); 
         return statement.executeUpdate() > 0;
     }
 
     public UserInfo loginUser(String email, String password) throws SQLException {
-        String query = "SELECT * FROM users WHERE email = ? AND password = ?"; // Consider comparing hashed passwords
+        String query = "SELECT * FROM users WHERE email = ? AND password = ?"; 
         PreparedStatement statement = DBUtill.setStatment(query);
         statement.setString(1, email);
         statement.setString(2, password);
@@ -41,7 +41,7 @@ public class authDao {
     }
 
     public Admin loginAdmin(String email, String password) throws SQLException {
-        String query = "SELECT * FROM admins WHERE email = ? AND password = ?"; // Consider comparing hashed passwords
+        String query = "SELECT * FROM admins WHERE email = ? AND password = ?"; 
         PreparedStatement statement = DBUtill.setStatment(query);
         statement.setString(1, email);
         statement.setString(2, password);

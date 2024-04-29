@@ -20,7 +20,7 @@
         <title>home</title>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/Common/navbar.jspf" %>
+        <%@include file="JSP/Common/navbar.jspf" %>
         
 
     <div class="homePageDiv">
@@ -88,6 +88,6 @@
     </div>
     
 
-        <%@include file="WEB-INF/jspf/Common/footer.jspf"%>
+        <%@include file="JSP/Common/footer.jspf"%>
     </body>
 </html>

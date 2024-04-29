@@ -428,3 +428,7 @@ body
     font-size: 0.4rem;
   }
 }
+
+.loggedName{
+    color: #01ca5e;
+}

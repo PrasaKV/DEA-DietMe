@@ -1,7 +1,7 @@
 package com.dietme.deafaultMeals;
 
 import com.dietme.mealItems.MealItems;
-import com.dietme.utill.DbUtill;
+import com.teamhydra.util.DBUtill;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -25,7 +25,7 @@ public class DefaultMealDao {
     private static final String SELECT_ALL_QUERY = "SELECT * FROM defaultmeals";
 
     public int insert(DefaultMeals defaultMeals) {
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(
                         INSERT_QUERY, PreparedStatement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, defaultMeals.getDefaultMealName());
@@ -48,7 +48,7 @@ public class DefaultMealDao {
 
     public boolean update(DefaultMeals defaultMeals) {
         boolean rowUpdated = false;
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(UPDATE_QUERY)) {
             statement.setString(1, defaultMeals.getDefaultMealName());
             statement.setString(2, defaultMeals.getImgurl());
@@ -65,7 +65,7 @@ public class DefaultMealDao {
     }
 
     public boolean delete(int defaultMealId) {
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(DELETE_QUERY)) {
             statement.setInt(1, defaultMealId);
             return statement.executeUpdate() > 0;
@@ -76,7 +76,7 @@ public class DefaultMealDao {
     }
 
     public DefaultMeals findById(int defaultMealId) {
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(SELECT_BY_ID_QUERY)) {
             statement.setInt(1, defaultMealId);
             ResultSet resultSet = statement.executeQuery();
@@ -91,7 +91,7 @@ public class DefaultMealDao {
 
     public List<DefaultMeals> findAll() {
         List<DefaultMeals> defaultMealDetailsList = new ArrayList<>();
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(SELECT_ALL_QUERY);
                 ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {

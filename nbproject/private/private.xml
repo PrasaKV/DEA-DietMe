@@ -2,13 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-
-        <group>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/src/java/com/teamhydra/Controllers/ProfileTabsController.java</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/index.jsp</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
-        </group>
         <group/>
-
+        <group>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Admin/DEA-DietMe/web/JSP/Common/navbar.jspf</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Admin/DEA-DietMe/src/java/com/teamhydra/Controllers/SignInController.java</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Admin/DEA-DietMe/web/WEB-INF/web.xml</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Admin/DEA-DietMe/web/index.jsp</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Admin/DEA-DietMe/src/java/com/teamhydra/util/DBUtill.java</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Admin/DEA-DietMe/src/java/com/dietme/authentication/authDao.java</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Admin/DEA-DietMe/src/java/com/dietme/authentication/AuthServlet.java</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Admin/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
+        </group>
     </open-files>
 </project-private>

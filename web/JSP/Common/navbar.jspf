@@ -16,21 +16,23 @@
         <%
             if (session.getAttribute("name") == null) {
         %>
-        <!-- Show login button if user is not logged in -->
-        <a class="selection" id="loginButton"
-           href="${pageContext.request.contextPath}/auth/login">Login</a>
+          <a href="${pageContext.request.contextPath}/auth/login" class="" id="navLogin">
+            <button class="selection" id="loginButton">
+                Login
+            </button>
+          </a>
         <%
         } else {
-            // If user is logged in, display the user's name
-            String userName = (String) session.getAttribute("name");
+            String userName = session.getAttribute("name").toString();
         %>
-        <!-- Display the user's name -->
-        <p>Welcome, <%= userName%></p>
+        <a href="/DEA-DietMe/Profile" class="" id="navLogin">
+            <button class="selection loggedName" id="loginButton">
+                <%=userName%>
+            </button>
+          </a>
         <%
             }
         %>
-        
-        </a>
         <a class="profilePic" href="#">
             <img class="profilePic" src="#">
         </a>

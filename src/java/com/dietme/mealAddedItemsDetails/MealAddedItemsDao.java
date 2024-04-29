@@ -1,6 +1,6 @@
 package com.dietme.mealAddedItemsDetails;
 
-import com.dietme.utill.DbUtill;
+import com.teamhydra.util.DBUtill;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,7 +20,7 @@ public class MealAddedItemsDao {
     private static final String SELECT_ALL_QUERY = "SELECT * FROM mealaddeditems";
 
     public int insert(MealAddedItems mealAddedItem) {
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(
                         INSERT_QUERY, PreparedStatement.RETURN_GENERATED_KEYS)) {
             statement.setInt(1, mealAddedItem.getMealId());
@@ -40,7 +40,7 @@ public class MealAddedItemsDao {
 
     public boolean update(MealAddedItems mealAddedItem) throws SQLException {
         boolean rowUpdated = false;
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(UPDATE_QUERY)) {
 
             statement.setInt(1, mealAddedItem.getMealId());
@@ -54,7 +54,7 @@ public class MealAddedItemsDao {
     }
 
     public boolean delete(int submealItemId) {
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(DELETE_QUERY)) {
             statement.setInt(1, submealItemId);
             return statement.executeUpdate() > 0;
@@ -65,7 +65,7 @@ public class MealAddedItemsDao {
     }
 
     public MealAddedItems findById(int submealItemId) {
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(SELECT_BY_ID_QUERY)) {
             statement.setInt(1, submealItemId);
             ResultSet resultSet = statement.executeQuery();
@@ -80,7 +80,7 @@ public class MealAddedItemsDao {
 
     public List<MealAddedItems> findAll() {
         List<MealAddedItems> mealAddedItemsList = new ArrayList<>();
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(SELECT_ALL_QUERY);
                 ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {

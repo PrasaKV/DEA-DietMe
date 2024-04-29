@@ -60,7 +60,7 @@ public class AuthServlet extends HttpServlet {
 
     private void showRegisterForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Signup/Sign_up.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Signup/Sign_In.jsp");
         dispatcher.forward(request, response);
 
     }
@@ -109,8 +109,8 @@ public class AuthServlet extends HttpServlet {
 
             if (user != null) {
                 // User login successful, set session attributes and redirect
-                request.getSession().setAttribute("user", user);
-               response.sendRedirect(request.getContextPath() + "/index.jsp");
+                request.getSession().setAttribute("name", user.getName());
+               response.sendRedirect("/DEA-DietMe/Home");
 
             } else if (admin != null) {
                 // Admin login successful, set session attributes and redirect

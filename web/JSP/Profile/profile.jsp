@@ -1,3 +1,4 @@
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <!-- <%-- 
     Document   : profile
     Created on : Apr 13, 2024, 11:04:29 PM
@@ -75,7 +76,7 @@
     </head>
     <body>
 
-        <%@include file="../../WEB-INF/jspf/Common/navbar.jspf" %>
+        <%--<%@include file="JSP/Common/navbar.jspf" %>--%>
 
        <% 
 
@@ -91,33 +92,33 @@
                     </form>
                 </div>
                 <div class="profileTabsDiv">
-                    <a href="/DEA-DietMe/ProfileTabsController?fileName=profileInfo" ><h1 class="profileTabs" id="personalInfo">Personal Info </h1></a>
-                     <a href="/DEA-DietMe/ProfileTabsController?fileName=customMeals" ><h1 class="profileTabs" id="customMeals">Custom Meals</h1></a>
-                    <a href="/DEA-DietMe/ProfileTabsController?fileName=cart" ><h1 class="profileTabs" id="cart">Cart</h1></a>
-                    <a href="/DEA-DietMe/ProfileTabsController?fileName=favourites" ><h1 class="profileTabs" id="favourites">Favourites</h1></a>
-                    <a href="/DEA-DietMe/ProfileTabsController?fileName=notifications" ><h1 class="profileTabs" id="notifications">Notifications</h1></a>
-                    <a href="/DEA-DietMe/ProfileTabsController?fileName=purchaseHistory" ><h1 class="profileTabs" id="purchaseHistory">Purchase History</h1></a>
-                    <a href="/DEA-DietMe/ProfileTabsController?fileName=pendingDeliveries" ><h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1></a>
+                    <a href="/DEA-DietMe/Profile? =ProfileInfo" ><h1 class="profileTabs" id="personalInfo">Personal Info </h1></a>
+                     <a href="/DEA-DietMe/Profile? =CustomMeals" ><h1 class="profileTabs" id="customMeals">Custom Meals</h1></a>
+                    <a href="/DEA-DietMe/Profile? =Cart" ><h1 class="profileTabs" id="cart">Cart</h1></a>
+                    <a href="/DEA-DietMe/Profile? =Favourites" ><h1 class="profileTabs" id="favourites">Favourites</h1></a>
+                    <a href="/DEA-DietMe/Profile? =Notifications" ><h1 class="profileTabs" id="notifications">Notifications</h1></a>
+                    <a href="/DEA-DietMe/Profile? =PurchaseHistory" ><h1 class="profileTabs" id="purchaseHistory">Purchase History</h1></a>
+                    <a href="/DEA-DietMe/Profile? =PendingDeliveries" ><h1 class="profileTabs" id="pendingDeliveries">Pending Deliveries</h1></a>
                 </div>
             </div>
         
                     <div class="profileDivRight profileDiv">
                         <%
-                                        String name = (String) request.getAttribute("fileName");
+                                        String name = (String) request.getParameter(" ");
                                        
                                         if (name == null || name.isEmpty())
                                         {
-                                            name = "profileInfo";
+                                            name = "ProfileInfo";
                                         }
                                         
-                                        String path = "ProfileFrag/"+ name+".jsp";
+
                         %>
-                        <jsp:include page="<%= path %>" />
+                        <jsp:include page="<%= "/" + name%>" />
                     </div>
           
         </div>
 
-        <%@include file="../../WEB-INF/jspf/Common/footer.jspf"  %>
+        <%--<%@include file="JSP/Common/footer.jspf"  %>--%>
 
         
         
