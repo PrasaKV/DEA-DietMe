@@ -65,7 +65,9 @@
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notification.js")%>" defer></script>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/notificationMassage.js")%>" defer></script>
 
+
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/cart.js")%>" defer></script>
+
         
         
         
