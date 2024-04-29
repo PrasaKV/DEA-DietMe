@@ -18,7 +18,7 @@
             <div class="card">
                 <h2>Sign Up to continue</h2>
                 <hr>
-                <form action="/DEA-DietMe/UserController?request=register" method="POST">
+                <form action="${pageContext.request.contextPath}/auth/registerMethod" method="POST">
                     
                     <label for="fullname">Full Name:</label>
                     <input type="text" id="fullname" name="name" placeholder="">
@@ -35,7 +35,7 @@
                     <button class="green-btn" type="submit">Sign Up</button>
                 </form>
                 <div class="register-text">
-                    <p>Already have an account? <a href="Sign_In.jsp">Login</a></p>
+                    <p>Already have an account? <a href="${pageContext.request.contextPath}/auth/login">Login</a></p>
                 </div>
             </div>
         </div>

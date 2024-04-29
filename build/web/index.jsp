@@ -20,7 +20,7 @@
         <title>home</title>
     </head>
     <body>
-        <%@include file="WEB-INF/jspf/Common/navbar.jspf" %>
+        <%@include file="JSP/Common/navbar.jspf" %>
         
 
     <div class="homePageDiv">
@@ -51,6 +51,27 @@
 
         <div class="mealsDiv">
             <h2 class="topic2">Popular Meals</h2>
+            <div class="mealsCarouselDiv">
+                <div class="mealsListDiv">
+                    <div class="Card">
+                        <div class="cardImageDiv">
+                            <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
+                        </div>
+                        <div class="mealDiscriptionDiv">
+                            <p> A meal pack for breakfast with three portions and a beverage</p>
+                        </div>
+                        <div class="mealCalDiv">
+                            <p>1200 Calories</p>
+                        </div>
+                        <div class="mealPriceDiv">
+                            <p>Rs.1000/=</p>
+                        </div>
+                        <div class="orderButtonDiv">
+                            <button class="orderButton">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="feedbackDiv">
@@ -67,6 +88,6 @@
     </div>
     
 
-        <%@include file="WEB-INF/jspf/Common/footer.jspf"%>
+        <%@include file="JSP/Common/footer.jspf"%>
     </body>
 </html>
