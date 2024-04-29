@@ -4,8 +4,12 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.UUID;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -17,8 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-@WebServlet(urlPatterns = {"/mealItems/new", "/mealItems/insert", "/mealItems/delete",
-    "/mealItems/edit", "/mealItems/update", "/mealItems/show"})
+@WebServlet(urlPatterns = {"/admin/meal-items/new", "/admin/meal-items/insert", "/admin/meal-items/delete",
+    "/admin/meal-items/edit", "/admin/meal-items/update", "/admin/meal-items/show"})
 @MultipartConfig
 public class MealItemsServlet extends HttpServlet {
 
@@ -42,22 +46,22 @@ public class MealItemsServlet extends HttpServlet {
 
         try {
             switch (action) {
-                case "/mealItems/new": // Changed to match the URL pattern for adding new items
+                case "/admin/meal-items/new": // Changed to match the URL pattern for adding new items
                     showNewForm(request, response);
                     break;
-                case "/mealItems/insert": // Changed to match the URL pattern for inserting new items
+                case "/admin/meal-items/insert": // Changed to match the URL pattern for inserting new items
                     insertMealItemDesc(request, response);
                     break;
-                case "/mealItems/delete": // Changed to match the URL pattern for deleting items
+                case "/admin/meal-items/delete": // Changed to match the URL pattern for deleting items
                     deleteMealIngredientDetails(request, response);
                     break;
-                case "/mealItems/edit": // Changed to match the URL pattern for editing items
+                case "/admin/meal-items/edit": // Changed to match the URL pattern for editing items
                     showEditForm(request, response);
                     break;
-                case "/mealItems/update": // Changed to match the URL pattern for updating items
+                case "/admin/meal-items/update": // Changed to match the URL pattern for updating items
                     updateMealItem(request, response);
                     break;
-                case "/mealItems/show": // Changed to match the URL pattern for displaying all items
+                case "/admin/meal-items/show": // Changed to match the URL pattern for displaying all items
                     listMealIngredientDetails(request, response);
                     break;
                 default:
@@ -139,7 +143,7 @@ public class MealItemsServlet extends HttpServlet {
 
         // Saving the image file
         String uploadPath
-                = "C:/Users/kavin/OneDrive/Desktop/DBImages/"
+                = "D:/SOFTWERE ENGENEERING/My-Projects/DEA-DietMe/web/DBImages/"
                 + imageFileName;
         try (FileOutputStream fos = new FileOutputStream(uploadPath);
                 InputStream is = file.getInputStream()) {
@@ -167,8 +171,8 @@ public class MealItemsServlet extends HttpServlet {
         } else {
             request.setAttribute("status", "InsertFailed");
         }
-        RequestDispatcher dispatcher =
-                request.getRequestDispatcher("/JSP/Admin/mealItems/addMealIngredianDetails.jsp");
+        RequestDispatcher dispatcher
+                = request.getRequestDispatcher("/JSP/Admin/mealItems/addMealIngredianDetails.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -205,41 +209,30 @@ public class MealItemsServlet extends HttpServlet {
         }
 
         String mealIngdName = request.getParameter("mealItemName");
-        String imgUrl = request.getParameter("imgUrl");
         String existingImageUrl = request.getParameter("existingImageUrl");
-
         String description = request.getParameter("description");
         double defaultGrams = Double.parseDouble(request.getParameter("defaultGrams"));
         double defaultPrice = Double.parseDouble(request.getParameter("defaultPrice"));
         double defaultCal = Double.parseDouble(request.getParameter("defaultCalories"));
         double defaultProtien = Double.parseDouble(request.getParameter("defaultProteins"));
         double defaultCarbs = Double.parseDouble(request.getParameter("defaultCarbs"));
-        Part file = null;
-        out.print("new" + imgUrl);
-        out.print("db" + existingImageUrl);
+        Part filePart = request.getPart("imgUrl");
 
-        if (imgUrl != null && !imgUrl.isEmpty()) { // Check if imgUrl is not null and not empty
-            try {
-                file = request.getPart("imgUrl");
-                imageFileName = file.getSubmittedFileName();
+        // Check if imgUrl is not null and not empty
+        if (filePart != null && filePart.getSize() > 0) {
+            // Image upload logic
+            imageFileName = filePart.getSubmittedFileName();
+            String uploadPath = "D:/SOFTWERE ENGENEERING/My-Projects/DEA-DietMe/web/DBImages/" + imageFileName;
 
-                // Saving the image file
-                String uploadPath = "C:\\upload\\" + imageFileName;
-
-                try (FileOutputStream fos = new FileOutputStream(uploadPath);
-                        InputStream is = file.getInputStream()) {
-                    byte[] data = new byte[is.available()];
-                    is.read(data);
-                    fos.write(data);
-                    out.println("Image successfully saved in folder location.");
-                }
-
-                System.out.println("Image successfully saved in folder location.");
-
-            } catch (ServletException ex) {
-                Logger.getLogger(MealItemsServlet.class.getName()).log(Level.SEVERE, null, ex);
+            try (FileOutputStream fos = new FileOutputStream(uploadPath);
+                    InputStream is = filePart.getInputStream()) {
+                byte[] data = new byte[is.available()];
+                is.read(data);
+                fos.write(data);
+                out.println("Image successfully saved in folder location.");
             }
         } else {
+            // Use existing image if no new image uploaded
             imageFileName = existingImageUrl;
         }
 
