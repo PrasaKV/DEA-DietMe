@@ -6,24 +6,25 @@
 package com.teamhydra.Objects;
 
 
+
 /**
  *
  * @author adipasith
  */
 public class UserInfo {
     
-    private int userId;
-    private String name;
-    private String email;
-    private String password;
-    private int phone;
-    private String address;
-    private String profileImage;
+    private int userId = 0;
+    private String name = "Jhone Doe";
+    private String email = "Example@com";
+    private String password = "123";
+    private String phone = "15654";
+    private String address = "1/2,ABC Street/ Colombo";
+    private String profileImage ="Common Resources/Assets/avatar.png";
     
     public UserInfo() {
     }
     
-    public UserInfo(int userId, String name, String email, String password, int phone, String address) {
+    public UserInfo(int userId, String name, String email, String password, String phone, String address) {
         this.userId = userId;
         this.name = name;
         this.email = email;
@@ -64,11 +65,11 @@ public class UserInfo {
     public void setPassword(String password) {
         this.password = password;
     }
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
     
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
     public String getAddress() {
@@ -79,11 +80,11 @@ public class UserInfo {
         this.address = address;
     }
     
-    public String getprofileImage() {
+    public String getProfileImage() {
         return profileImage;
     }
     
-    public void setprofileImage (String profileImage) {
+    public void setProfileImage (String profileImage) {
         this.profileImage = profileImage;
     }
 }

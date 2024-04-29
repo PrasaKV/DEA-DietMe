@@ -34,13 +34,13 @@ body {
     
 }
 
-h3 {
+/*h3 {
     text-align: start;
     margin-bottom: 20px;
     border-bottom: 2px solid #01CA5E;
     position: relative;
     top: 20px;
-}
+}*/
 
 .cvc{
     display: flex;
@@ -77,28 +77,28 @@ h3 {
     border-right: none;
 }
 
-h2 {
+/*h2 {
     margin-bottom: 10px;
-}
+}*/
 
 .form-group {
     margin-bottom: 15px;
 }
-
+/*
 label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-}
+}*/
 
 
-input[type="text"], select {
+/*input[type="text"], select {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-}
+}*/
 
 .cvcchange[type="text"]{
     width: 20%;
@@ -155,7 +155,7 @@ textarea {
     
 }
 
-button {
+/*button {
     padding: 5px 10px;
     border: none;
     border-radius: 3px;
@@ -171,4 +171,4 @@ button:first-child {
 button:last-child {
     background-color: #01CA5E;
     color: #fff;
-}
+}*/

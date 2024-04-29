@@ -10,7 +10,7 @@
         <div class="notification-container">
             
             
-            <jsp:include page="../../jspf/Profile/PendingDelMassage.jspf"/>
+            <%--<jsp:include page="../../jspf/Profile/PendingDelMassage.jspf"/>--%>
             
         </div>
         
