@@ -34,7 +34,7 @@ public class User {
         this.password = password;
         this.confirmpassword = confirmpassword;
     }
-     
+    
     public User(String email, String password, String confirmpassword) {
         this.email = email;
         this.password = password;
