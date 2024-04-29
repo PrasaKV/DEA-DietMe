@@ -8,6 +8,14 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.teamhydra.Sign_UpIn_Controller.RegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UserVerify</servlet-name>
+        <servlet-class>com.teamhydra.Userverify.UserVerify</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>VerifyCode</servlet-name>
+        <servlet-class>com.teamhydra.Userverify.VerifyCode</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Usercontroller</servlet-name>
         <url-pattern>/Usercontroller</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserVerify</servlet-name>
+        <url-pattern>/UserVerify</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerifyCode</servlet-name>
+        <url-pattern>/VerifyCode</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
