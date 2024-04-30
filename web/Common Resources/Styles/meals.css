@@ -2,17 +2,18 @@
 .background-image{
                 height: 700px;
                 width:1500px;
+                
             }  
 
             .navbar2 {
                 z-index: 100;
-                position:relative;
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                background-color: rgba(0, 0, 0, 0.75);
-                background-position:bottom;
+                background-color: rgba(0, 0, 0, 10);
                 box-sizing: border-box;
+                position: absolute;
+                
             }
 
 
@@ -153,8 +154,6 @@
                 margin: 20px;
                 border-radius: 10px;
                 text-align: center;
-
-
 
             }
 
