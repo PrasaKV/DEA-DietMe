@@ -1,9 +1,4 @@
-<%-- 
-    Document   : meals
-    Created on : Apr 17, 2024, 12:35:20 AM
-    Author     : Imandi
---%>
-
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +9,7 @@
         <title>meals</title>
     </head>
     <body>
-        <%@include file="../../WEB-INF/jspf/Common/navbar.jspf" %>
+        
 
         <div class="container">
 
@@ -27,6 +22,9 @@
                     </div>
                 </div>
             </center>
+            
+            
+            
             <div class="navbar2" >
                 <nav class="secondary-menu" >
                     <ul>
@@ -65,8 +63,35 @@
                     </ul>
                 </nav>
             </div>
+            
+            <div class="mealsDiv">
+            
+            <div class="mealsCarouselDiv">
+                <div class="mealsListDiv">
+                    <div class="Card">
+                        <div class="cardImageDiv">
+                            <img class="cardImage" src="../../Common Resources/Images/Card image.jpg" alt="Image">
+                        </div>
+                        <div class="mealDiscriptionDiv">
+                            <p> A meal pack for breakfast with three portions and a beverage</p>
+                        </div>
+                        <div class="mealCalDiv">
+                            <p>1200 Calories</p>
+                        </div>
+                        <div class="mealPriceDiv">
+                            <p>Rs.1000/=</p>
+                        </div>
+                        <div class="orderButtonDiv">
+                            <button class="orderButton">More details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
             
-        <%@include file="../../WEB-INF/jspf/Common/footer.jspf"  %>
+        </div>
+            
+        
     </body>
 </html>
