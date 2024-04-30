@@ -298,13 +298,61 @@
         width: 1000px;
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(3px);
+        
+        .commentContainer {
+          display: flex;
+          margin-bottom: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-bottom: 20px;
+          padding-top: 20px;
+          padding-right: 20px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 15px;
+    
+          position: absolute;
+          z-index: 5;
+          top: 20px;
+        }
+        .commentImageDiv {
+            width: 60px;
+            height: 60px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 50%;
+      
+            .commentImage {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+            }
+        }
+        
+        .commentText {
+            flex-grow: 1;
+        }
+
+        .userName {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+
+        .commentcontent{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+        }
       }
       
       .commentbar{
         height: 150px;
         width: 1000px;
         position: absolute;
+        z-index: 10;
         bottom: 0;
+        
+        background-color: white;
 
         background-image: url("../Images/Feedback image.png");
         background-size: 800px 530px;
@@ -318,10 +366,67 @@
       .backblur2{
         height: 150px;
         width: 1000px;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
 
         position: absolute;
         bottom: 0;
+        
+         #newCommentForm{
+          height: 100px;
+          width: 950px;
+        }
+    
+        #commentText{
+          height: 60px;
+          width: 850px;
+          position: absolute;
+          top: 40px;
+    
+          margin-left: 40px;
+          border-radius: 15px;
+          border: none;
+          padding: 20px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+          flex-grow: 1;
+        }
+
+        .sendButton{
+          height: 60px;
+          width: 60px;
+    
+          position: absolute;
+          top: 40px;
+          right: 40px;
+    
+          border-radius: 15px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .sendButton:active {
+          height: 60px;
+          width: 60px;
+      
+          position: absolute;
+          top: 40px;
+          right: 40px;
+      
+          border-radius: 15px;
+      
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+    
+        .sendImage{
+          height: 35px;
+          width: 35px;
+    
+          position: absolute;
+          top: 13px;
+          right: 10px;
+    
+          border-radius: 15px;
+        }
       }
       }
     }
