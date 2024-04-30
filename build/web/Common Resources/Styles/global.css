@@ -42,6 +42,18 @@ a {
   font-family: 'Lilita One', cursive;
   cursor: pointer;
 }
+.buttonRed
+{
+    background-color: #F10000;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 0px 10px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Lilita One', cursive;
+  cursor: pointer;
+}
 
 .customInput
 {
@@ -142,6 +154,21 @@ body
 .profilePic {
   visibility: hidden;
 }
+.loggedName{
+
+        font-family:sans-serif;
+        font-weight: 800;
+        font-size: 1.1rem;
+        font-variant: petite-caps;
+}
+.navProfileImage{
+    border-radius: 100px;
+    transform: translateX(-5px);
+    width: 33px;
+    height: 33px;
+}
+
+
 
 /* ID */
 #navLogin {
@@ -151,7 +178,7 @@ body
   border: 3px solid black;
   border-radius: 15px;
   height: 50%;
-  width: 100px;
+  width: 130px;
   margin-right: 5px;
   transition: 0.5s;
 }
@@ -173,6 +200,8 @@ body
   color: white;
   transition: 0.5s;
 }
+
+
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
@@ -427,4 +456,8 @@ body
   .alrightRecived {
     font-size: 0.4rem;
   }
+}
+
+.loggedName{
+    color: #01ca5e;
 }

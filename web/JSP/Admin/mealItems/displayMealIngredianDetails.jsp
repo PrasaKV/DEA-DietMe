@@ -1,9 +1,10 @@
 <%@page import="java.io.File"%>
-<%@page import="com.dietme.utill.PathProvider"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="com.dietme.mealItems.MealItems" %>
 <%@ page import="java.util.List" %>
+<%@page import="com.teamhydra.util.assetsUrl"%>
+
 
 <%
     // Assuming mIDList is a List<MealItems> passed as a request attribute
@@ -18,7 +19,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>CMS Dashboard</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<%=PathProvider.giveUrl(request, "common/styles/custom.css")%>">
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "JSP/Admin/common/styles/custom.css")%>">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -33,9 +34,9 @@
     <body>
         <div class="wrapper">
             <div class="body-overlay"></div>
-            <%@include file="../../common/widgets/sidenavbar.jsp" %>
+            <%@include file="../common/widgets/sidenavbar.jsp" %>
             <div id="content">
-                <%@include file="../../common/widgets/topnavbar.jsp" %>
+                <%@include file="../common/widgets/topnavbar.jsp" %>
                 <div class="main-content">
                     <div class="container-fluid">
                         <div class="row">
@@ -72,10 +73,11 @@
                                             <td><%= item.getMealItemId()%></td>
                                             <td><%= item.getMealItemName()%></td>
                                             <%
-                                                String externalFilePath = "C:/DBImages/"+item.getImgurl(); // Example external file path
-                                                File imageFile = new File(externalFilePath);
+                                                String externalFilePath = "file:///C:/DBImages/" + item.getImgurl(); // Constructing file URL
                                             %>
                                             <td><img src="<%=externalFilePath%>" style="width:5rem;height:5rem"></td>
+
+
                                             <td><%= item.getDefaultGrams()%></td>
                                             <td><%= item.getDefaultPrice()%></td>
                                             <td><%= item.getDefaultCal()%></td>
@@ -114,23 +116,24 @@
 
     <script>
                                                        function confirmDelete(itemId) {
-                                                       // Display a confirmation dialog using SweetAlert
-                                                       swal({
-                                                       title: "Are you sure?",
-                                                               text: "Once deleted, you will not be able to recover this item!",
-                                                               icon: "warning",
-                                                               buttons: true,
-                                                               dangerMode: true,
-                                                       }).then((willDelete) = > {
-                                                       if (willDelete) {
-                                                       // Redirect to the delete action with the item ID
-                                                       window.location.href = "delete?id=" + itemId;
-                                                       } else {
-                                                       // Do nothing if the user cancels
-                                                       }
-                                                       });
-                                                       // Return false to prevent the default link action
-                                                       return false;
+                                                           // Display a confirmation dialog using SweetAlert
+                                                           swal({
+                                                           title: "Are you sure?",
+                                                                   text: "Once deleted, you will not be able to recover this item!",
+                                                                   icon: "warning",
+                                                                   buttons: true,
+                                                                   dangerMode: true,
+                                                           }).then((willDelete) = > {
+                                                           if (willDelete) {
+                                                               // Redirect to the delete action with the item ID
+                                                               window.location.href = "delete?id=" + itemId;
+                                                           } else {
+                                                               // Do nothing if the user cancels
+                                                           }
+                                                           }
+                                                           );
+                                                                   // Return false to prevent the default link action
+                                                                   return false;
                                                        }
     </script>
 

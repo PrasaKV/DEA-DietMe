@@ -14,7 +14,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sign In Form</title>
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/styles.css")%>"/>
-        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/Sign_up_in.js")%>"></script>
     </head>
     <body>
         <div class="center">
@@ -23,22 +22,21 @@
                 <h4>Sign in to continue</h4>
                 <hr>
 
-                <form action="/DEA-DietMe/SignInController" method="post" class="login-form" onsubmit="return validate();">
+                <form action="${pageContext.request.contextPath}/auth/loginMethod" method="post" class="login-form">
 
 
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email" required="required">
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
                 </div>
-                    
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required="required">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
                 </div>
 
 
                 <div class="forgot-password-link">
-                    <a href="Forgot_password.jsp?email=<%= request.getParameter("email") %>">Forgot password?</a>
+                    <a href="Forgot_password.jsp">Forgot password?</a>
                 </div>
 
 
@@ -48,12 +46,14 @@
 
 
                 <div class="register-text">
-                    <p>Haven't registered yet? <a href="Sign_up.jsp">Register</a></p>
+                    <p>Haven't registered yet? <a href="${pageContext.request.contextPath}/auth/register">Register</a></p>
                 </div>
             </form>
 
             
-            
+            <div class="carousel-card">
+                
+            </div>
         </div>
     </body>
 </html>

@@ -17,21 +17,34 @@ public class UserInfo {
     private String name = "Jhone Doe";
     private String email = "Example@com";
     private String password = "123";
-    private String phone = "15654";
+    private int phone = 15654;
     private String address = "1/2,ABC Street/ Colombo";
     private String profileImage ="Common Resources/Assets/avatar.png";
     
     public UserInfo() {
     }
     
-    public UserInfo(int userId, String name, String email, String password, String phone, String address) {
+    public UserInfo(int userId, String name, String email, String password, int phone, String address,String profileImage) {
         this.userId = userId;
         this.name = name;
         this.email = email;
         this.password = password;
         this.phone = phone;
         this.address = address;
+        this.profileImage = profileImage;
     }
+
+    public UserInfo(String name, String email, String password, int phone, String address) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.phone = phone;
+        this.address = address;
+    }
+
+  
+
+  
     
 
     public int getId() {
@@ -65,11 +78,11 @@ public class UserInfo {
     public void setPassword(String password) {
         this.password = password;
     }
-    public String getPhone() {
+    public int getPhone() {
         return phone;
     }
     
-    public void setPhone(String phone) {
+    public void setPhone(int phone) {
         this.phone = phone;
     }
     public String getAddress() {
