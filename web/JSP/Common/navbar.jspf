@@ -19,26 +19,37 @@
         </a>
         
         
-        <%
-            if (session.getAttribute("userName") == null) {
-        %>
-          <a href="${pageContext.request.contextPath}/auth/login" class="" id="navLogin">
-            <button class="selection" id="loginButton">
-                Login
-            </button>
-          </a>
-        <%
-        } else {
-        %>
-        <a href="/DEA-DietMe/Profile" class="" id="navLogin">
-            <button class="selection loggedName" id="loginButton">
-                <%=session.getAttribute("userName").toString()%>
-            </button>
-                <img class="navProfileImage" src="<%=assetsUrl.giveUrl(request, session.getAttribute("profileImage").toString()) %>" loading="lazy" width="24px" height="24px">
-          </a>
-        <%
-            }
-        %>
+                                <%
+                                String currentPage = request.getRequestURI().trim();
+                                String[] words = currentPage.split("/");
+                                String lastWord = words[words.length - 1];
+
+                                if (session.getAttribute("userName") == null) {
+                                %>
+                                <a href="${pageContext.request.contextPath}/auth/login" id="navLogin">
+                                    <button class="selection" id="loginButton">Login</button>
+                                </a>
+                                <%
+                                } else {
+                                    if (lastWord.equals("Profile")) {
+                                %>
+                                        <a href="${pageContext.request.contextPath}/auth/logOutMethod" id="navLogin">
+                                            <button class="selection" id="loginButton">Log Out</button>
+                                        </a>
+                                <%
+                                    } else {
+                                %>
+                                        <a href="${pageContext.request.contextPath}/Profile" id="navLogin">
+                                            <button class="selection loggedName" id="loginButton">
+                                                <%= session.getAttribute("userName").toString() %>
+                                            </button>
+                                            <img class="navProfileImage" src="<%= assetsUrl.giveUrl(request, session.getAttribute("profileImage").toString()) %>" loading="lazy" width="24px" height="24px">
+                                        </a>
+                                <%
+                                    }
+                                }
+                                %>
+
         <a class="profilePic" href="#">
             <img class="profilePic" src="#">
         </a>
@@ -59,3 +70,4 @@
         </div>
     </div>
 </div>
+                

@@ -67,7 +67,7 @@ public class HomeServlet extends HttpServlet {
         request.setAttribute("test", "this home page");
         RequestDispatcher dispatcher
                 = request.getRequestDispatcher("home.jsp");
-        dispatcher.forward(request, response);
+            dispatcher.forward(request, response);
     }
 
 }

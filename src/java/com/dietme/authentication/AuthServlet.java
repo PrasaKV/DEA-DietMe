@@ -15,7 +15,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns = {
-    "/auth/register", "/auth/login","/auth/loginMethod","/auth/registerMethod"})
+    "/auth/register", "/auth/login","/auth/loginMethod","/auth/registerMethod","/auth/logOutMethod"})
 public class AuthServlet extends HttpServlet {
     
    
@@ -54,6 +54,9 @@ public class AuthServlet extends HttpServlet {
                 break;
             case "/auth/loginMethod":
                 loginUser(request, response);
+                break;
+                case "/auth/logOutMethod":
+                logOut(request, response);
                 break;
             default:
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid action");
@@ -135,5 +138,14 @@ public class AuthServlet extends HttpServlet {
             e.printStackTrace();
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Login failed");
         }
+    }
+            private void logOut(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+                HttpSession session = request.getSession();
+
+                session.invalidate();
+                
+                response.sendRedirect("/DEA-DietMe/home");
+        
     }
 }
