@@ -23,7 +23,7 @@
       href="https://fonts.googleapis.com/css2?family=Istok Web:wght@400&display=swap"
     />
     <link
-      rel="stylesheet"
+      rel="stylesheet"8
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
     />
     </head>
