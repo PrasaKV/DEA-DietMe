@@ -29,8 +29,8 @@ import javax.servlet.http.Part;
  *
  * @author kavin
  */
-@WebServlet(urlPatterns = {"/default-meals/new", "/default-meals/insert-basic-details", "/default-meals/delete",
-    "/default-meals/edit", "/default-meals/update", "/default-meals/show-all-items","/default-meals/insert-mealsub"})
+@WebServlet(urlPatterns = {"/admin/default-meals/new", "/admin/default-meals/insert-basic-details", "/admin/default-meals/delete",
+    "/admin/default-meals/edit", "/admin/default-meals/update", "/admin/default-meals/show-all-items", "/admin/default-meals/remove-mealsub", "/admin/default-meals/insert-mealsub"})
 @MultipartConfig
 public class DefaultMealsServlet extends HttpServlet {
 
@@ -59,24 +59,28 @@ public class DefaultMealsServlet extends HttpServlet {
 
         try {
             switch (action) {
-                case "/default-meals/new":
+                case "/admin/default-meals/new":
                     showNewForm(request, response);
                     break;
-                case "/default-meals/insert-basic-details":
+                case "/admin/default-meals/insert-basic-details":
                     insertDefaultMeal(request, response);
                     break;
-                case "/default-meals/delete":
+                case "/admin/default-meals/delete":
                     deleteMeal(request, response);
                     break;
-                case "/default-meals/edit":
+                case "/admin/default-meals/edit":
+                    showEditForm(request, response);
                     break;
                 case "/default-meals/update":
                     break;
-                case "/default-meals/show-all-items":
+                case "/admin/default-meals/show-all-items":
                     listDefaultMeals(request, response);
                     break;
-                case "/default-meals/insert-mealsub":
+                case "/admin/default-meals/insert-mealsub":
                     addNewMealSubItem(request, response);
+                    break;
+                case "/admin/default-meals/remove-mealsub":
+                    removemealItem(request, response);
                     break;
                 default:
                     break;
@@ -99,7 +103,7 @@ public class DefaultMealsServlet extends HttpServlet {
         List<DefaultMeals> dmList = dmDao.findAll();
         request.setAttribute("dMList", dmList);
         dispatcher = request.getRequestDispatcher(
-                "/jsp/default-meals/displayDefaultMealsDetails.jsp");
+                "/JSP/Admin/default-meals/displayDefaultMealsDetails.jsp");
 
         dispatcher.forward(request, response);
     }
@@ -107,7 +111,7 @@ public class DefaultMealsServlet extends HttpServlet {
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         RequestDispatcher dispatcher
-                = request.getRequestDispatcher("/jsp/default-meals/addDefaultMeal.jsp");
+                = request.getRequestDispatcher("/JSP/Admin/default-meals/addDefaultMeal.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -156,18 +160,17 @@ public class DefaultMealsServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/default-meals/addDefaultMeal.jsp");
-//        dispatcher.forward(request, response);
-//    private void showEditForm(HttpServletRequest request, HttpServletResponse response)
-//            throws ServletException, IOException {
-//        // Implement edit form display
-//        String id = request.getParameter("id"); // Get the ID of the item to edit
-//        // Fetch the item from the database using the DAO
-//        MealItems mealItem = mIDDao.findById(Integer.parseInt(id));
-//        request.setAttribute("MealItem", mealItem);
-//        RequestDispatcher dispatcher = request.getRequestDispatcher("/jsp/mealItems/addMealIngredianDetails.jsp");
-//        dispatcher.forward(request, response);
-//    }
+
+    private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Implement edit form display
+        String id = request.getParameter("id"); 
+        // Fetch the item from the database using the DAO
+        DefaultMeals defaultMeals = dmDao.findById(Integer.parseInt(id));
+        request.setAttribute("DefaultMeals", defaultMeals);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Admin/default-meals/addDefaultMeal.jsp");
+        dispatcher.forward(request, response);
+    }
 //
 //    private void updateMealItem(HttpServletRequest request, HttpServletResponse response)
 //            throws ServletException, IOException, SQLException {
@@ -245,8 +248,13 @@ public class DefaultMealsServlet extends HttpServlet {
     private void deleteMeal(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // Implement delete method
-        String id = request.getParameter("id"); // Get the ID of the item to delete
+        String id = request.getParameter("id");
+        try {
+            maIDo.deleteByMealId(Integer.parseInt(id));
+        } catch (Exception e) {
+        }
         dmDao.delete(Integer.parseInt(id));
+
         response.sendRedirect("show-all-items");
     }
 
@@ -284,6 +292,15 @@ public class DefaultMealsServlet extends HttpServlet {
         }
 
     }
+
+    private void removemealItem(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // Implement delete method
+        String id = request.getParameter("id"); // Get the ID of the item to delete
+        maIDo.delete(Integer.parseInt(id));
+        response.sendRedirect("new");
+    }
+
 
     /*-----------------This is end of addedmealitem function codes----------------*/
     @Override
