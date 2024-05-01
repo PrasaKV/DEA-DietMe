@@ -1,0 +1,265 @@
+/* Card */
+
+#yourMealsContainer
+{
+    display: flex;
+}
+
+
+.createMealCard
+{
+  width: 160px;
+  height: 260px;
+  
+  position: relative;
+
+  background-color: white;
+  border-radius: 15px;
+
+  margin-right: 20px;
+  margin-top: 20px;
+
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.3);
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.createMealCard:hover{
+  box-shadow: 0 8px 16px 4px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  border: 1px solid #01ca5e;
+}
+
+
+.createMealCardImage
+{
+  width: 90%;
+  height: 50%;
+  object-fit: cover;
+
+  margin-top: 10px;
+  margin-right: 5%;
+  margin-left: 5%;
+
+  border-radius: 15px;
+}
+.createMealCardName
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+.createMealCardPrice
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+#createMealCardAddToCartButton
+{
+  position: absolute;
+  width: 100px;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+
+/* PopUp */
+#mealsPopupContainerId{
+    
+}
+
+.mealsPopupContainer
+{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 90;
+  left: 0;
+  top: 50%;
+  transform: translateY(-30%);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0,0.5);
+  backdrop-filter: blur(5px);
+
+  transition: 1s;
+}
+.editMealsLeft
+{
+
+  border-radius: 15px;
+  background-color: white;
+  width: 60vw;
+  height: 80vh;
+  margin: 10px;
+
+  overflow: hidden;
+  border: 3px solid #01ca5e;
+}
+.editMealsRight
+{
+  border-radius: 15px;
+  background-color: white;
+  width: 15vw;
+  height: 80vh;
+  margin: 15px;
+
+  overflow: hidden;
+  border: 3px solid #01ca5e;
+}
+.popupCreateMealsLeftHeaderContainer
+{
+  height: 80px;
+  border-bottom: 3px solid #01ca5e;
+}
+.popupCreateMealNameInput
+{
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 40%;
+  height: 25px;
+  border: none;
+  border-bottom: 2px solid #01ca5e;
+  background-color: transparent;
+  outline: none;
+}
+.popupCreateMealDiscriptionInput
+{
+  margin-left: 20px;
+  margin-top: 10px;
+  width: 90%;
+  height: 25px;
+  border: none;
+  border-bottom: 2px solid #01ca5e;
+  background-color: transparent;
+  outline: none;
+}
+.popupCreateMealsPortionLable
+{
+  margin-bottom: 10px;
+  font-size: 15px;
+
+  font-weight: 600;
+  font: 1em sans-serif;
+
+}
+.popupCreateMealsPortionsContainer
+{
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10px;
+
+}
+.popupCreateMealsPortionDivs
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  margin-top: 10px;
+  height:10%;
+}
+.popupCreateMealsPortionFirstSection
+{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.popupCreateMealsPortionSecondSection
+{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+.createMealPopupButtonDiv
+{
+  display: flex;
+  justify-content: space-evenly;
+  
+  margin-top: 15px;
+  border-top: 3px solid #01ca5e;
+
+  position: sticky;
+  bottom: 0;
+}
+#popupCreateMealsAddPortion
+{
+  margin-top: 15px;
+}
+#popupCreateMealsSave
+{
+  margin-top: 15px;
+}
+#popupCreateMealsCancel
+{
+  margin-top: 15px;
+}
+#popupCreateMealsAddtocart
+{
+  margin-top: 15px;
+}
+
+
+/* Right */
+
+.popupCreateMealsRightHeaderContainer
+{
+  height: 80px;
+  border-bottom: 3px solid #01ca5e;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  
+}
+.popupCreateMealsRightPortionContainer
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+
+  margin-top: 10px;
+  transform: translateY(27px);
+}
+.popupCreateMealsPortionCal
+{
+}
+.popupCreateMealsPortionPrice
+{
+}
+.popupCreateMealsRightPortionTotalContainer
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+
+  margin-top: 20px;
+  border-top: 3px solid #01ca5e;
+}
+

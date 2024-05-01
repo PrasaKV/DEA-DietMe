@@ -7,6 +7,12 @@
 }
 
 /* class */
+
+.hiddenData
+{
+    visibility: hidden;
+}
+
 .createMealsDiv
 {
   margin: 20px;
@@ -63,7 +69,7 @@
 {
   width: 75%;
   height: fit-content;
-
+  margin-left: 10px;
 }
 .createMealsLeftHeaderContainer
 {
@@ -142,9 +148,16 @@
 
 
 /* ID */
+#yourMeals
+{
+    border-left: 3px solid #01ca5e;
+    border-top:3px solid #01ca5e;
+    border-right: 3px solid #01ca5e;
+    border-bottom: 3px solid #F0EFF4 ;
+}
 #createMeals
 {
-  transform: translateX(-5px) translateY(3px);
+  transform: translateX(-3px) translateY(3px);
 }
 
 #createMealsAddPortion

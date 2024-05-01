@@ -22,45 +22,48 @@ public class customMealDAO {
          
         int success = 0;
         
-           try {
+           
                
             String mealName = jsonData.get("mealName");
-            String mealDescription = jsonData.get("mealDescription");
+            String mealDiscription = jsonData.get("mealDiscription");
             String firstPortion = jsonData.get("firstPortion");
-            String firstPortionSize = jsonData.get("firstPortionSize");
+            Integer firstPortionSize = Integer.parseInt(jsonData.get("firstPortionSize"));
             String secondPortion = jsonData.get("secondPortion");
-            String secondPortionSize = jsonData.get("secondPortionSize");
+            Integer secondPortionSize = Integer.parseInt(jsonData.get("secondPortionSize"));
             String thirdPortion = jsonData.get("thirdPortion");
-            String thirdPortionSize = jsonData.get("thirdPortionSize");
+            Integer thirdPortionSize = Integer.parseInt(jsonData.get("thirdPortionSize"));
             String fourthPortion = jsonData.get("fourthPortion");
-            String fourthPortionSize = jsonData.get("fourthPortionSize");
+            Integer fourthPortionSize = Integer.parseInt(jsonData.get("fourthPortionSize"));
             String fifthPortion = jsonData.get("fifthPortion");
-            String fifthPortionSize = jsonData.get("fifthPortionSize");
+            Integer fifthPortionSize = Integer.parseInt(jsonData.get("fifthPortionSize"));
             
-
+            
             String sql = "INSERT INTO custommeal (userId, mealName, mealDiscription, " +
-                         "firstPortion, firstPortionSize, " +
-                         "secondPortion, secondPortionSize, " +
-                         "thirdPortion, thirdPortionSize, " +
-                         "fourthPortion, fourthPortionSize, " +
-                         "fifthPortion, fifthPortionSize) " +
-                         "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+             "firstPortion, firstPortionSize, " +
+             "secondPortion, secondPortionSize, " +
+             "thirdPortion, thirdPortionSize, " +
+             "fourthPortion, fourthPortionSize, " +
+             "fifthPortion, fifthPortionSize) " +
+             "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
+            
+            try {
+             
             PreparedStatement stmt = DBUtill.setStatment(sql);
-               
-            stmt.setString(1, mealName);
-            stmt.setString(2, mealDescription);
-            stmt.setString(3, firstPortion);
-            stmt.setString(4, firstPortionSize);
-            stmt.setString(5, secondPortion);
-            stmt.setString(6, secondPortionSize);
-            stmt.setString(7, thirdPortion);
-            stmt.setString(8, thirdPortionSize);
-            stmt.setString(9, fourthPortion);
-            stmt.setString(10, fourthPortionSize);
-            stmt.setString(11, fifthPortion);
-            stmt.setString(12, fifthPortionSize);
-            stmt.setInt(13, userId);
+            
+            stmt.setInt(1, userId); 
+            stmt.setString(2, mealName);
+            stmt.setString(3, mealDiscription);
+            stmt.setString(4, firstPortion);
+            stmt.setInt(5, firstPortionSize);
+            stmt.setString(6, secondPortion);
+            stmt.setInt(7, secondPortionSize);
+            stmt.setString(8, thirdPortion);
+            stmt.setInt(9, thirdPortionSize);
+            stmt.setString(10, fourthPortion);
+            stmt.setInt(11, fourthPortionSize);
+            stmt.setString(12, fifthPortion);
+            stmt.setInt(13, fifthPortionSize);
             
             success = stmt.executeUpdate();
             

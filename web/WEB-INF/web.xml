@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
 
+<!--<<<<<<< HEAD-->
     <servlet>
         <servlet-name>Home</servlet-name>
         <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>Meals</servlet-name>
+        <jsp-file>/JSP/Meals/meals.jsp</jsp-file>
     </servlet>
     
    <servlet>
@@ -30,6 +39,22 @@
         <servlet-name>VerifyCode</servlet-name>
         <servlet-class>com.teamhydra.Userverify.VerifyCode</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>com.dietme.productmeal.AddToCartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BuyNowServlet</servlet-name>
+        <servlet-class>com.dietme.productmeal.BuyNowServlet</servlet-class>
+    </servlet>
+<!--<<<<<<< HEAD
+    <servlet>
+        <servlet-name>VerificationServlet</servlet-name>
+        <servlet-class>com.teamhydra.Controllers.VerificationServlet</servlet-class>
+    </servlet>
+=======-->
+
 
     <servlet>
         <servlet-name>navbar</servlet-name>
@@ -76,9 +101,16 @@
         <jsp-file> /JSP/Profile/ProfileFrag/pendingDeliveries.jsp</jsp-file>
     </servlet>
     
+
+<!-->>>>>>> 49defcd3c8bec955b9e5e25cc264b66760a63420-->
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/Home</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>Meals</servlet-name>
+        <url-pattern>/Meals</url-pattern>
     </servlet-mapping>
     
     <servlet-mapping>
@@ -100,6 +132,22 @@
         <servlet-name>VerifyCode</servlet-name>
         <url-pattern>/VerifyCode</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <url-pattern>/AddToCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuyNowServlet</servlet-name>
+        <url-pattern>/BuyNowServlet</url-pattern>
+    </servlet-mapping>
+<!--<<<<<<< HEAD
+    <servlet-mapping>
+        <servlet-name>VerificationServlet</servlet-name>
+        <url-pattern>/VerificationServlet</url-pattern>
+    </servlet-mapping>
+=======-->
+
 
     
     <servlet-mapping>
@@ -147,9 +195,11 @@
         <url-pattern>/PendingDeliveries</url-pattern>
     </servlet-mapping>
 
+
     <session-config>
         <session-timeout>
             30
         </session-timeout>
     </session-config>
+
 </web-app>

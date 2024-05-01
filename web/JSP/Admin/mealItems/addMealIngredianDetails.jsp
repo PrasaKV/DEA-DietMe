@@ -1,18 +1,15 @@
-<%-- 
-    Document   : addMealIngredianDetails
-    Created on : Apr 22, 2024, 8:07:41 PM
-    Author     : kavin
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="com.dietme.utill.PathProvider"%>
+
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<%=PathProvider.giveUrl(request, "common/styles/custom.css")%>">
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "JSP/Admin/common/styles/custom.css")%>">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -39,11 +36,11 @@
                 background-color: #fff;
             }
             /* Hide scrollbar for Chrome, Safari and Opera */
-             .custom-form::-webkit-scrollbar {
+            .custom-form::-webkit-scrollbar {
                 width: 0;
             }
 
-         
+
 
             label {
                 font-weight: 700;
@@ -74,9 +71,9 @@
     <body>
         <div class="wrapper">
             <div class="body-overlay"  style="overflow-y: hidden;position: fixed;top: 0;left: 0;width: 100%">
-                <%@include file="../../common/widgets/sidenavbar.jsp" %>
+                <%@include file="../common/widgets/sidenavbar.jsp" %>
                 <div id="content" style="overflow-y: auto">
-                    <%@include file="../../common/widgets/topnavbar.jsp" %>
+                    <%@include file="../common/widgets/topnavbar.jsp" %>
                     <div class="main-content">
                         <div class="container-fluid" style="overflow-y: auto">
                             <input type="hidden" id="status" value="<%= request.getAttribute("status")%>">
@@ -96,7 +93,7 @@
                                 <!-- Rest of your content -->
                             </div>
 
-                            <div class="scrollable-form mt-1">
+                            <div class="scrollable-form mt-5">
                                 <form class="custom-form" 
                                       action="${MealItem != null ? 'update'
                                                 : 'insert'}" method="post" enctype="multipart/form-data"> 
@@ -122,13 +119,14 @@
                                             %>
 
                                             <% if (imageUrlDB != null) {%>
-                                          <img src="<%= PathProvider.giveUrl(request, "C:\\upload\\") + imageUrlDB %>" style="width:5rem;height:5rem">
+                                            <img src="<%= assetsUrl.giveUrl(request, "DBImages/") + imageUrlDB%>" style="width:5rem;height:5rem">
 
                                             <% }%>
 
                                             <div class="form-group">
                                                 <label for="imgUrl">Add Image</label>
                                                 <input type="file" class="form-control" id="imgUrl" name="imgUrl">
+
 
                                                 <input type="hidden" name="existingImageUrl" value="<%= imageUrlDB%>">
 
@@ -144,7 +142,7 @@
                                                 <label for="defaultPrice">Default Price</label>
                                                 <input type="number" class="form-control" id="defaultPrice"
                                                        name="defaultPrice" placeholder="Enter Default Price(RS)" required
-                                                       value="${MealItem != null ? MealItem.defaultGrams : ''}"
+                                                       value="${MealItem != null ? MealItem.defaultPrice : ''}"
                                                        >
                                             </div>
                                         </div>

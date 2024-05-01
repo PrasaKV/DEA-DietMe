@@ -16,6 +16,8 @@ public class MealAddedItemsDao {
             = "UPDATE mealaddeditems SET"
             + " mealId = ?, mealItemId = ?, inputGrams = ? WHERE submealItemId = ?";
     private static final String DELETE_QUERY = "DELETE FROM mealaddeditems WHERE submealItemId = ?";
+    private static final String DELETE_BY_MEALID_QUERY = "DELETE FROM mealaddeditems WHERE mealId = ?";
+
     private static final String SELECT_BY_ID_QUERY = "SELECT * FROM mealaddeditems WHERE submealItemId = ?";
     private static final String SELECT_ALL_QUERY = "SELECT * FROM mealaddeditems";
 
@@ -57,6 +59,17 @@ public class MealAddedItemsDao {
         try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(DELETE_QUERY)) {
             statement.setInt(1, submealItemId);
+            return statement.executeUpdate() > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public boolean deleteByMealId(int mealId) {
+        try (Connection connection = DBUtill.getConnection();
+                PreparedStatement statement = connection.prepareStatement(DELETE_BY_MEALID_QUERY)) {
+            statement.setInt(1, mealId);
             return statement.executeUpdate() > 0;
         } catch (SQLException e) {
             e.printStackTrace();
