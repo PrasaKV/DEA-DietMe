@@ -93,7 +93,7 @@
                                 <!-- Rest of your content -->
                             </div>
 
-                            <div class="scrollable-form mt-1">
+                            <div class="scrollable-form mt-5">
                                 <form class="custom-form" 
                                       action="${MealItem != null ? 'update'
                                                 : 'insert'}" method="post" enctype="multipart/form-data"> 

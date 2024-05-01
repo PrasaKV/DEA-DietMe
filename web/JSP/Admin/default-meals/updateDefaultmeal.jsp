@@ -16,7 +16,7 @@
 <html lang="en">
     <head>
 
-        <title>Meal Form</title>
+        <title>Update Meal Form</title>
         <%@include file="../common/widgets/cmdlinks.jsp" %>
         <style>
             /* Custom CSS */
@@ -74,7 +74,7 @@
                 <div class="main-content" style="background-color: white" >
                     <input type="hidden" id="status" value="<%= request.getAttribute("status")%>"> 
                     <div class="container">
-                        <h1 class="text-center mt-2">${DefaultMeals != null ? 'Update Meal Item' : 'Add new Meal '}</h1>
+                        <h1 class="text-center mt-2">${MealItem != null ? 'Update Meal Item' : 'Add new Meal '}</h1>
                         <div class="row mt-3" style="align-items: flex-end">
                             <div class=" col-12 d-flex justify-content-end">
                                 <a class="btn btn-dark" href="show-all-items" style="color: white; text-decoration:none">All Items</a>
@@ -143,29 +143,14 @@
                                                           >${MealItem != null ? MealItem.description : ''}</textarea></div>
 
                                         </div>
-                                        <%
-                                            Object DefaultMeals = request.getAttribute("DefaultMeals");
-                                            if (DefaultMeals != null) {
-                                        %>
-                                        <button  type="submit" id="" 
-                                                 class="btn btn-success mt-3" >Update Basic Meal Details</button>
-
-                                        <%
-                                        } else {
-                                        %>
                                         <button  type="submit" id="submitBasic" 
                                                  class="btn btn-success mt-3" >Add Basic Meal Details</button>
-
-                                        <%
-                                            }
-                                        %>
                                     </form>
                                 </div>
                                 <div class="col-md-6 ">
                                     <%
                                         Object idObj = request.getAttribute("DefaultMealId");
-
-                                        if (idObj != null || DefaultMeals != null) {
+                                        if (idObj != null) {
                                     %>
                                     <button onclick="enableSecondForm()" type="submit" id="mealItemsButton" class="btn btn-primary"> Press to Add Meal Items</button>
                                     <%
@@ -192,7 +177,7 @@
                                                                 Statement st = con.createStatement();
                                                                 ResultSet rs = st.executeQuery(query);
                                                                 while (rs.next()) {%>
-                                                        <option value="<%= rs.getInt("mealItemId")%>" style="max-width: 20px; overflow: hidden; text-overflow: ellipsis"><%= rs.getString("mealItemName")%></option>
+                                                                <option value="<%= rs.getInt("mealItemId")%>" style="max-width: 20px; overflow: hidden; text-overflow: ellipsis"><%= rs.getString("mealItemName")%></option>
                                                         <% }
                                                                 con.close();
                                                             } catch (ClassNotFoundException e) {
@@ -216,27 +201,21 @@
                                     </form>
 
                                     <!-- Display items -->
-
                                     <%
-                                        Object mealId;
-                                        if (DefaultMeals != null) {
-                                            mealId = Integer.parseInt("10");
-                                        } else {
-                                            mealId = request.getAttribute("DefaultMealId");
-                                        }
-
-                                        if (idObj != null || DefaultMeals != null) {
+                                        // Check if DefaultMealId attribute exists in the request
+                                        idObj = request.getAttribute("DefaultMealId");
+                                        if (idObj != null) {
                                     %>
-
                                     <h4 class="m-2">Selected meal items</h4>
 
-                                    <%                                        // Establishing database connection
+                                    <%
+                                        // Establishing database connection
                                         try {
                                             Class.forName("com.mysql.cj.jdbc.Driver");
                                             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/dietme", "root", "");
 
                                             // Constructing SQL query to select all meal items for a specific meal
-                                            String query = "SELECT * FROM mealaddeditems WHERE mealID=" + mealId;
+                                            String query = "SELECT * FROM mealaddeditems WHERE mealID=" + idObj;
                                             Statement st = con.createStatement();
                                             ResultSet rs = st.executeQuery(query);
 
@@ -249,7 +228,6 @@
                                                     <th>Ingredient Name</th> 
                                                     <th>Image</th>
                                                     <th>Grams</th>
-
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -258,7 +236,7 @@
                                                         // Get meal item ID and grams
                                                         int mealItemId = rs.getInt("mealItemId");
                                                         String grams = rs.getString("inputGrams");
-                                                        int submealItemId = rs.getInt("submealItemId");
+                                                        int submealItemId  = rs.getInt("submealItemId");
 
                                                         // Constructing SQL query to select meal details for a specific meal item
                                                         String mealDetailsQuery = "SELECT * FROM mealitems WHERE mealItemId =" + mealItemId;
@@ -277,17 +255,7 @@
                                                     <td><%= name%></td>
                                                     <td><img src="<%= assetsUrl.giveUrl(request, "DBImages/") + imgurl%>" style="width:3rem;height:3rem"></td>
                                                     <td><%= grams%></td>
-                                                    <%
-
-                                                        if (idObj != null || DefaultMeals != null) {
-                                                    %>
-                                                    <td> 
-                                                        <a href="edit?id=<%=mealId%>"  style="width: 3.5rem;font-size: 1rem;color: red">Remove</a>
-                                                    </td>
-                                                    <%
-                                                        }
-                                                    %>
-
+                                                     
                                                 </tr>
                                                 <%
                                                             }
@@ -356,7 +324,7 @@
                                         function disableButton() {
                                             document.getElementById("submitBasic").disabled = true; // Disable the button
                                         }
-
+                                        
         </script>
     </body>
 </html>
