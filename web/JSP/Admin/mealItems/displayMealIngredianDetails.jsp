@@ -22,9 +22,9 @@
         <div class="wrapper">
             <div class="body-overlay"></div>
             <%@include file="../common/widgets/sidenavbar.jsp" %>
-            <div id="content">
+            <div id="content" style="background-color: white">
                 <%@include file="../common/widgets/topnavbar.jsp" %>
-                <div class="main-content">
+                <div class="main-content" style="background-color: white" >
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-6">
@@ -40,7 +40,7 @@
                             <div class="col-md-12" style="overflow-x: auto">
                                 <% if (mIDList != null && !mIDList.isEmpty()) { %>
                                 <!--show table-->
-                                <table class="table">
+                                <table class="table table-hover">
                                     <thead class="thead-dark">
                                         <tr>
                                             <th>ID</th>
@@ -56,7 +56,8 @@
                                     </thead>
                                     <tbody>
                                         <% for (MealItems item : mIDList) {%>
-                                        <tr style="border-bottom: 1px solid #999">
+                                        <tr style="border-bottom: 1px solid #222222;"> 
+                                           
                                             <td><%= item.getMealItemId()%></td>
                                             <td style="max-width: 100px; overflow: hidden; text-overflow: ellipsis">
                                                 <%= item.getMealItemName()%>
@@ -80,6 +81,7 @@
 
                                             </td>
                                         </tr>
+                                       
                                         <% }%>
                                     </tbody>
                                 </table>

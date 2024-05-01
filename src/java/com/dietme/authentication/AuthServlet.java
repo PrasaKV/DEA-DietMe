@@ -120,7 +120,7 @@ public class AuthServlet extends HttpServlet {
                 session.setAttribute("userPhone", user.getPhone());
                 session.setAttribute("userAddress", user.getAddress());
                 session.setAttribute("profileImage", user.getProfileImage());
-               response.sendRedirect("/DEA-DietMe/Home");
+               response.sendRedirect(request.getContextPath() + "/home");
 
             } else if (admin != null) {
                 // Admin login successful, set session attributes and redirect

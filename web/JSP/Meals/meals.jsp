@@ -68,6 +68,8 @@
             </div>
         </div>
             
-        <%@include file="../Common/footer.jspf"  %>
+
+                <%@include file="../Common/footer.jspf"  %>
+
     </body>
 </html>

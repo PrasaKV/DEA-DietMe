@@ -46,7 +46,7 @@
         </li>
 
         <li class="dropdown">
-            <a href="test" class="<%= request.getParameter("page") != null && request.getParameter("page").equals("defaultMeals") ? "active" : "" %>">
+            <a href="<%=assetsUrl.giveUrl(request, "admin/default-meals/show-all-items")%>" class="<%= request.getParameter("page") != null && request.getParameter("page").equals("defaultMeals") ? "active" : "" %>">
                 <i class="material-icons">fastfood</i><span>Default Meals</span>
             </a>
         </li>
