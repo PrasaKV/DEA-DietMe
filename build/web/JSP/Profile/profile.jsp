@@ -23,7 +23,7 @@
             
                        if(userName == null)
                         {
-                                response.sendRedirect("/DEA-DietMe/index.jsp");
+                                response.sendRedirect("/DEA-DietMe/Home");
                                 System.out.println("Profile If Redirect");
                         }
     }
@@ -57,7 +57,7 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDeliveries.css")%>" />
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDelMassage.css")%>" />
        
-        
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/customMeal.css")%>" />
 
         
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
@@ -93,7 +93,7 @@
                 </div>
                 <div class="profileTabsDiv">
                     <a href="/DEA-DietMe/Profile? =ProfileInfo" ><h1 class="profileTabs" id="personalInfo">Personal Info </h1></a>
-                     <a href="/DEA-DietMe/Profile? =CustomMeals" ><h1 class="profileTabs" id="customMeals">Custom Meals</h1></a>
+                    <a href="/DEA-DietMe/Profile? =CustomMeals" ><h1 class="profileTabs" id="customMeals">Custom Meals</h1></a>
                     <a href="/DEA-DietMe/Profile? =Cart" ><h1 class="profileTabs" id="cart">Cart</h1></a>
                     <a href="/DEA-DietMe/Profile? =Favourites" ><h1 class="profileTabs" id="favourites">Favourites</h1></a>
                     <a href="/DEA-DietMe/Profile? =Notifications" ><h1 class="profileTabs" id="notifications">Notifications</h1></a>

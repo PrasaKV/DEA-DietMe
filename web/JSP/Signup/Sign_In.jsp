@@ -21,7 +21,9 @@
                 <h2>Welcome</h2>
                 <h4>Sign in to continue</h4>
                 <hr>
+
                 <form action="${pageContext.request.contextPath}/auth/loginMethod" method="post" class="login-form">
+
 
                 <div class="form-group">
                     <label for="email">Email:</label>

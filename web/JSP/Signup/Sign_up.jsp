@@ -18,7 +18,9 @@
             <div class="card">
                 <h2>Sign Up to continue</h2>
                 <hr>
+
                 <form action="${pageContext.request.contextPath}/auth/registerMethod" method="POST">
+
                     
                     <label for="fullname">Full Name:</label>
                     <input type="text" id="fullname" name="name" placeholder="">

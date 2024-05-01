@@ -34,7 +34,7 @@ public class User {
         this.password = password;
         this.confirmpassword = confirmpassword;
     }
-     
+    
     public User(String email, String password, String confirmpassword) {
         this.email = email;
         this.password = password;
@@ -46,7 +46,7 @@ public class User {
         this.confirmpassword = confirmpassword;
     }
     
-    public User(String confirmpassword) {
+    public User(String Confirmpassword) {
         this.confirmpassword = confirmpassword;
     }
     
@@ -58,35 +58,35 @@ public class User {
         this.id = id;
     }
     
-     public String getfullname() {
+     public String getFullName() {
         return fullname;
     }
      
-    public void setfullname(String fullname) {
+    public void setFullName(String fullname) {
         this.fullname = fullname;
     }
     
-    public String getemail() {
+    public String getEmail() {
         return email;
     }
     
-    public void setemail(String email) {
+    public void setEmail(String email) {
         this.email = email;
     }
     
-    public String getpassword() {
+    public String getPassword() {
         return password;
     }
     
-    public void setpassword(String password) {
+    public void setPassword(String password) {
         this.password = password;
     }
     
-    public String getconfirmpassword() {
+    public String getConfirmPassword() {
         return confirmpassword;
     }
     
-    public void setconfirmpassword(String confirmpassword) {
+    public void setConfirmPassword(String confirmpassword) {
         this.confirmpassword = confirmpassword;
     }
 }
