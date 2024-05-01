@@ -279,15 +279,12 @@
     .feedbackground{
         height: 600px;
         width: 75%;
-
         background-image: url("../Images/Feedback image.png");
         background-size: 800px 700px;
         background-repeat: no-repeat;
         background-position: right;
-
         box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
-        margin-left: auto;
-        margin-right: auto;
+        margin: 2rem auto;
 
         .backblur{
             height: 600px;
@@ -356,22 +353,20 @@
                 height: 150px;
                 width: 100%;
                 background-color: rgba(0, 0, 0, 0.2);
-
                 position: absolute;
                 bottom: 0;
 
                 #newCommentForm{
                     height: 100px;
-                    width: 950px;
+                    width: 80%;
                 }
 
                 #commentText{
                     height: 60px;
-                    width: 850px;
+                    width: 80%;
                     position: absolute;
                     top: 40px;
-
-                    margin-left: 40px;
+                    margin-left: 3rem;
                     border-radius: 15px;
                     border: none;
                     padding: 20px;
@@ -381,12 +376,12 @@
                 }
 
                 .sendButton{
+                    align-items: center;
                     height: 60px;
                     width: 60px;
-
                     position: absolute;
                     top: 40px;
-                    right: 40px;
+                    right:4rem;
 
                     border-radius: 15px;
 
@@ -399,7 +394,7 @@
 
                     position: absolute;
                     top: 40px;
-                    right: 40px;
+                    right:4rem;
 
                     border-radius: 15px;
 

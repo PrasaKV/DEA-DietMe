@@ -1,16 +1,18 @@
-<%--
-    Document   : index
-    Created on : Apr 12, 2024, 7:21:44 PM
-    Author     : Prasad
---%>
-<%@page import="com.teamhydra.util.MealItemDef"%>
-<%@page import="java.util.List"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page import="javax.servlet.http.HttpServletRequest" %>
-<%@page import="com.teamhydra.util.assetsUrl"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-<!DOCTYPE html>
+<%@page import="com.dietme.deafaultMeals.DefaultMeals"%>
+<%@page import="java.io.File"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page import="com.dietme.mealItems.MealItems" %>
+<%@ page import="java.util.List" %>
+<%@page import="com.teamhydra.util.assetsUrl"%>
+
+
+<%
+    // Assuming mIDList is a List<MealItems> passed as a request attribute
+    List<DefaultMeals> dMList = (List<DefaultMeals>) request.getAttribute("dMList");
+
+%>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -74,211 +76,95 @@
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
                                             <div class="row">
+                                                <%        // Calculate the starting index for displaying the last four items
+                                                    int startIndex = Math.max(0, dMList.size() - 4);
+
+                                                    // Iterate over the last four items in the list
+                                                    for (int i = startIndex; i < dMList.size(); i++) {
+                                                        DefaultMeals meal = dMList.get(i);
+                                                %>
+
                                                 <div class="col-md-3">
                                                     <div class="mealsListDiv">
-                                                        <div class="Card">
+                                                        <div class="Card border rounded">
                                                             <div class="cardImageDiv">
-                                                                <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
+                                                                <img class="cardImage" src="<%= assetsUrl.giveUrl(request, "DBImages/") + meal.getImgurl()%>" alt="Image">
                                                                 <div class="favHeartDiv">
                                                                     <img id="favHeart" src="Common Resources/Images/heart0.png" alt="image" onclick="changeImage()">
                                                                 </div>
                                                             </div>
-                                                            <h4 class="text-center mt-4 "style="color: black;font-weight: 800">Weight Loss</h4>
-                                                            <div class="text-center" style="margin: 0 5%">
-                                                                <p class="mealDes"> A meal pack for breakfast with three portions and a beverage</p>
-                                                                <h6 style="font-weight: 700">1200 Calories</h6>
-                                                                <h4 style="color: black;font-weight: bold">Rs.1000/=</h4>
-                                                            </div>
+                                                            <h4 class="text-center mt-4" style="color: black;font-weight: 800"><%= meal.getMealgoalType().equals("bodyGain") ? "Weight Gain" : "Weight Loss"%></h4>
 
+                                                            <div class="text-center" style="margin: 0 5%">
+                                                                <p class="mealDes"><%= meal.getDescription()%></p>
+                                                                <h6 style="font-weight: 700">1500 Calories</h6>
+                                                                <h4 style="color: black;font-weight: bold">Rs.1250</h4>
+                                                            </div>
 
                                                             <div class="orderButtonDiv">
                                                                 <button class="orderButton">More Details</button>
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="mealsListDiv">
-                                                        <div class="Card">
-                                                            <div class="cardImageDiv">
-                                                                <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
-                                                                <div class="favHeartDiv">
-                                                                    <img id="favHeart" src="Common Resources/Images/heart0.png" alt="image" onclick="changeImage()">
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="text-center mt-4 "style="color: black;font-weight: 800">Weight Loss</h4>
-                                                            <div class="text-center" style="margin: 0 5%">
-                                                                <p class="mealDes"> A meal pack for breakfast with three portions and a beverage</p>
-                                                                <h6 style="font-weight: 700">1200 Calories</h6>
-                                                                <h4 style="color: black;font-weight: bold">Rs.1000/=</h4>
-                                                            </div>
-
-
-                                                            <div class="orderButtonDiv">
-                                                                <button class="orderButton">More Details</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="mealsListDiv">
-                                                        <div class="Card">
-                                                            <div class="cardImageDiv">
-                                                                <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
-                                                                <div class="favHeartDiv">
-                                                                    <img id="favHeart" src="Common Resources/Images/heart0.png" alt="image" onclick="changeImage()">
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="text-center mt-4 "style="color: black;font-weight: 800">Weight Loss</h4>
-                                                            <div class="text-center" style="margin: 0 5%">
-                                                                <p class="mealDes"> A meal pack for breakfast with three portions and a beverage</p>
-                                                                <h6 style="font-weight: 700">1200 Calories</h6>
-                                                                <h4 style="color: black;font-weight: bold">Rs.1000/=</h4>
-                                                            </div>
-
-
-                                                            <div class="orderButtonDiv">
-                                                                <button class="orderButton">More Details</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="mealsListDiv">
-                                                        <div class="Card">
-                                                            <div class="cardImageDiv">
-                                                                <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
-                                                                <div class="favHeartDiv">
-                                                                    <img id="favHeart" src="Common Resources/Images/heart0.png" alt="image" onclick="changeImage()">
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="text-center mt-4 "style="color: black;font-weight: 800">Weight Loss</h4>
-                                                            <div class="text-center" style="margin: 0 5%">
-                                                                <p class="mealDes"> A meal pack for breakfast with three portions and a beverage</p>
-                                                                <h6 style="font-weight: 700">1200 Calories</h6>
-                                                                <h4 style="color: black;font-weight: bold">Rs.1000/=</h4>
-                                                            </div>
-
-
-                                                            <div class="orderButtonDiv">
-                                                                <button class="orderButton">More Details</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
 
+                                                <% // End of for loop
+                                                    }
+                                                %>
                                             </div>
+
                                         </div>
+
+
+
+
                                         <div class="carousel-item"> 
                                             <div class="row">
+                                                <%
+                                                    // Calculate the starting index for displaying the last four items
+                                                    startIndex = Math.max(0, dMList.size() - 8);
+
+                                                    // Iterate over the last four items in the list
+                                                    for (int i = startIndex; i < dMList.size() - 4; i++) {
+                                                        DefaultMeals meal = dMList.get(i);
+                                                %>
+
                                                 <div class="col-md-3">
                                                     <div class="mealsListDiv">
                                                         <div class="Card">
                                                             <div class="cardImageDiv">
-                                                                <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
+                                                                <img class="cardImage" src="<%= assetsUrl.giveUrl(request, "DBImages/") + meal.getImgurl()%>" alt="Image">
                                                                 <div class="favHeartDiv">
                                                                     <img id="favHeart" src="Common Resources/Images/heart0.png" alt="image" onclick="changeImage()">
                                                                 </div>
                                                             </div>
-                                                            <h4 class="text-center mt-4 "style="color: black;font-weight: 800">Weight Loss</h4>
-                                                            <div class="text-center" style="margin: 0 5%">
-                                                                <p class="mealDes"> A meal pack for breakfast with three portions and a beverage</p>
-                                                                <h6 style="font-weight: 700">1200 Calories</h6>
-                                                                <h4 style="color: black;font-weight: bold">Rs.1000/=</h4>
-                                                            </div>
+                                                            <h4 class="text-center mt-4" style="color: black;font-weight: 800"><%= meal.getMealgoalType().equals("bodyGain") ? "Weight Gain" : "Weight Loss"%></h4>
 
+                                                            <div class="text-center" style="margin: 0 5%">
+                                                                <p class="mealDes"><%= meal.getDescription()%></p>
+                                                                <h6 style="font-weight: 700">1500 Calories</h6>
+                                                                <h4 style="color: black;font-weight: bold">Rs.1250</h4>
+                                                            </div>
 
                                                             <div class="orderButtonDiv">
                                                                 <button class="orderButton">More Details</button>
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="mealsListDiv">
-                                                        <div class="Card">
-                                                            <div class="cardImageDiv">
-                                                                <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
-                                                                <div class="favHeartDiv">
-                                                                    <img id="favHeart" src="Common Resources/Images/heart0.png" alt="image" onclick="changeImage()">
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="text-center mt-4 "style="color: black;font-weight: 800">Weight Loss</h4>
-                                                            <div class="text-center" style="margin: 0 5%">
-                                                                <p class="mealDes"> A meal pack for breakfast with three portions and a beverage</p>
-                                                                <h6 style="font-weight: 700">1200 Calories</h6>
-                                                                <h4 style="color: black;font-weight: bold">Rs.1000/=</h4>
-                                                            </div>
-
-
-                                                            <div class="orderButtonDiv">
-                                                                <button class="orderButton">More Details</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="mealsListDiv">
-                                                        <div class="Card">
-                                                            <div class="cardImageDiv">
-                                                                <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
-                                                                <div class="favHeartDiv">
-                                                                    <img id="favHeart" src="Common Resources/Images/heart0.png" alt="image" onclick="changeImage()">
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="text-center mt-4 "style="color: black;font-weight: 800">Weight Loss</h4>
-                                                            <div class="text-center" style="margin: 0 5%">
-                                                                <p class="mealDes"> A meal pack for breakfast with three portions and a beverage</p>
-                                                                <h6 style="font-weight: 700">1200 Calories</h6>
-                                                                <h4 style="color: black;font-weight: bold">Rs.1000/=</h4>
-                                                            </div>
-
-
-                                                            <div class="orderButtonDiv">
-                                                                <button class="orderButton">More Details</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="mealsListDiv">
-                                                        <div class="Card">
-                                                            <div class="cardImageDiv">
-                                                                <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
-                                                                <div class="favHeartDiv">
-                                                                    <img id="favHeart" src="Common Resources/Images/heart0.png" alt="image" onclick="changeImage()">
-                                                                </div>
-                                                            </div>
-                                                            <h4 class="text-center mt-4 "style="color: black;font-weight: 800">Weight Loss</h4>
-                                                            <div class="text-center" style="margin: 0 5%">
-                                                                <p class="mealDes"> A meal pack for breakfast with three portions and a beverage</p>
-                                                                <h6 style="font-weight: 700">1200 Calories</h6>
-                                                                <h4 style="color: black;font-weight: bold">Rs.1000/=</h4>
-                                                            </div>
-
-
-                                                            <div class="orderButtonDiv">
-                                                                <button class="orderButton">More Details</button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
                                                 </div>
 
+                                                <% // End of for loop
+                                                    }
+                                                %>
                                             </div>
+
+
                                         </div>
 
                                     </div>
-
-                                </div>
+                                </div>    
                             </div>
+
                             <div class="col-md-1">
                                 <!-- Next button outside the carousel -->
                                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
@@ -291,26 +177,14 @@
                 </div>
 
 
-                <%    // Assuming "test" is set as an attribute in the request scope before this JSP is called
-                    String test = (String) request.getAttribute("test");
-                    if (test != null) {
-                        // Process the attribute or use it as needed
-                        // For example, you can display it within HTML tags
-                %>
-                <div>
-                    <%= test%>
-                </div>
-                <%
-                    }
-                %>
             </div>
-
             <!-- feedback section -->
 
 
 
             <div class="feedbackDiv">
-                <h2 class="topic2">Popular Meals</h2><br>
+                <br><br>
+                <h2 class="topic2 ">Top Customer's Reviews</h2><br>
                 <div class="feedbackground">
 
                     <div class="backblur">
@@ -426,8 +300,8 @@
 
 
                             <form id="sendMessageForm" action="sendMessage"
-                             method="post" onsubmit="return checkUserLogin()">
-                                <input type="hidden" name="userId" value="<%= session.getAttribute("userId")%>">
+                                  method="post">
+                                <input type="hidden" name="userId" value="1">
                                 <div class="form-group">
                                     <textarea class="form-control" style="height: 10rem; background-color: rgba(255, 255, 255, 0.5);" id="message" placeholder="Enter your message" name="message"></textarea>
                                 </div>
@@ -475,28 +349,28 @@
                             }
                         }
                         );
-                        function checkUserLogin() {
-                            // Check if the user is logged in by verifying userId existence
-                            var userId = '<%= session.getAttribute("userId")%>';
-
-                            if (userId !== null) {
-                                // User is logged in, allow form submission
-                                return true;
-                            } else {
-                                // User is not logged in, display message and redirect to login servlet
-                                swal({
-                                    title: "Login Required",
-                                    text: "You need to login to send a message.",
-                                    icon: "warning",
-                                    buttons: true,
-                                }).then(function () {
-                                    // Redirect to login servlet
-                                    window.location.href = "loginServletUrl";
-                                });
-                                // Prevent form submission
-                                return false;
-                            }
-                        }
+                        //                        function checkUserLogin() {
+                        //                            // Check if the user is logged in by verifying userId existence
+                        //                            var userId = '<%= session.getAttribute("userId")%>';
+                        //
+                        //                            if (userId !== null) {
+                        //                                // User is logged in, allow form submission
+                        //                                return true;
+                        //                            } else {
+                        //                                // User is not logged in, display message and redirect to login servlet
+                        //                                swal({
+                        //                                    title: "Login Required",
+                        //                                    text: "You need to login to send a message.",
+                        //                                    icon: "warning",
+                        //                                    buttons: true,
+                        //                                }).then(function () {
+                        //                                    // Redirect to login servlet
+                        //                                    window.location.href = "loginServletUrl";
+                        //                                });
+                        //                                // Prevent form submission
+                        //                                return false;
+                        //                            }
+                        //                        }
             </script>
 
 
