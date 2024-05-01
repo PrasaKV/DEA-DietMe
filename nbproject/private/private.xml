@@ -6,11 +6,11 @@
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/src/java/com/teamhydra/util/commonUtill.java</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/src/java/com/teamhydra/Controllers/createMealController.java</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/web/JSP/Profile/ProfileFrag/profileInfo.jsp</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/src/java/com/teamhydra/Controllers/SignInController.java</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/web/WEB-INF/web.xml</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/src/java/com/teamhydra/util/DBUtill.java</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/src/java/com/teamhydra/DAOs/customMealDAO.java</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/web/JSP/Profile/ProfileFrag/customMeal.jsp</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/web/JSP/Common/navbar.jspf</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/web/Common%20Resources/Styles/yourMealPopup.css</file>
         </group>
     </open-files>
 </project-private>

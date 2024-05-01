@@ -24,7 +24,9 @@ public class MealItemsDao {
     private static final String SELECT_ALL_QUERY = "SELECT * FROM mealitems";
 
     public int insert(MealItems mealIngredientDetails) {
-        try (PreparedStatement statement = DBUtill.setStatment(INSERT_QUERY)) {
+        try (Connection connection = DBUtill.getConnection();
+                PreparedStatement statement = connection.prepareStatement(
+                        INSERT_QUERY, PreparedStatement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, mealIngredientDetails.getMealItemName());
             statement.setString(2, mealIngredientDetails.getImgurl());
             statement.setString(3, mealIngredientDetails.getDescription());
