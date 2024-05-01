@@ -58,6 +58,7 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/pendingDelMassage.css")%>" />
        
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/customMeal.css")%>" />
+        <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/yourMealPopup.css")%>" />
 
         
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
@@ -76,7 +77,7 @@
     </head>
     <body>
 
-        <%--<%@include file="JSP/Common/navbar.jspf" %>--%>
+        <%@include file="../Common/navbar.jspf" %>
 
        <% 
 
@@ -110,15 +111,13 @@
                                         {
                                             name = "ProfileInfo";
                                         }
-                                        
-
                         %>
                         <jsp:include page="<%= "/" + name%>" />
                     </div>
           
         </div>
 
-        <%--<%@include file="JSP/Common/footer.jspf"  %>--%>
+        <%@include file="../Common/footer.jspf"  %>
 
         
         

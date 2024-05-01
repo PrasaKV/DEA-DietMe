@@ -2,35 +2,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Rye&display=swap');
 
 
-
 .homePageDiv {
     background-image: url("../Images/Diet image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  
+
     /*background-position: right top;*/
-  }
-  
-  .mainVideoDiv {
+}
+
+.mainVideoDiv {
     height: 610px;
     width: 100%;
-  
-  .mainVideo {
-    height: 700px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-  }
-  }
-  
-  .topicDiv {
+
+    .mainVideo {
+        height: 700px;
+        width: 100%;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.topicDiv {
     width: 100%;
     height: 475px;
     background: rgba(255, 255, 255, 0.3);
-  }
+}
 
-  .topicTextDiv {
+.topicTextDiv {
     margin-left: 100px;
     /*margin-right: 800px;*/
     height: 200px;
@@ -52,7 +51,7 @@
         word-spacing: 30px;
         letter-spacing: 5px;
     }
-      
+
     .text2{
         width: 100%;
         height: 120px;
@@ -60,7 +59,7 @@
         word-spacing: 30px;
         letter-spacing: 5px;
     }
-    
+
     .text3{
         width: 100%;
         height: 120px;
@@ -68,121 +67,144 @@
         word-spacing: 30px;
         letter-spacing: 5px;
     }
-  }
+}
 
-  .discriptionDiv{
+.discriptionDiv{
     height: 850px;
     width: 100%;
     background-color: white;
     border: 10px solid #444444;
 
     .firstParagraphDiv{
-      height: 450px;
-      width: 450px;
-      margin-top: 120px;
-      margin-left: 95px;
-      margin-right: 75px;
+        height: 450px;
+        width: 450px;
+        margin-top: 120px;
+        margin-left: 95px;
+        margin-right: 75px;
     }
-    
+
     .para1{
-      font-family: monospace;
-      font-size: 30px;
-      font-weight: bold;
-      text-align: center;
-      line-height: 70px;
+        font-family: monospace;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 70px;
     }
 
     .secondParagraphDiv{
-      height: 800px;
-      width: 700px;
-      background-color: white;
-      position: absolute;
-      right: 150px;
-      top: 1050px;
-      border-top: 7px solid #01ca5e;
-      box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
+        height: 800px;
+        width: 700px;
+        background-color: white;
+        position: absolute;
+        right: 150px;
+        top: 1050px;
+        border-top: 7px solid #01ca5e;
+        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
     }
 
     .para2{
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      font-size: 30px;
-      font-weight: lighter;
-      text-align: center;
-      line-height: 55px;
-      margin-top: 80px;
-      margin-left: 45px;
-      margin-right: 45px;
-      margin-bottom: 100px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 30px;
+        font-weight: lighter;
+        text-align: center;
+        line-height: 55px;
+        margin-top: 80px;
+        margin-left: 45px;
+        margin-right: 45px;
+        margin-bottom: 100px;
     }
 
     .buttonDiv{
-      text-align: center;
+        text-align: center;
 
-      .buttonGreen{
-        background-color: #01ca5e;
-        color: rgb(255, 255, 255);
-  
-        height: 75px;
-        width: 250px;
-        border: none;
-        padding: 0px 10px;
-        border-radius: 10px;
-        cursor: pointer;
-  
-        font-size: 35px;
-        font-family: Arial, Helvetica, sans-serif;    
-      }
+        .buttonGreen{
+            background-color: #01ca5e;
+            color: rgb(255, 255, 255);
 
-      .buttonGreen:hover{
-        box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
-      }
+            height: 75px;
+            width: 250px;
+            border: none;
+            padding: 0px 10px;
+            border-radius: 10px;
+            cursor: pointer;
 
-      .buttonGreen:active{
-        background-color: #01ca5e;
-        transform: translateY(3px);
-      }
+            font-size: 35px;
+            font-family: Arial, Helvetica, sans-serif;    
+        }
+
+        .buttonGreen:hover{
+            box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .buttonGreen:active{
+            background-color: #01ca5e;
+            transform: translateY(3px);
+        }
     }
 
-    
-  }
 
-  .mealsDiv{
-    height: 900px;
+}
+
+.mealsDiv{
+    height: 800px;
     width: 100%;
-    background-color: white;
-    
-    .topic2{
-      font-family: "Rye", serif;
-      font-size: 30px;
-      font-weight: bold;
-      font-style: normal;
+    background-color: rgba(255, 255, 255, 0.5);
 
+/*<<<<<<< HEAD
       padding: 70px;
-      /*padding-bottom: 120px;*/
+      padding-bottom: 120px;
       text-align: center;
+=======*/
+
+    .topic2{
+        font-family: "Rye", serif;
+        font-size: 30px;
+        font-weight: bold;
+        font-style: normal;
+
+        padding: 70px;
+        text-align: center;
+/*>>>>>>> Admin-pannel*/
     }
-    
+
     .mealsCarouselDiv{
-      height: 650px;
-      width: 100%;
+        height: 650px;
+        width: 100%;
     }
 
     .mealsListDiv{
+/*<<<<<<< HEAD
       height: 600px;
       width: 92%;
       margin-left: auto;
       margin-right: auto;
+      display: flex;
+=======*/
+        height: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+/*>>>>>>> Admin-pannel*/
     }
 
     .Card{
-      height: 510px;
-      width: 270px;
-      background-color: white;
-      border-radius: 15px;
+        border: 1px solid #404040;
+        height: auto;
+        width: 270px;
+        background-color: white;
+        border-radius: 15px;
+        background: linear-gradient(145deg, #ffffff, #f5f5f5);
+        position: relative;
+        .cardImageDiv{
+            position: relative;
+            height: 250px;
+            width: 250px;
 
+/*<<<<<<< HEAD
       .cardImageDiv{
-        height: 250px;
-        width: 250px;
+        height: 270px;
+        width: 270px;
+        position: relative;
 
         .cardImage{
           height: 250px;
@@ -190,11 +212,32 @@
           margin: 10px;
           border-radius: 15px;
         }
+        
+         .favHeartDiv{
+          height: 55px;
+          width: 55px;
+
+          position: absolute;
+          right: 15px;
+          bottom: 15px;
+          
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.7); 
+        }
+
+        #favHeart{
+          height: 30px;
+          width: 30px;
+
+          position: absolute;
+          right: 12px;
+          bottom: 10px;
+        }
       }
 
       .mealDiscriptionDiv{
         margin: 15px;
-        padding-top: 7px;
+        margin-top: 0px;
 
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-size: 12px;
@@ -202,19 +245,20 @@
         font-weight: lighter;
       }
 
-      .mealCalDiv{
+      .mealNameDiv{
         margin: 15px;
-        padding-top: 15px;
+        padding-top: 5px;
 
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
         font-style: normal;
-        font-weight: normal;
+        font-weight: bolder;
+        color: #01ca5e;
       }
 
       .mealPriceDiv{
         margin: 15px;
-        padding-top: 10px;
+        padding-top: 15px;
 
         font-family: Arial, Helvetica, sans-serif;
         font-size: 20px;
@@ -223,108 +267,439 @@
       }
 
       .orderButtonDiv{
-        text-align: center;
-        padding-top: 15px;
+        padding-top: 25px;
 
-        .orderButton{
+        #orderButton{
           background-color: #01ca5e;
           color: rgb(255, 255, 255);
+          display: none;
 
           height: 40px;
           width: 130px;
           border-radius: 10px;
+          margin-left: auto;
+          margin-right: auto;
           cursor: pointer;
     
           font-family: Arial, Helvetica, sans-serif;
           font-size: larger;
         }
 
-        .orderButton:hover{
+        #orderButton:hover{
           background-color: #01ca5fb3; 
         }
 
-        .orderButton:active{
+        #orderButton:active{
           background-color: #01ca5e;
           box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
         }
       }
+=======*/
+            .cardImage{
+                height: 100%;
+                width: 100%;
+                margin: 10px;
+                border-radius: 15px;
+            }
+            .favHeartDiv{
+                height: 55px;
+                width: 55px;
+                position: absolute;
+                right: 2%;
+                bottom: 0;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.9); 
+            }
+
+            #favHeart{
+                height: 30px;
+                width: 30px;
+
+                position: absolute;
+                right: 12px;
+                bottom: 10px;
+            }
+        }
+
+
+
+        .orderButtonDiv{
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+
+
+            .orderButton{
+                background-color: #01ca5e;
+                color: rgb(255, 255, 255);
+
+                height: 40px;
+                width: 130px;
+                border-radius: 10px;
+                cursor: pointer;
+
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: larger;
+            }
+
+            .orderButton:hover{
+                background-color: #01ca5fb3; 
+            }
+
+            .orderButton:active{
+                background-color: #01ca5e;
+                box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+/*>>>>>>> Admin-pannel*/
     }
 
     .Card:hover{
-      height: 510px;
-      width: 271px;
+        height: 510px;
+        width: 271px;
 
-      box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.4);
+        box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.4);
 
-      .cardImage{
-        height: 250px;
-        width: 251px;
-      }
+        .cardImage{
+            height: 250px;
+            width: 251px;
+        }
 
-      .mealDiscriptionDiv{
-        font-size: 12.25px;
-      }
+        .mealDiscriptionDiv{
+            font-size: 12.25px;
+        }
 
-      .mealCalDiv{
+/*<<<<<<< HEAD
+      .mealNameDiv{
         font-size: 20.25px;
       }
+=======*/
+        .mealCalDiv{
+            font-size: 20.25px;
+        }
+/*>>>>>>> Admin-pannel*/
 
-      .mealPriceDiv{
-        font-size: 20.25px;
-      }
+        .mealPriceDiv{
+            font-size: 20.25px;
+        }
     }
-  }
-  
-  .feedbackDiv{
-    height: 700px;
+}
+
+.feedbackDiv{
+    height: 750px;
     width: 100%;
     background-color: white;
-    
-      .feedbackground{
-        height: 600px;
-        width: 1000px;
 
+
+    .feedbackground{
+        height: 600px;
+        width: 75%;
         background-image: url("../Images/Feedback image.png");
         background-size: 800px 700px;
         background-repeat: no-repeat;
         background-position: right;
-
         box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
-        margin-left: auto;
-        margin-right: auto;
+        margin: 2rem auto;
 
+/*<<<<<<< HEAD
       .backblur{
         height: 600px;
         width: 1000px;
         background-color: rgba(0, 0, 0, 0.5);
         backdrop-filter: blur(3px);
+        
+        .commentContainer {
+          display: flex;
+          margin-bottom: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-bottom: 20px;
+          padding-top: 20px;
+          padding-right: 20px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 15px;
+    
+          position: absolute;
+          z-index: 5;
+          top: 20px;
+        }
+        .commentImageDiv {
+            width: 60px;
+            height: 60px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 50%;
+      
+            .commentImage {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+            }
+        }
+        
+        .commentText {
+            flex-grow: 1;
+        }
+
+        .userName {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+
+        .commentcontent{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+        }
       }
       
       .commentbar{
         height: 150px;
         width: 1000px;
         position: absolute;
+        z-index: 10;
         bottom: 0;
+        
+        background-color: white;
+=======*/
+        .backblur{
+            height: 600px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(3px);
+/*>>>>>>> Admin-pannel*/
 
-        background-image: url("../Images/Feedback image.png");
-        background-size: 800px 530px;
-        background-repeat: no-repeat;
-        background-position: right bottom;
+            .commentContainer {
+                width: 90%;
+                margin:1rem auto;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 15px;
+                z-index: 5;
+                top: 20px;
+            }
+            .commentImageDiv {
+                width: 60px;
+                height: 60px;
+                margin-left: 20px;
+                margin-right: 20px;
+                border-radius: 50%;
+                border: 1px solid gray;
 
-        box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
-        margin-left: auto;
-        margin-right: auto;
+                .commentImage {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+            }
 
+/*<<<<<<< HEAD
       .backblur2{
         height: 150px;
         width: 1000px;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
 
         position: absolute;
         bottom: 0;
-      }
-      }
-    }
+        
+         #newCommentForm{
+          height: 100px;
+          width: 950px;
+        }
     
-  }
-  
+        #commentText{
+          height: 60px;
+          width: 850px;
+          position: absolute;
+          top: 40px;
+    
+          margin-left: 40px;
+          border-radius: 15px;
+          border: none;
+          padding: 20px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+          flex-grow: 1;
+        }
+
+        .sendButton{
+          height: 60px;
+          width: 60px;
+    
+          position: absolute;
+          top: 40px;
+          right: 40px;
+    
+          border-radius: 15px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .sendButton:active {
+          height: 60px;
+          width: 60px;
+      
+          position: absolute;
+          top: 40px;
+          right: 40px;
+      
+          border-radius: 15px;
+      
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+    
+        .sendImage{
+          height: 35px;
+          width: 35px;
+    
+          position: absolute;
+          top: 13px;
+          right: 10px;
+    
+          border-radius: 15px;
+        }
+      }
+      }
+=======*/
+            .commentText {
+                flex-grow: 1;
+            }
+
+            .userName {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                padding-bottom: 5px;
+            }
+
+            .commentcontent{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+            }
+        }
+
+        .commentbar{
+            height: 150px;
+            width: 100%;
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+
+            background-color: white;
+
+            background-image: url("../Images/Feedback image.png");
+            background-size: 800px 530px;
+            background-repeat: no-repeat;
+            background-position: right bottom;
+
+            box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+            margin-left: auto;
+            margin-right: auto;
+
+            .backblur2{
+                height: 150px;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                bottom: 0;
+
+                #newCommentForm{
+                    height: 100px;
+                    width: 80%;
+                }
+
+                #commentText{
+                    height: 60px;
+                    width: 80%;
+                    position: absolute;
+                    top: 40px;
+                    margin-left: 3rem;
+                    border-radius: 15px;
+                    border: none;
+                    padding: 20px;
+
+                    background-color: rgba(255, 255, 255, 0.8);
+                    flex-grow: 1;
+                }
+
+                .sendButton{
+                    align-items: center;
+                    height: 60px;
+                    width: 60px;
+                    position: absolute;
+                    top: 40px;
+                    right:4rem;
+
+                    border-radius: 15px;
+
+                    background-color: rgba(255, 255, 255, 0.8);
+                }
+
+                .sendButton:active {
+                    height: 60px;
+                    width: 60px;
+
+                    position: absolute;
+                    top: 40px;
+                    right:4rem;
+
+                    border-radius: 15px;
+
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+
+                .sendImage{
+                    height: 35px;
+                    width: 35px;
+
+                    position: absolute;
+                    top: 13px;
+                    right: 10px;
+
+                    border-radius: 15px;
+                }
+            }
+        }
+/*>>>>>>> Admin-pannel*/
+    }
+    .reviews-scroll{
+        height: 80%;
+        overflow-y: scroll;
+    }
+    .reviews-scroll::-webkit-scrollbar {
+        width: 0;
+    }
+    .topic2{
+        font-family: "Rye", serif;
+        font-size: 2rem;
+        font-weight: bold;
+        font-style: normal;
+        text-align: center;
+    }
+}
+/*customer message section*/
+.customerMessage {
+    width: 80%;
+    border-radius: 10px;
+    border: .003rem solid #01CA5A;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 5rem auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Background color with opacity */
+
+    .topicmes{
+        font-family: "Rye", serif;
+        font-size: 2rem;
+        font-weight: 800;
+        font-style: normal;
+
+    }
+    .btn-primary {
+        background-color: #01CA5A;
+        border-color: green; /* Set border color to match background for consistency */
+    }
+}
+
+
+
+
