@@ -36,7 +36,7 @@ public class FileController extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
         
-       String directory = "\\Common Resources\\UserImages"; 
+       String directory = "/Common Resources/UserImages"; 
 
        
        int userId = 0;
@@ -52,7 +52,7 @@ public class FileController extends HttpServlet {
         
         
 
-        String filePath = directory + File.separator + userId + "." + fileExtension;
+        String filePath = directory + "/" + userId + "." + fileExtension;
         
         System.out.println(filePath);
         

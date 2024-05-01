@@ -95,7 +95,7 @@ public static UserInfo signInUser(String email) {
             userInfo.setName(rs.getString("name"));
             userInfo.setEmail(email);
             userInfo.setPassword(rs.getString("password"));
-            userInfo.setPhone(rs.getString("phone"));
+            userInfo.setPhone(rs.getInt("phone"));
             userInfo.setAddress(rs.getString("address"));
             userInfo.setProfileImage( rs.getString("profileImage"));
             

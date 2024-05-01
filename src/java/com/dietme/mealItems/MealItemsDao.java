@@ -1,5 +1,6 @@
 package com.dietme.mealItems;
-import com.dietme.utill.DbUtill;
+
+import com.teamhydra.util.DBUtill;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,19 +12,19 @@ public class MealItemsDao {
 
     private static final String INSERT_QUERY
             = "INSERT INTO mealitems"
-            + " (mealItemName, imgurl,description, defaultGrams,"
-            + "defaultPrice, defaultCal, defaultProtein, defaultCarbs)"
-            + " VALUES (?, ?, ?, ?, ?, ?, ?,?)";
+            + " (mealItemName, imgurl, description, defaultGrams,"
+            + " defaultPrice, defaultCal, defaultProtein, defaultCarbs)"
+            + " VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     private static final String UPDATE_QUERY
             = "UPDATE mealitems SET"
-            + " mealItemName = ?, imgurl = ?,description = ?, defaultGrams = ?, "
-            + "defaultPrice = ?, defaultCal = ?, defaultProtein = ?, defaultCarbs = ? WHERE mealItemId   = ?";
-    private static final String DELETE_QUERY = "DELETE FROM mealitems WHERE mealItemId  = ?";
-    private static final String SELECT_BY_ID_QUERY = "SELECT * FROM mealitems WHERE mealItemId  = ?";
+            + " mealItemName = ?, imgurl = ?, description = ?, defaultGrams = ?, "
+            + " defaultPrice = ?, defaultCal = ?, defaultProtein = ?, defaultCarbs = ? WHERE mealItemId = ?";
+    private static final String DELETE_QUERY = "DELETE FROM mealitems WHERE mealItemId = ?";
+    private static final String SELECT_BY_ID_QUERY = "SELECT * FROM mealitems WHERE mealItemId = ?";
     private static final String SELECT_ALL_QUERY = "SELECT * FROM mealitems";
 
     public int insert(MealItems mealIngredientDetails) {
-        try (Connection connection = DbUtill.getConnection();
+        try (Connection connection = DBUtill.getConnection();
                 PreparedStatement statement = connection.prepareStatement(
                         INSERT_QUERY, PreparedStatement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, mealIngredientDetails.getMealItemName());
@@ -46,10 +47,9 @@ public class MealItemsDao {
         return -1;
     }
 
-    public boolean update(MealItems mealIngredientDetails) throws SQLException {
-          boolean rowUpdated;
-        try (Connection connection = DbUtill.getConnection();
-                PreparedStatement statement = connection.prepareStatement(UPDATE_QUERY)) {
+    public boolean update(MealItems mealIngredientDetails) {
+        boolean rowUpdated = false;
+        try (PreparedStatement statement = DBUtill.setStatment(UPDATE_QUERY)) {
 
             statement.setString(1, mealIngredientDetails.getMealItemName());
             statement.setString(2, mealIngredientDetails.getImgurl());
@@ -61,15 +61,16 @@ public class MealItemsDao {
             statement.setDouble(8, mealIngredientDetails.getDefaultCarbs());
             statement.setInt(9, mealIngredientDetails.getMealItemId());
 
-         rowUpdated  = statement.executeUpdate() > 0;
+            rowUpdated = statement.executeUpdate() > 0;
 
-        } 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return rowUpdated;
     }
 
     public boolean delete(int mealItemId) {
-        try (Connection connection = DbUtill.getConnection();
-                PreparedStatement statement = connection.prepareStatement(DELETE_QUERY)) {
+        try (PreparedStatement statement = DBUtill.setStatment(DELETE_QUERY)) {
             statement.setInt(1, mealItemId);
             return statement.executeUpdate() > 0;
         } catch (SQLException e) {
@@ -78,9 +79,8 @@ public class MealItemsDao {
         return false;
     }
 
-    public MealItems findById(int mealItemId ) {
-        try (Connection connection = DbUtill.getConnection();
-                PreparedStatement statement = connection.prepareStatement(SELECT_BY_ID_QUERY)) {
+    public MealItems findById(int mealItemId) {
+        try (PreparedStatement statement = DBUtill.setStatment(SELECT_BY_ID_QUERY)) {
             statement.setInt(1, mealItemId);
             ResultSet resultSet = statement.executeQuery();
             if (resultSet.next()) {
@@ -94,9 +94,8 @@ public class MealItemsDao {
 
     public List<MealItems> findAll() {
         List<MealItems> mealIngredientDetailsList = new ArrayList<>();
-        try (Connection connection = DbUtill.getConnection();
-                PreparedStatement statement = connection.prepareStatement(SELECT_ALL_QUERY);
-                ResultSet resultSet = statement.executeQuery()) {
+        try (PreparedStatement statement = DBUtill.setStatment(SELECT_ALL_QUERY);
+             ResultSet resultSet = statement.executeQuery()) {
             while (resultSet.next()) {
                 mealIngredientDetailsList.add(mapResultSetToMealIngredientDetails(resultSet));
             }
@@ -114,10 +113,9 @@ public class MealItemsDao {
         double defaultGrams = resultSet.getDouble("defaultGrams");
         double defaultPrice = resultSet.getDouble("defaultPrice");
         double defaultCal = resultSet.getDouble("defaultCal");
-        double defaultProtien = resultSet.getDouble("defaultProtein");
+        double defaultProtein = resultSet.getDouble("defaultProtein");
         double defaultCarbs = resultSet.getDouble("defaultCarbs");
         return new MealItems(mealItemId, mealItemName, imgurl, description, defaultGrams,
-                defaultPrice, defaultCal, defaultProtien, defaultCarbs);
+                defaultPrice, defaultCal, defaultProtein, defaultCarbs);
     }
-
 }

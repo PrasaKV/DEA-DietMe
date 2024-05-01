@@ -1,8 +1,7 @@
-<%@page import="com.dietme.deafaultMeals.DefaultMeals"%>
-<%@page import="com.dietme.utill.PathProvider"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="java.util.List" %>
+<%@page import="com.teamhydra.util.assetsUrl"%>
 
 <%
     // Assuming mIDList is a List<MealItems> passed as a request attribute
@@ -54,7 +53,7 @@
                             <tr>
                                 <td><%= item.getDefaultMealId()%></td>
                                 <td><%= item.getDefaultMealName()%></td>
-                                <td><img src="<%= PathProvider.giveUrl(request, "DBImages/") + item.getImgurl()%>" style="width:5rem;height:5rem"></td>
+                                <td><img src="<%= assetsUrl.giveUrl(request, "DBImages/") + item.getImgurl()%>" style="width:5rem;height:5rem"></td>
                                 <td><%= item.getMealgoalType()%></td>
                                 <td><%= item.getMealTime()%></td>
                                 <td><%= item.getMealType()%></td>

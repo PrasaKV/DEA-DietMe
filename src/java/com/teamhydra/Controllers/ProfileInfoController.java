@@ -1,12 +1,8 @@
-
 package com.teamhydra.Controllers;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import static com.sun.corba.se.spi.presentation.rmi.StubAdapter.request;
-import com.teamhydra.util.assetsUrl;
 import com.teamhydra.DAOs.UserDAO;
-import com.teamhydra.Objects.UserInfo;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,8 +13,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
 
 /**
  *
@@ -64,8 +58,7 @@ public class ProfileInfoController extends HttpServlet{
                                        if(success > 0)
                                        {
                                                 
-//                                           res.sendRedirect("JSP/Profile/profile.jsp");
-                                              out.write("success");
+                                              out.write("mealAdded");
                                        }
                                        
                                          }

@@ -1,3 +1,5 @@
+package com.dietme.admin;
+
 //
 //import com.dietme.admin.Admin;
 //import com.dietme.admin.AdminDao;

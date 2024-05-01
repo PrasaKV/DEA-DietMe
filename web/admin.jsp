@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>CMS Dashboard</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="common/styles/custom.css">
+    <link rel="stylesheet" href="JSP/Admin/common/styles/custom.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
@@ -17,17 +17,17 @@
 <body>
 <div class="wrapper">
     <div class="body-overlay"></div>
-    <%@include file="common/widgets/sidenavbar.jsp" %>
+    <%@include file="JSP/Admin/common/widgets/sidenavbar.jsp" %>
     <div id="content">
-        <%@include file="common/widgets/topnavbar.jsp" %>
+        <%@include file="JSP/Admin/common/widgets/topnavbar.jsp" %>
         <div class="main-content">
             <div class="container-fluid">
                 <% if (request.getParameter("page") == null || request.getParameter("page").equals("dashboard")) { %>
-                    <%@include file="jsp/home/homeCategoryRow.jsp" %>
+                <%@include file="JSP/Admin/home/homeCategoryRow.jsp" %>
                 <% } %>
 
                 <% if (request.getParameter("page") != null && request.getParameter("page").equals("users")) { %>
-                    <%@include file="jsp/users/usersRow.jsp" %>
+                    <%@include file="JSP/Admin/home/homeCategoryRow.jsp" %>
                 <% } %>
 
                 <% if (request.getParameter("page") != null && (request.getParameter("page").equals("defaultMeals") || request.getParameter("page").equals("customMeals") || request.getParameter("page").equals("mealitems"))) { %>

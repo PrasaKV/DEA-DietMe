@@ -12,7 +12,6 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Sign Up Form</title>
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/styles.css")%>"/>
-        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/Sign_up_in.js")%>"></script>
     </head>
     <body>
         <div class="center">
@@ -20,7 +19,7 @@
                 <h2>Sign Up to continue</h2>
                 <hr>
 
-                <form action="/DEA-DietMe/SignUpController" method="POST" onsubmit="return validate();">
+                <form action="${pageContext.request.contextPath}/auth/registerMethod" method="POST">
 
                     
                     <label for="fullname">Full Name:</label>
@@ -38,7 +37,7 @@
                     <button class="green-btn" type="submit">Sign Up</button>
                 </form>
                 <div class="register-text">
-                    <p>Already have an account? <a href="Sign_In.jsp">Login</a></p>
+                    <p>Already have an account? <a href="${pageContext.request.contextPath}/auth/login">Login</a></p>
                 </div>
             </div>
         </div>
