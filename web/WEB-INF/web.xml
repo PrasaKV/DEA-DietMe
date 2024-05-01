@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
-    
+
     <servlet>
         <servlet-name>Home</servlet-name>
         <jsp-file>/index.jsp</jsp-file>
@@ -17,15 +17,20 @@
     </servlet>
     
     <servlet>
-        <servlet-name>Usercontroller</servlet-name>
-        <servlet-class>Usercontroller</servlet-class>
-    </servlet>
-    
-    <servlet>
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>com.teamhydra.Sign_UpIn_Controller.RegisterServlet</servlet-class>
     </servlet>
+
+    <servlet>
+        <servlet-name>UserVerify</servlet-name>
+        <servlet-class>com.teamhydra.Userverify.UserVerify</servlet-class>
+    </servlet>
     
+    <servlet>
+        <servlet-name>VerifyCode</servlet-name>
+        <servlet-class>com.teamhydra.Userverify.VerifyCode</servlet-class>
+    </servlet>
+
     <servlet>
         <servlet-name>navbar</servlet-name>
         <jsp-file> /JSP/Common/navbar.jspf</jsp-file>
@@ -42,8 +47,8 @@
     </servlet>
     
     <servlet>
-        <servlet-name>CustomMeal</servlet-name>
-        <jsp-file> /JSP/Profile/ProfileFrag/customMeals.jsp</jsp-file>
+        <servlet-name>CustomMeals</servlet-name>
+        <jsp-file> /JSP/Profile/ProfileFrag/customMeal.jsp</jsp-file>
     </servlet>
     
     <servlet>
@@ -86,15 +91,16 @@
         <url-pattern>/SignUp</url-pattern>
     </servlet-mapping>
     
-    <servlet-mapping>
-        <servlet-name>Usercontroller</servlet-name>
-        <url-pattern>/Usercontroller</url-pattern>
-    </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>RegisterServlet</servlet-name>
-        <url-pattern>/RegisterServlet</url-pattern>
+        <servlet-name>UserVerify</servlet-name>
+        <url-pattern>/UserVerify</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerifyCode</servlet-name>
+        <url-pattern>/VerifyCode</url-pattern>
+    </servlet-mapping>
+
     
     <servlet-mapping>
         <servlet-name>Profile</servlet-name>
@@ -112,8 +118,8 @@
     </servlet-mapping>
     
     <servlet-mapping>
-        <servlet-name>CustomMeal</servlet-name>
-        <url-pattern>/CustomMeal</url-pattern>
+        <servlet-name>CustomMeals</servlet-name>
+        <url-pattern>/CustomMeals</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>
@@ -140,7 +146,7 @@
         <servlet-name>PendingDeliveries</servlet-name>
         <url-pattern>/PendingDeliveries</url-pattern>
     </servlet-mapping>
-    
+
     <session-config>
         <session-timeout>
             30

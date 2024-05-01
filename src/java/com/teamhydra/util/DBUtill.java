@@ -64,4 +64,6 @@ public static Connection getConnection() throws SQLException {
             System.out.println("Error in closing resources: " + ex.getMessage());
         }
     }
+    
+    
 }

@@ -22,11 +22,11 @@
             
                        if(userName == null)
                         {
-                                response.sendRedirect("/DEA-DietMe/index.jsp");
+                                response.sendRedirect("/DEA-DietMe/Home");
                                 System.out.println("ProfileInfo If Redirect");
                         }          
          else {
-             response.sendRedirect("/DEA-DietMe/JSP/Profile/profile.jsp");
+             response.sendRedirect("/DEA-DietMe/Profile");
          } 
     }
         catch (NullPointerException e) {

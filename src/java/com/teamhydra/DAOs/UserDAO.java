@@ -21,7 +21,7 @@ public class UserDAO {
     private static String profileImage;
 
 
-    public static boolean signUpUser(String name, String email, String password) {
+     public static boolean signUpUser(String name, String email, String password) {
         boolean signedUp = false;
         
         System.out.println(name);
