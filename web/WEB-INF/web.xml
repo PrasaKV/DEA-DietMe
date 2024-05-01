@@ -32,6 +32,16 @@
     </servlet>
 
     <servlet>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <servlet-class>com.dietme.productmeal.AddToCartServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>BuyNowServlet</servlet-name>
+        <servlet-class>com.dietme.productmeal.BuyNowServlet</servlet-class>
+    </servlet>
+
+
+    <servlet>
         <servlet-name>navbar</servlet-name>
         <jsp-file> /JSP/Common/navbar.jspf</jsp-file>
     </servlet>
@@ -76,6 +86,7 @@
         <jsp-file> /JSP/Profile/ProfileFrag/pendingDeliveries.jsp</jsp-file>
     </servlet>
     
+
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/Home</url-pattern>
@@ -100,6 +111,16 @@
         <servlet-name>VerifyCode</servlet-name>
         <url-pattern>/VerifyCode</url-pattern>
     </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AddToCartServlet</servlet-name>
+        <url-pattern>/AddToCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>BuyNowServlet</servlet-name>
+        <url-pattern>/BuyNowServlet</url-pattern>
+    </servlet-mapping>
+
 
     
     <servlet-mapping>
@@ -146,6 +167,7 @@
         <servlet-name>PendingDeliveries</servlet-name>
         <url-pattern>/PendingDeliveries</url-pattern>
     </servlet-mapping>
+
 
     <session-config>
         <session-timeout>
