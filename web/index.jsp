@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/global.css")%>"/>
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/index.css")%>"/>
         <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/navbar.js")%>" defer></script>
+        <script src="<%=assetsUrl.giveUrl(request, "Common Resources/Scripts/index.js")%>" defer></script>
 
         <title>home</title>
     </head>
@@ -53,21 +54,24 @@
             <h2 class="topic2">Popular Meals</h2>
             <div class="mealsCarouselDiv">
                 <div class="mealsListDiv">
-                    <div class="Card">
+                    <div class="Card" onmouseover="showButton()" onmouseout="hideButton()">
                         <div class="cardImageDiv">
                             <img class="cardImage" src="Common Resources/Images/Card image.jpg" alt="Image">
+                            <div class="favHeartDiv">
+                                <img id="favHeart" src="Common Resources/Assets/heart 0.png" alt="image" onclick="changeImage()">
+                            </div>
                         </div>
                         <div class="mealDiscriptionDiv">
                             <p> A meal pack for breakfast with three portions and a beverage</p>
                         </div>
-                        <div class="mealCalDiv">
-                            <p>1200 Calories</p>
+                        <div class="mealNameDiv">
+                            <p>Fruit Salad</p>
                         </div>
                         <div class="mealPriceDiv">
                             <p>Rs.1000/=</p>
                         </div>
                         <div class="orderButtonDiv">
-                            <button class="orderButton">Add To Cart</button>
+                            <button id="orderButton">More Details</button>
                         </div>
                     </div>
                 </div>
@@ -77,9 +81,25 @@
         <div class="feedbackDiv">
             <div class="feedbackground">
                 <div class="backblur">
+                    <div class="commentContainer">
+                        <div class="commentImageDiv">
+                            <img class="commentImage" src="Common Resources/Assets/avatar.png" alt="Avatar">
+                        </div>
+                        <div class="commentText">
+                            <h2 class="userName">User Name</h2>
+                            <p class="commentContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae libero sit amet ipsum dapibus fermentum.</p>
+                        </div>   
+                    </div>
                     <div class="commentbar">
                         <div class="backblur2">
-                            
+                            <form id="newCommentForm">
+                                <input type="text" id="commentText" name="commentText" placeholder="Add Comment..." required><br>
+                                <div class="sendButton">
+                                    <button type="submit">
+                                        <img class="sendImage" src="Common Resources/Assets/send.png">
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
