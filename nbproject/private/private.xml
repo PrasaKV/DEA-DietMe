@@ -2,6 +2,11 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
+        <group/>
+        <group/>
+        <group/>
+=======
         <group>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/src/java/com/teamhydra/util/commonUtill.java</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/src/java/com/teamhydra/Controllers/createMealController.java</file>
@@ -12,5 +17,6 @@
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/web/JSP/Common/navbar.jspf</file>
             <file>file:/D:/Programming/Java/NetBeans/Group%20Project/h/DEA-DietMe/web/Common%20Resources/Styles/yourMealPopup.css</file>
         </group>
+>>>>>>> 49defcd3c8bec955b9e5e25cc264b66760a63420
     </open-files>
 </project-private>

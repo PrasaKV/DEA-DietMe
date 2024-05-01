@@ -1,10 +1,12 @@
 package com.teamhydra.DAOs;
 
+import com.teamhydra.Controllers.EmailSender;
 import com.teamhydra.Objects.UserInfo;
 import com.teamhydra.util.DBUtill;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.UUID;
 
 /**
  *
@@ -28,6 +30,9 @@ public class UserDAO {
         
         try {
             if (!(name.isEmpty() && email.isEmpty() && password.isEmpty())) {
+                
+                String verificationToken = UUID.randomUUID().toString();
+                
                 System.out.println(email);
                 System.out.println(password);
                 
@@ -46,6 +51,24 @@ public class UserDAO {
                 if (affectedrows > 0) {
                     System.out.println("Insert Success");
                     signedUp = true;
+                    
+                    ResultSet rs = stmt.getGeneratedKeys();
+                    if(rs.next()) {
+                        int userId = rs.getInt(1);
+                        // Insert user details and verification token into the verification_tokens table
+                        String sql2 = "INSERT INTO verification_tokens (user_id, email, token) VALUES (?, ?, ?)";
+                        PreparedStatement stmt2 = DBUtill.setStatment(sql2);
+                        stmt2.setInt(1, userId);
+                        stmt2.setString(2, email);
+                        stmt2.setString(3, verificationToken);
+                        stmt2.executeUpdate();
+                        
+                        // Send verification email
+                        EmailSender.sendVerificationEmail(email, verificationToken);
+
+                        signedUp = true;
+
+                    }
                 }
             } else {
                 System.out.println("Empty data");
@@ -169,11 +192,6 @@ public static UserInfo signInUser(String email) {
         return msg;
         
     }
-    
-    
-    
-    
-    
     
 }
 

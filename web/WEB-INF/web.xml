@@ -44,6 +44,12 @@
         <servlet-name>BuyNowServlet</servlet-name>
         <servlet-class>com.dietme.productmeal.BuyNowServlet</servlet-class>
     </servlet>
+<<<<<<< HEAD
+    <servlet>
+        <servlet-name>VerificationServlet</servlet-name>
+        <servlet-class>com.teamhydra.Controllers.VerificationServlet</servlet-class>
+    </servlet>
+=======
 
 
     <servlet>
@@ -92,6 +98,7 @@
     </servlet>
     
 
+>>>>>>> 49defcd3c8bec955b9e5e25cc264b66760a63420
     <servlet-mapping>
         <servlet-name>Home</servlet-name>
         <url-pattern>/Home</url-pattern>
@@ -130,6 +137,12 @@
         <servlet-name>BuyNowServlet</servlet-name>
         <url-pattern>/BuyNowServlet</url-pattern>
     </servlet-mapping>
+<<<<<<< HEAD
+    <servlet-mapping>
+        <servlet-name>VerificationServlet</servlet-name>
+        <url-pattern>/VerificationServlet</url-pattern>
+    </servlet-mapping>
+=======
 
 
     
@@ -179,6 +192,7 @@
     </servlet-mapping>
 
 
+>>>>>>> 49defcd3c8bec955b9e5e25cc264b66760a63420
     <session-config>
         <session-timeout>
             30
