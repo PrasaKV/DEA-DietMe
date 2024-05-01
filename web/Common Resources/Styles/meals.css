@@ -1,24 +1,19 @@
-/* 
-    Created on : Apr 17, 2024, 8:52:40 PM
-    Author     : imandi
-*/
+
 .background-image{
                 height: 700px;
                 width:1500px;
+                
             }  
 
             .navbar2 {
-                position:relative;
+                z-index: 100;
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                background-color:#666666;
-                background-position:bottom;
-                color: #fff;
-
-
-                z-index: 2;
+                background-color: rgba(0, 0, 0, 10);
                 box-sizing: border-box;
+                position: absolute;
+                
             }
 
 
@@ -160,8 +155,6 @@
                 border-radius: 10px;
                 text-align: center;
 
-
-
             }
 
             .card-image{
@@ -214,3 +207,134 @@
             .round-button:hover{
                 transform: scale(1.2);
             }
+            
+.mealsDiv{
+    margin: 40px;
+    height: 900px;
+    width: 100%;
+    background-color: white;
+    
+    .topic2{
+      font-family: "Rye", serif;
+      font-size: 30px;
+      font-weight: bold;
+      font-style: normal;
+
+      padding: 70px;
+      /*padding-bottom: 120px;*/
+      text-align: center;
+    }
+    
+    .mealsCarouselDiv{
+      height: 650px;
+      width: 100%;
+    }
+
+    .mealsListDiv{
+      height: 600px;
+      width: 92%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .Card{
+      height: 510px;
+      width: 270px;
+      background-color: white;
+      border-radius: 15px;
+
+      .cardImageDiv{
+        height: 250px;
+        width: 250px;
+
+        .cardImage{
+          height: 250px;
+          width: 250px;
+          margin: 10px;
+          border-radius: 15px;
+        }
+      }
+
+      .mealDiscriptionDiv{
+        margin: 15px;
+        padding-top: 7px;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: lighter;
+      }
+
+      .mealCalDiv{
+        margin: 15px;
+        padding-top: 15px;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: normal;
+      }
+
+      .mealPriceDiv{
+        margin: 15px;
+        padding-top: 10px;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: bold;
+      }
+
+      .orderButtonDiv{
+        text-align: center;
+        padding-top: 15px;
+
+        .orderButton{
+          background-color: #01ca5e;
+          color: rgb(255, 255, 255);
+
+          height: 40px;
+          width: 130px;
+          border-radius: 10px;
+          cursor: pointer;
+    
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: larger;
+        }
+
+        .orderButton:hover{
+          background-color: #01ca5fb3; 
+        }
+
+        .orderButton:active{
+          background-color: #01ca5e;
+          box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+
+    .Card:hover{
+      height: 510px;
+      width: 271px;
+
+      box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.4);
+
+      .cardImage{
+        height: 250px;
+        width: 251px;
+      }
+
+      .mealDiscriptionDiv{
+        font-size: 12.25px;
+      }
+
+      .mealCalDiv{
+        font-size: 20.25px;
+      }
+
+      .mealPriceDiv{
+        font-size: 20.25px;
+      }
+    }
+  }
+  
