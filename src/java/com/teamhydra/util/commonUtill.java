@@ -35,8 +35,8 @@ public class commonUtill {
         return result;
     }
                      
-        public static List<String> mealPortionSize() throws SQLException {
-        List<String> result = new ArrayList<>();
+        public static List<Integer> mealPortionSize() throws SQLException {
+        List<Integer> result = new ArrayList<>();
         String sql = "SELECT baseGram FROM mealportions";
         
         try {
@@ -44,7 +44,7 @@ public class commonUtill {
             ResultSet rs = stmt.executeQuery();
             
             while (rs.next()) {
-                String mealGram = rs.getString("baseGram");
+                int mealGram = rs.getInt("baseGram");
                 result.add(mealGram);
             }
             
@@ -57,8 +57,8 @@ public class commonUtill {
         return result;
     }
         
-         public static List<String> mealPortionCal() throws SQLException {
-        List<String> result = new ArrayList<>();
+         public static List<Integer > mealPortionCal() throws SQLException {
+        List<Integer > result = new ArrayList<>();
         String sql = "SELECT baseCal FROM mealportions";
         
         try {
@@ -66,7 +66,7 @@ public class commonUtill {
             ResultSet rs = stmt.executeQuery();
             
             while (rs.next()) {
-                String mealCal = rs.getString("baseCal");
+                int mealCal = rs.getInt("baseCal");
                 result.add(mealCal);
             }
             
@@ -78,8 +78,8 @@ public class commonUtill {
         
         return result;
     }
-         public static List<String> mealPortionPrice() throws SQLException {
-        List<String> result = new ArrayList<>();
+         public static List<Integer> mealPortionPrice() throws SQLException {
+        List<Integer> result = new ArrayList<>();
         String sql = "SELECT basePrice FROM mealportions";
         
         try {
@@ -87,7 +87,7 @@ public class commonUtill {
             ResultSet rs = stmt.executeQuery();
             
             while (rs.next()) {
-                String mealPrice = rs.getString("basePrice");
+                int mealPrice = rs.getInt("basePrice");
                 result.add(mealPrice);
             }
             
@@ -99,4 +99,36 @@ public class commonUtill {
         
         return result;
     }
+         
+        public static ResultSet getAllWhereUser(String table,int userId)throws SQLException
+        {
+            String sql = "SELECT * FROM "+table+ " WHERE userId= "+userId;
+             ResultSet result = null;
+            try{
+                
+                PreparedStatement stmt = DBUtill.setStatment(sql);
+                result = stmt.executeQuery();
+                
+            }
+            catch(SQLException e)
+            {
+                System.out.println(e.getMessage());
+            }
+            return result;
+        }
+        public static ResultSet getAll(String table)throws SQLException
+        {
+            String sql = "SELECT * FROM "+table;
+             ResultSet result = null;
+            try{
+                PreparedStatement stmt = DBUtill.setStatment(sql);
+                result = stmt.executeQuery();
+                
+            }
+            catch(SQLException e)
+            {
+                System.out.println(e.getMessage());
+            }
+            return result;
+        }
 }

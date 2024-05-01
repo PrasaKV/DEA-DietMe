@@ -150,6 +150,11 @@
     width: 100%;
     background-color: rgba(255, 255, 255, 0.5);
 
+/*<<<<<<< HEAD
+      padding: 70px;
+      padding-bottom: 120px;
+      text-align: center;
+=======*/
 
     .topic2{
         font-family: "Rye", serif;
@@ -159,6 +164,7 @@
 
         padding: 70px;
         text-align: center;
+/*>>>>>>> Admin-pannel*/
     }
 
     .mealsCarouselDiv{
@@ -167,10 +173,18 @@
     }
 
     .mealsListDiv{
+/*<<<<<<< HEAD
+      height: 600px;
+      width: 92%;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+=======*/
         height: 600px;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+/*>>>>>>> Admin-pannel*/
     }
 
     .Card{
@@ -186,6 +200,101 @@
             height: 250px;
             width: 250px;
 
+/*<<<<<<< HEAD
+      .cardImageDiv{
+        height: 270px;
+        width: 270px;
+        position: relative;
+
+        .cardImage{
+          height: 250px;
+          width: 250px;
+          margin: 10px;
+          border-radius: 15px;
+        }
+        
+         .favHeartDiv{
+          height: 55px;
+          width: 55px;
+
+          position: absolute;
+          right: 15px;
+          bottom: 15px;
+          
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 0.7); 
+        }
+
+        #favHeart{
+          height: 30px;
+          width: 30px;
+
+          position: absolute;
+          right: 12px;
+          bottom: 10px;
+        }
+      }
+
+      .mealDiscriptionDiv{
+        margin: 15px;
+        margin-top: 0px;
+
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: lighter;
+      }
+
+      .mealNameDiv{
+        margin: 15px;
+        padding-top: 5px;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: bolder;
+        color: #01ca5e;
+      }
+
+      .mealPriceDiv{
+        margin: 15px;
+        padding-top: 15px;
+
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: bold;
+      }
+
+      .orderButtonDiv{
+        padding-top: 25px;
+
+        #orderButton{
+          background-color: #01ca5e;
+          color: rgb(255, 255, 255);
+          display: none;
+
+          height: 40px;
+          width: 130px;
+          border-radius: 10px;
+          margin-left: auto;
+          margin-right: auto;
+          cursor: pointer;
+    
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: larger;
+        }
+
+        #orderButton:hover{
+          background-color: #01ca5fb3; 
+        }
+
+        #orderButton:active{
+          background-color: #01ca5e;
+          box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.5);
+        }
+      }
+=======*/
             .cardImage{
                 height: 100%;
                 width: 100%;
@@ -243,6 +352,7 @@
             }
         }
 
+/*>>>>>>> Admin-pannel*/
     }
 
     .Card:hover{
@@ -260,9 +370,15 @@
             font-size: 12.25px;
         }
 
+/*<<<<<<< HEAD
+      .mealNameDiv{
+        font-size: 20.25px;
+      }
+=======*/
         .mealCalDiv{
             font-size: 20.25px;
         }
+/*>>>>>>> Admin-pannel*/
 
         .mealPriceDiv{
             font-size: 20.25px;
@@ -286,11 +402,74 @@
         box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.5);
         margin: 2rem auto;
 
+/*<<<<<<< HEAD
+      .backblur{
+        height: 600px;
+        width: 1000px;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(3px);
+        
+        .commentContainer {
+          display: flex;
+          margin-bottom: 20px;
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-bottom: 20px;
+          padding-top: 20px;
+          padding-right: 20px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+          border-radius: 15px;
+    
+          position: absolute;
+          z-index: 5;
+          top: 20px;
+        }
+        .commentImageDiv {
+            width: 60px;
+            height: 60px;
+            margin-left: 20px;
+            margin-right: 20px;
+            border-radius: 50%;
+      
+            .commentImage {
+              width: 60px;
+              height: 60px;
+              border-radius: 50%;
+            }
+        }
+        
+        .commentText {
+            flex-grow: 1;
+        }
+
+        .userName {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+          padding-bottom: 5px;
+        }
+
+        .commentcontent{
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 15px;
+        }
+      }
+      
+      .commentbar{
+        height: 150px;
+        width: 1000px;
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        
+        background-color: white;
+=======*/
         .backblur{
             height: 600px;
             width: 100%;
             background-color: rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(3px);
+/*>>>>>>> Admin-pannel*/
 
             .commentContainer {
                 width: 90%;
@@ -315,6 +494,74 @@
                 }
             }
 
+/*<<<<<<< HEAD
+      .backblur2{
+        height: 150px;
+        width: 1000px;
+        background-color: rgba(0, 0, 0, 0.4);
+
+        position: absolute;
+        bottom: 0;
+        
+         #newCommentForm{
+          height: 100px;
+          width: 950px;
+        }
+    
+        #commentText{
+          height: 60px;
+          width: 850px;
+          position: absolute;
+          top: 40px;
+    
+          margin-left: 40px;
+          border-radius: 15px;
+          border: none;
+          padding: 20px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+          flex-grow: 1;
+        }
+
+        .sendButton{
+          height: 60px;
+          width: 60px;
+    
+          position: absolute;
+          top: 40px;
+          right: 40px;
+    
+          border-radius: 15px;
+    
+          background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .sendButton:active {
+          height: 60px;
+          width: 60px;
+      
+          position: absolute;
+          top: 40px;
+          right: 40px;
+      
+          border-radius: 15px;
+      
+          background-color: rgba(0, 0, 0, 0.5);
+      }
+    
+        .sendImage{
+          height: 35px;
+          width: 35px;
+    
+          position: absolute;
+          top: 13px;
+          right: 10px;
+    
+          border-radius: 15px;
+        }
+      }
+      }
+=======*/
             .commentText {
                 flex-grow: 1;
             }
@@ -413,6 +660,7 @@
                 }
             }
         }
+/*>>>>>>> Admin-pannel*/
     }
     .reviews-scroll{
         height: 80%;

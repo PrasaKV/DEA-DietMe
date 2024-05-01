@@ -4,6 +4,7 @@
     Author     : Imandi
 --%>
 
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -67,6 +68,8 @@
             </div>
         </div>
             
+
                 <%@include file="../Common/footer.jspf"  %>
+
     </body>
 </html>

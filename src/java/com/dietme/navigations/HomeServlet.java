@@ -66,6 +66,7 @@ public class HomeServlet extends HttpServlet {
     private void showHomePage(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+
         RequestDispatcher dispatcher;
         List<DefaultMeals> dmList = defaultMealDao.findAll();
         request.setAttribute("dMList", dmList);
@@ -73,6 +74,7 @@ public class HomeServlet extends HttpServlet {
                 "home.jsp");
 
         dispatcher.forward(request, response);
+
     }
 
 }
