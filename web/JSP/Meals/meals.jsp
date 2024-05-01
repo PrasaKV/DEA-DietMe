@@ -4,6 +4,7 @@
     Author     : Imandi
 --%>
 
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,7 @@
         <title>meals</title>
     </head>
     <body>
-        <%@include file="../../WEB-INF/jspf/Common/navbar.jspf" %>
+        <%@include file="../Common/navbar.jspf" %>
 
         <div class="container">
 
@@ -67,6 +68,6 @@
             </div>
         </div>
             
-        <%@include file="../../WEB-INF/jspf/Common/footer.jspf"  %>
+        <%@include file="../Common/footer.jspf"  %>
     </body>
 </html>
