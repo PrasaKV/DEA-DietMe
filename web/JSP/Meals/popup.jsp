@@ -1,9 +1,3 @@
-<%-- 
-    Document   : popup.jsp
-    Created on : Apr 20, 2024, 12:05:02 AM
-    Author     :Sandali
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

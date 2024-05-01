@@ -3,7 +3,7 @@ package com.teamhydra.util;
 import javax.servlet.http.HttpServletRequest;
 /**
  *
- * @author Prasad
+ * @author ashani
  */
 public class assetsUrl {
     
@@ -11,7 +11,7 @@ public class assetsUrl {
              {
                  
                     
-                    String fileUrl = request.getScheme() + "://" + request.getServerName()+ ":" + request.getServerPort() + "/"+ request.getServletContext().getContextPath() + "/";
+                    String fileUrl = request.getScheme() + "://" + request.getServerName()+ ":" + request.getServerPort() + request.getServletContext() .getContextPath() + "/";
 //                    String fileUrl = request.getScheme() + "://" + request.getServerName() + "/" + request.getServletContext().getContextPath() + "/";
                     String url = fileUrl + path;
                     

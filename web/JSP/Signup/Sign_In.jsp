@@ -21,7 +21,9 @@
                 <h2>Welcome</h2>
                 <h4>Sign in to continue</h4>
                 <hr>
-                <form action="/DEA-DietMe/UserController?request=signin" method="post" class="login-form">
+
+                <form action="${pageContext.request.contextPath}/auth/loginMethod" method="post" class="login-form">
+
 
                 <div class="form-group">
                     <label for="email">Email:</label>
@@ -44,7 +46,7 @@
 
 
                 <div class="register-text">
-                    <p>Haven't registered yet? <a href="Sign_up.jsp">Register</a></p>
+                    <p>Haven't registered yet? <a href="${pageContext.request.contextPath}/auth/register">Register</a></p>
                 </div>
             </form>
 
