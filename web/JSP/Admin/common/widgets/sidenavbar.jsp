@@ -40,7 +40,7 @@
         </div>
 
         <li class="dropdown">
-            <a href="mealItems/show" class="<%= request.getParameter("page") != null && request.getParameter("page").equals("users") ? "active" : "" %>">
+            <a href="" class="<%= request.getParameter("page") != null && request.getParameter("page").equals("users") ? "active" : "" %>">
                 <i class="material-icons">person</i><span>Users</span>
             </a>
         </li>
@@ -58,8 +58,8 @@
         </li>
 
         <li class="dropdown">
-            <a href="index.jsp?page=mealitems" class="<%= request.getParameter("page") != null && request.getParameter("page").equals("mealitems") ? "active" : "" %>">
-                <i class="material-icons">restaurant_menu</i><span>Meal Contains</span>
+            <a href="<%=assetsUrl.giveUrl(request, "admin/meal-items/show")%>" class="<%= request.getParameter("page") != null && request.getParameter("page").equals("mealitems") ? "active" : "" %>">
+                <i class="material-icons">restaurant_menu</i><span>Meal Items</span>
             </a>
         </li>
 
