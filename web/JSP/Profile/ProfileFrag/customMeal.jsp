@@ -401,7 +401,7 @@
                      data-third-portion="<%=result.getString("thirdPortion")%>" data-third-portion-size="<%=result.getString("thirdPortionSize")%>"
                       data-fourth-portion="<%=result.getString("fourthPortion")%>" data-fourth-portion-size="<%=result.getString("fourthPortionSize")%>"
                       data-fifth-portion="<%=result.getString("fifthPortion")%>" data-fifth-portion-size="<%=result.getString("fifthPortionSize")%>">
-                    <img id="removeCardIcon" src="<%= assetsUrl.giveUrl(request, "Common Resources/Assets/close.png") %>">
+                    <img class="removeCardIcon" src="<%= assetsUrl.giveUrl(request, "Common Resources/Assets/close.png") %>" data-meal-Id="<%=result.getString("mealId")%>">
                     <img
                         src="https://media.istockphoto.com/id/168340083/photo/choosemyplate-healthy-food-and-plate-of-usda-balanced-diet-recommendation.jpg?s=612x612&w=0&k=20&c=S5OYuPg-n1fuOOgReQf9xPuFgA1i-UO54Uj2u1RD7iU="
                         alt="meal image"
@@ -841,7 +841,7 @@
         const popupCreateMealDiscriptionInput = document.getElementById("popupCreateMealDiscriptionInput");
 
 
-        const removeCardIcon = document.getElementById("removeCardIcon");
+        const removeCardIcon = document.querySelectorAll(".removeCardIcon");
 
         popupCreateMealsPortionFirstDiv.style.display = "none";
         popupCreateMealsPortionSecondDiv.style.display = "none";
@@ -993,79 +993,111 @@
         });
         
         
-        removeCardIcon.addEventListener("click",()=>{
-            if(confirm("are you sure about this"))
-            {
-                window.location.reload(false);
-            }
+        removeCardIcon.forEach( (removeCardIcon) => {
+            
+            removeCardIcon.addEventListener("click",() => {
+            if(confirm("are you sure about this")){
+               
+                        const XMLRequest = new XMLHttpRequest();
+
+                        XMLRequest.onreadystatechange = ()=> {
+                            if(XMLRequest.readyState === XMLHttpRequest.DONE){
+
+                                if(XMLRequest.status === 200){
+
+                                    if(XMLRequest.responseText === "success")
+                                    {
+                                        window.location.reload(true);
+                                    }
+                                else {
+                                    alert("Somthing Went Wrong");
+                                }
+                            }
+                             else if (XMLRequest.status === 400){
+                                    alert("Somthing Went Wrong Horribly");
+                                }         
+                        }
+                    };
+            
+                XMLRequest.open("POST","/DEA-DietMe/createMealController?userId=<%=userId%>&type=delete&mealId="+removeCardIcon.dataset.mealId, true);
+                XMLRequest.send();
+
+            } 
+            });
         });
         
+
+
         
         const createMealCards = document.querySelectorAll(".createMealCard");
-
+        
         createMealCards.forEach(function (card) {
-            
-                    card.addEventListener("mouseover", function() {
+        
+        const removeCardIcon = card.querySelector(".removeCardIcon");
+
+            card.addEventListener("mouseover", function() {
                 removeCardIcon.style.display = "initial";
             });
 
             card.addEventListener("mouseout", function() {
                 removeCardIcon.style.display = "none";
             });
-            
+
             card.addEventListener("click", () => {
-                
-            mealsPopupContainer.style.display = "flex";
-                
-            popupCreateMealNameInput.dataset.mealId = card.dataset.mealId;
-            popupCreateMealNameInput.placeholder = card.dataset.mealName;    
-            popupCreateMealDiscriptionInput.placeholder = card.dataset.mealDiscription;    
-                
-           for (let i = 0; i < popUpfirstPortionList.options.length; i++) {
-               
-               
-                    if (popUpfirstPortionList.options[i].value === card.dataset.firstPortion) {
-                        popUpfirstPortionList.selectedIndex = i;
-                    }
 
-                    if (popUpsecondPortionList.options[i].value=== card.dataset.secondPortion) {
-                        popUpsecondPortionList.selectedIndex = i;
-                    }
+                setTimeout(()=>{
+              
+                            mealsPopupContainer.style.display = "flex";
 
-                    if (popUpthirdPortionList.options[i].value === card.dataset.thirdPortion) {
-                        popUpthirdPortionList.selectedIndex = i;
-                    }
+                            popupCreateMealNameInput.dataset.mealId = card.dataset.mealId;
+                            popupCreateMealNameInput.placeholder = card.dataset.mealName;    
+                            popupCreateMealDiscriptionInput.placeholder = card.dataset.mealDiscription;    
 
-                    if (popUpfourthPortionList.options[i].value === card.dataset.fourthPortion) {
-                        popUpfourthPortionList.selectedIndex = i;
-                    }
+                           for (let i = 0; i < popUpfirstPortionList.options.length; i++) {
 
-                    if (popUpfifthPortionList.options[i].value === card.dataset.fifthPortion) {
-                        popUpfifthPortionList.selectedIndex = i;
-                    }
 
-                    if (popUpfirstPortionSize.options[i].value === card.dataset.firstPortionSize) {
-                        popUpfirstPortionSize.selectedIndex = i;
-                    }
+                                    if (popUpfirstPortionList.options[i].value === card.dataset.firstPortion) {
+                                        popUpfirstPortionList.selectedIndex = i;
+                                    }
 
-                    if (popUpsecondPortionSize.options[i].value === card.dataset.secondPortionSize) {
-                        popUpsecondPortionSize.selectedIndex = i;
-                    }
+                                    if (popUpsecondPortionList.options[i].value=== card.dataset.secondPortion) {
+                                        popUpsecondPortionList.selectedIndex = i;
+                                    }
 
-                    if (popUpthirdPortionSize.options[i].value === card.dataset.thirdPortionSize) {
-                        popUpthirdPortionSize.selectedIndex = i;
-                    }
+                                    if (popUpthirdPortionList.options[i].value === card.dataset.thirdPortion) {
+                                        popUpthirdPortionList.selectedIndex = i;
+                                    }
 
-                    if (popUpfourthPortionSize.options[i].value === card.dataset.fourthPortionSize) {
-                        popUpfourthPortionSize.selectedIndex = i;
-                    }
+                                    if (popUpfourthPortionList.options[i].value === card.dataset.fourthPortion) {
+                                        popUpfourthPortionList.selectedIndex = i;
+                                    }
 
-                    if (popUpfifthPortionSize.options[i].value === card.dataset.fifthPortionSize) {
-                        popUpfifthPortionSize.selectedIndex = i;
-                    }
-                }
+                                    if (popUpfifthPortionList.options[i].value === card.dataset.fifthPortion) {
+                                        popUpfifthPortionList.selectedIndex = i;
+                                    }
 
-            });
+                                    if (popUpfirstPortionSize.options[i].value === card.dataset.firstPortionSize) {
+                                        popUpfirstPortionSize.selectedIndex = i;
+                                    }
+
+                                    if (popUpsecondPortionSize.options[i].value === card.dataset.secondPortionSize) {
+                                        popUpsecondPortionSize.selectedIndex = i;
+                                    }
+
+                                    if (popUpthirdPortionSize.options[i].value === card.dataset.thirdPortionSize) {
+                                        popUpthirdPortionSize.selectedIndex = i;
+                                    }
+
+                                    if (popUpfourthPortionSize.options[i].value === card.dataset.fourthPortionSize) {
+                                        popUpfourthPortionSize.selectedIndex = i;
+                                    }
+
+                                    if (popUpfifthPortionSize.options[i].value === card.dataset.fifthPortionSize) {
+                                        popUpfifthPortionSize.selectedIndex = i;
+                                    }
+                                    }
+                            },300);
+                });
         });
 
         popupCreateMealsCancel.addEventListener("click", () => {

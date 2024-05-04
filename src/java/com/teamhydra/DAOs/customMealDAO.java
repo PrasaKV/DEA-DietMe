@@ -145,5 +145,30 @@ public class customMealDAO {
         return success;
         
 }
+          public static int deleteMeal(int mealId,int userId) throws SQLException {
+
+                int success = 0;
+
+
+                    String sql = "DELETE FROM custommeal WHERE mealId = ? AND userId = ?";
+
+
+           try {
+
+                    PreparedStatement stmt = DBUtill.setStatment(sql);
+                    
+                    stmt.setInt(1, mealId);
+                    stmt.setInt(2, userId); 
+                    
+                    success = stmt.executeUpdate();
+
+                } 
+           catch (SQLException e) {
+                    System.out.println(e.getMessage());
+                }
+
+        return success;
+        
+}
 }
 

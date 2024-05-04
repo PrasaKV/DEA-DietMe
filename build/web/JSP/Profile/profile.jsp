@@ -81,10 +81,6 @@
     <body>
 
         <%@include file="../Common/navbar.jspf" %>
-
-       <% 
-
-       %> 
         
         <div id="profile">
             <div class="profileDivLeft profileDiv">

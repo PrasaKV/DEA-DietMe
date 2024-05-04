@@ -67,6 +67,22 @@ public class createMealController extends HttpServlet {
                                                            out.write("success");
                                                     }
                                             }
+                                            
+                                             else if(type.equals("delete"))
+                                            {
+                                                     if( Integer.parseInt(req.getParameter("mealId")) != 0)
+                                                    { 
+                                                        userId =   Integer.parseInt(req.getParameter("userId"));
+                                                        mealId =  Integer.parseInt(req.getParameter("mealId"));
+                                                    }
+
+                                                     success = customMealDAO.deleteMeal(mealId,userId);
+                                                     
+                                                    if(success > 0)
+                                                    {
+                                                           out.write("success");
+                                                    }
+                                            }
                     }
                     catch (JsonSyntaxException | SQLException e)
                     {
