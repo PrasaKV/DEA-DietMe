@@ -13,6 +13,7 @@ and open the template in the editor.
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: #404040
   }
 
 .card {
@@ -38,6 +39,7 @@ and open the template in the editor.
 
 h2, h4 {
   margin: 0;
+/*  text-decoration: #01CA5A*/
 }
 
 hr {
@@ -76,6 +78,10 @@ button.green-btn {
   margin-bottom: 20px;
   border-radius: 5px;
   cursor: pointer;
+  
+}
+button:hover {
+    background-color:095217 ;
 }
 
 .register-text {
