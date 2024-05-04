@@ -3,7 +3,7 @@ package com.teamhydra.util;
 import javax.servlet.http.HttpServletRequest;
 /**
  *
- * @author Prasad
+ * @author Ashani
  */
 public class assetsUrl {
     
