@@ -112,7 +112,8 @@
           <div class="background8"></div>
         </div>
         <button><div class="information1">Information</div></button>
-        <button><div class="customer-reviews1">Customer Reviews</div></button>
+        <a href="../../JSP/Meals/customerreview.jsp">
+            <button><div class="customer-reviews1">Customer Reviews</div></button></a>
       </div>
     </div>
   </body>
