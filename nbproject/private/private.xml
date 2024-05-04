@@ -3,15 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/src/java/com/dietme/authentication/authDao.java</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/src/java/com/dietme/authentication/AuthServlet.java</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/JSP/Meals/meals.jsp</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/JSP/Profile/ProfileFrag/customMeal.jsp</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/JSP/Common/navbar.jspf</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/home.jsp</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/Common%20Resources/Styles/index.css</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/Common%20Resources/Styles/popup.css</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/src/java/com/dietme/navigations/HomeServlet.java</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
+            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/src/java/com/teamhydra/util/commonUtill.java</file>
         </group>
     </open-files>
 </project-private>

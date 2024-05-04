@@ -133,16 +133,16 @@ public class commonUtill {
             return result;
         }
         
-        public static ResultSet userInfo(String email)throws SQLException
+        public static ResultSet userInfo(String userId)throws SQLException
         {
             ResultSet rs = null;
-            String sql = "SELECT * FROM users WHERE email = ? ";
+            String sql = "SELECT * FROM users WHERE userId = ? ";
             
             try
             {
                 
                 PreparedStatement stmt =DBUtill.setStatment(sql);
-                stmt.setString(1,email);
+                stmt.setString(1,userId);
                 rs = stmt.executeQuery();
             }
             catch(SQLException e)
@@ -153,17 +153,18 @@ public class commonUtill {
             return rs;
         }
         
-        public static String profileImage(String email)throws SQLException
+        public static String profileImage(String userId)throws SQLException
         {
 
             String profileImage ="";
-            String sql = "SELECT profileImage FROM users WHERE email = ? ";
+            String sql = "SELECT profileImage FROM users WHERE userId = ? ";
+            
             
             try
             {
                 
                 PreparedStatement stmt =DBUtill.setStatment(sql);
-                stmt.setString(1,email);
+                stmt.setString(1,userId);
                 ResultSet rs = stmt.executeQuery();
                 while( rs.next())
                {
@@ -174,7 +175,7 @@ public class commonUtill {
             {
                 System.out.println(e.getMessage());
             }
-            
+            System.out.println(profileImage +  " - commonUtill.profileImage - Line 178");
             return profileImage;
         }
 }

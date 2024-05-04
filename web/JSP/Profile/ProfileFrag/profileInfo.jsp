@@ -26,7 +26,7 @@
                         
                         if(!userEmail.isEmpty())
                         {
-                            rs = commonUtill.userInfo(userEmail);
+                            rs = commonUtill.userInfo(userId);
                             
                            while(rs.next())
                            {
@@ -34,11 +34,20 @@
                                 userEmail =  rs.getString("email");
                                 userPhone = String.valueOf(rs.getInt("phone"));
                                 userAddress = rs.getString("address");
-//                                
+                                
                                 String address[] = userAddress.split(",");
-                                line1 = address[0];
-                                line2 = address[1];
-                                line3 = address[2];
+                                if(address.length > 0)
+                                {
+                                     line1 = address[0];
+                                }
+                                if(address.length > 1)
+                                {
+                                    line2 = address[1];
+                                }
+                                if(address.length > 2)
+                                {
+                                    line3 = address[2];
+                                }
                            }   
                         }   
                         
@@ -54,7 +63,7 @@
          } 
     }
         catch (NullPointerException e) {
-        System.out.println(e.getMessage() + " = Profile Info.jsp +Null Pointer ");
+        System.out.println(e.getMessage() + " = Profile Info.jsp + Null Pointer ");
     }
 
 %>
@@ -324,8 +333,18 @@ document.addEventListener("DOMContentLoaded",()=>{
         
             let address = "";
             
-            profileAddressInputs.forEach( line =>{
-            address +=  line.value + ",";
+            profileAddressInputs.forEach( line => {
+                let value;
+                
+                if ( line.value === "")
+                { 
+                    value = line.placeholder;
+                } 
+                else
+                {
+                    value = line.value;
+                }
+            address +=  value + "," ;
     });
        
        singleUpdate("address", address);

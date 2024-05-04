@@ -24,7 +24,7 @@
                                 
                                 String profileImageNav = "";
                                 String userNameNav = "";
-                                String userEmailNav = "";
+                                String userIdNav = "";
 
                                 if (session.getAttribute("userName") == null ) {
                                 %>
@@ -34,9 +34,9 @@
                                 <%
                                 } else {
 
-                                    userEmailNav = session.getAttribute("userEmail").toString();
+                                    userIdNav= session.getAttribute("userId").toString();
                                     userNameNav = session.getAttribute("userName").toString();
-                                    profileImageNav = commonUtill.profileImage(userEmailNav);
+                                    profileImageNav = commonUtill.profileImage(userIdNav);
                                     
                                     if (lastWord.equals("Profile") || lastWord.equals("profile.jsp")) {
                                 %>

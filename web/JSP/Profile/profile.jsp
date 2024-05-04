@@ -1,28 +1,28 @@
 <%@page import="java.sql.ResultSet"%>
 <%@page import="com.teamhydra.util.commonUtill"%>
 <%@page import="com.teamhydra.util.assetsUrl"%>
-<!-- <%-- 
+<%-- 
     Document   : profile
     Created on : Apr 13, 2024, 11:04:29 PM
     Author     : Prasad
 --%>
--->
+
 
 
 <%  
             String  userId = "" ;
             String userName = "";
             String profileImage="not found";
-            String userEmail="";
     
     try
     {
         
          userId = session.getAttribute("userId").toString();
          userName = (String) session.getAttribute("userName");
-         userEmail =(String) session.getAttribute("userEmail");
          
-         profileImage = commonUtill.profileImage(userEmail);
+         profileImage = commonUtill.profileImage(userId);
+         
+         System.out.println(profileImage + "Profile.jsp - profileImageUrl - Line 22");
             
                        if(userName == null)
                         {
