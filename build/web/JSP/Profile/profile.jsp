@@ -1,3 +1,5 @@
+<%@page import="java.sql.ResultSet"%>
+<%@page import="com.teamhydra.util.commonUtill"%>
 <%@page import="com.teamhydra.util.assetsUrl"%>
 <!-- <%-- 
     Document   : profile
@@ -6,20 +8,21 @@
 --%>
 -->
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <%  
             String  userId = "" ;
             String userName = "";
-            String profileImage="";
+            String profileImage="not found";
+            String userEmail="";
     
     try
     {
         
-        
          userId = session.getAttribute("userId").toString();
          userName = (String) session.getAttribute("userName");
-         profileImage = (String) session.getAttribute("profileImage");
+         userEmail =(String) session.getAttribute("userEmail");
+         
+         profileImage = commonUtill.profileImage(userEmail);
             
                        if(userName == null)
                         {

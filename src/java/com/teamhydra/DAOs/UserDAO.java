@@ -116,9 +116,9 @@ public static UserInfo signInUser(String email) {
     
     public static int singleUpdate(String value, String column, int userId) {
         
-        System.out.println(value + " UserDAO - SingleUpdate");
-        System.out.println(column + " UserDAO - SingleUpdate");
-        System.out.println(userId + " UserDAO - SingleUpdate");
+        System.out.println(value + " UserDAO - SingleUpdate - value");
+        System.out.println(column + " UserDAO - SingleUpdate - column");
+        System.out.println(userId + " UserDAO - SingleUpdate - userId");
          
         
         int success = 0;

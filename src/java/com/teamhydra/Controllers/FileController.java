@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.teamhydra.Controllers;
 
 /**
@@ -10,7 +6,7 @@ package com.teamhydra.Controllers;
  * @author Prasad
  */
 import com.teamhydra.DAOs.UserDAO;
-import java.io.File;
+import com.teamhydra.util.assetsUrl;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -58,10 +54,10 @@ public class FileController extends HttpServlet {
         
         String msg = UserDAO.profileImageUpload(userId, filePath);
         
-        imagePart.write(filePath); 
+        imagePart.write(filePath);
            
-//        res.sendRedirect(assetsUrl.giveUrl(req, "JSP/Profile/profile.jsp"));
-            res.sendRedirect("SessionRefreshController");
+        res.sendRedirect(assetsUrl.giveUrl(req, "Profile"));
+//            res.sendRedirect("SessionRefreshController");
                 
                
     }

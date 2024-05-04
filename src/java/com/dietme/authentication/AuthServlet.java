@@ -17,8 +17,6 @@ import javax.servlet.http.HttpSession;
 @WebServlet(urlPatterns = {
     "/auth/register", "/auth/login","/auth/loginMethod","/auth/registerMethod","/auth/logOutMethod"})
 public class AuthServlet extends HttpServlet {
-    
-   
 
     private authDao authDao;
 
@@ -66,7 +64,7 @@ public class AuthServlet extends HttpServlet {
 
     private void showRegisterForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Signup/Sign_In.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Signup/Sign_up.jsp");
         dispatcher.forward(request, response);
 
     }
@@ -108,8 +106,8 @@ public class AuthServlet extends HttpServlet {
         // Get login credentials from request
         String email = request.getParameter("email");
         String password = request.getParameter("password");
-        
-         HttpSession session = request.getSession();
+
+        HttpSession session = request.getSession();
 
         try {
             UserInfo user = authDao.loginUser(email, password);
@@ -118,13 +116,14 @@ public class AuthServlet extends HttpServlet {
             if (user != null) {
                 // User login successful, set session attributes and redirect
                 session.setAttribute("userId", user.getId());
+
                 session.setAttribute("userName", user.getName());
                 session.setAttribute("userEmail", user.getEmail());
                 session.setAttribute("userPhone", user.getPhone());
                 session.setAttribute("userAddress", user.getAddress());
                 session.setAttribute("profileImage", user.getProfileImage());
-                
                response.sendRedirect(request.getContextPath() + "/home");
+
 
             } else if (admin != null) {
                 // Admin login successful, set session attributes and redirect

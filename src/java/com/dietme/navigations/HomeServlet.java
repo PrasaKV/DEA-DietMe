@@ -1,6 +1,7 @@
 package com.dietme.navigations;
 
-
+import com.dietme.deafaultMeals.DefaultMealDao;
+import com.dietme.deafaultMeals.DefaultMeals;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,44 +17,45 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/home", "/home/new"})
+@WebServlet(urlPatterns = {"/home"})
 @MultipartConfig
 public class HomeServlet extends HttpServlet {
 
-    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        doGet(request, response);
+   private  DefaultMealDao defaultMealDao;
 
+    public HomeServlet() {
+        this.defaultMealDao = new DefaultMealDao();
     }
+   
+   
+
+  
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String action = request.getServletPath();
+        doPost(request, response);
 
-        try {
-            switch (action) {
-                case "/admin/show": 
-                    listMealIngredientDetails(request, response);
-                    break;
-                case "/home": 
-                    showHomePage(request, response);
-                    
-                    break;
-                default:
-
-                    break;
-            }
-        } catch (SQLException ex) {
-            throw new ServletException(ex);
-        }
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response);
+        String action = request.getServletPath();
+
+        try {
+            switch (action) {
+                case "":
+                    listMealIngredientDetails(request, response);
+                    break;
+
+                default:
+                    showHomePage(request, response);
+                    break;
+            }
+        } catch (SQLException ex) {
+            throw new ServletException(ex);
+        }
     }
 
     private void listMealIngredientDetails(HttpServletRequest request, HttpServletResponse response)
@@ -63,11 +65,16 @@ public class HomeServlet extends HttpServlet {
 
     private void showHomePage(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        request.setAttribute("test", "this home page");
-        RequestDispatcher dispatcher
-                = request.getRequestDispatcher("home.jsp");
-            dispatcher.forward(request, response);
+
+
+        RequestDispatcher dispatcher;
+        List<DefaultMeals> dmList = defaultMealDao.findAll();
+        request.setAttribute("dMList", dmList);
+        dispatcher = request.getRequestDispatcher(
+                "home.jsp");
+
+        dispatcher.forward(request, response);
+
     }
 
 }
