@@ -63,6 +63,9 @@ body
 {
     margin:20px 0px 30px 0px;
     border-bottom: 2px solid #404040;
+     cursor: pointer;
+  font-family: monospace;
+  font-style: BOLT;
 }
 
 
@@ -81,13 +84,19 @@ body
   border-top: 2px solid #404040;
 
   cursor: pointer;
+  font-family: monospace;
+  font-style: BOLT;
+  font-size: large;
 }
 
 .profileTabs:hover
 {
   color: #01ca5e;
   border-left: 3px solid #01ca5e;
+  
 }
+
+
 
 /* Id */
 #profile {
