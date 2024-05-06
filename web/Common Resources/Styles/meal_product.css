@@ -1,0 +1,50 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 5, 2024, 12:30:11 PM
+    Author     : adipasith
+*/
+
+
+.card {
+    width: 300px;
+    border: 1px solid #01CA5E;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; 
+    
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content img {
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.meal-btn {
+    color: #01CA5E; /* Change button text color */
+    text-align: center; /* Center align button text */
+    margin-top: 20px; /* Add margin to create space between button and other content */
+}
+
+.meal-btn input[type="submit"] {
+    width: 50%; /* Make the button occupy full width of its container */
+    background-color: #01CA5E; /* Change button background color */
+    color: white; /* Change button text color */
+    border: none; /* Remove default button border */
+    padding: 10px; /* Add padding for better appearance */
+    border-radius: 25px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.meal-btn input[type="submit"]:hover {
+    background-color: #017F3F; /* Change button background color on hover */
+}
+

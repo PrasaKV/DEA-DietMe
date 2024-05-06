@@ -6,7 +6,7 @@
 
 <%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+ 
 
 <!DOCTYPE html>
 <html>
@@ -16,14 +16,15 @@
         <link rel="stylesheet" href="<%=assetsUrl.giveUrl(request, "Common Resources/Styles/styles.css")%>"/>
     </head>
     <body>
+       
         <div class="center">
-            <div class="card">
-                <h2>Welcome</h2>
-                <h4>Sign in to continue</h4>
-                <hr>
+        <div class="backblur">
+        <div class="card">
+            <h2>Welcome</h2>
+            <h4>Sign in to continue</h4>
+            <hr>
 
-                <form action="${pageContext.request.contextPath}/auth/loginMethod" method="post" class="login-form">
-
+            <form action="" method="post" class="login-form">
 
                 <div class="form-group">
                     <label for="email">Email:</label>
@@ -35,25 +36,28 @@
                 </div>
 
 
-                <div class="forgot-password-link">
-                    <a href="Forgot_password.jsp">Forgot password?</a>
-                </div>
-
-
-                <div class="form-group">
-                    <button type="submit" class="green-btn">Log In</button>
-                </div>
-
-
-                <div class="register-text">
-                    <p>Haven't registered yet? <a href="${pageContext.request.contextPath}/auth/register">Register</a></p>
-                </div>
-            </form>
-
-            
-            <div class="carousel-card">
-                
+            <div class="forgot-password-link">
+                <a href="Forgot_password.jsp">Forgot password?</a>
             </div>
+
+
+            <div class="form-group">
+                <button type="submit" class="green-btn">Log In</button>
+            </div>
+
+
+            <div class="register-text">
+                <p>Haven't registered yet? <a href="">Register</a></p>
+            </div>
+        </form>
+
+        
+        <div class="carousel-card">
+            
         </div>
+    </div>
+    </div>
+    </div>
+        
     </body>
 </html>

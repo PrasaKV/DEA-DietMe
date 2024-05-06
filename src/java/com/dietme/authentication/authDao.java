@@ -35,7 +35,8 @@ public class authDao {
                     resultSet.getString("password"),
                     resultSet.getInt("phone"),
                     resultSet.getString("address"),
-                    resultSet.getString("profileImage")
+                    resultSet.getString("profileImage"),
+                    resultSet.getInt("active")
             );
         }
         return null;
