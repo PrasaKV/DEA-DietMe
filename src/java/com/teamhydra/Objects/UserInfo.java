@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.teamhydra.Objects;
 
 
@@ -20,11 +16,11 @@ public class UserInfo {
     private int phone = 15654;
     private String address = "1/2,ABC Street/ Colombo";
     private String profileImage ="Common Resources/Assets/avatar.png";
-    
+    private int active = 15654;
     public UserInfo() {
     }
     
-    public UserInfo(int userId, String name, String email, String password, int phone, String address,String profileImage) {
+    public UserInfo(int userId, String name, String email, String password, int phone, String address,String profileImage,int active) {
         this.userId = userId;
         this.name = name;
         this.email = email;
@@ -32,6 +28,7 @@ public class UserInfo {
         this.phone = phone;
         this.address = address;
         this.profileImage = profileImage;
+        this.active = active;
     }
 
     public UserInfo(String name, String email, String password, int phone, String address) {
@@ -41,11 +38,6 @@ public class UserInfo {
         this.phone = phone;
         this.address = address;
     }
-
-  
-
-  
-    
 
     public int getId() {
         return userId;
@@ -99,5 +91,12 @@ public class UserInfo {
     
     public void setProfileImage (String profileImage) {
         this.profileImage = profileImage;
+    }
+    public int getActive() {
+        return active;
+    }
+    
+    public void setAcitve(int active) {
+        this.active = active;
     }
 }
