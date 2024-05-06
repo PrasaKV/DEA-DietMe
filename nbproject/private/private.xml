@@ -5,12 +5,12 @@
 
 
 
-        <group>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/web/JSP/Profile/profile.jsp</file>
-            <file>file:/D:/Programming/Java/NetBeans/Group%20Project/Develop/DEA-DietMe/src/java/com/teamhydra/util/commonUtill.java</file>
 
+    <group>
+            <file>file:/C:/Users/ashan/OneDrive/Documents/NetBeansProjects/DEA-DietMe/web/Common%20Resources/Styles/customMeal.css</file>
+            <file>file:/C:/Users/ashan/OneDrive/Documents/NetBeansProjects/DEA-DietMe/web/Common%20Resources/Styles/global.css</file>
+            <file>file:/C:/Users/ashan/OneDrive/Documents/NetBeansProjects/DEA-DietMe/web/JSP/Profile/ProfileFrag/customMeal.jsp</file>
         </group>
-
 
     </open-files>
 </project-private>

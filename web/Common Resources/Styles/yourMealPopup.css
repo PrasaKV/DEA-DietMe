@@ -61,16 +61,20 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 600;
+  color: black;
+  
+  text-align: center;
   margin-top: 10px;
-  margin-left: 5%;
 }
 .createMealCardPrice
 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 600;
-  margin-top: 10px;
-  margin-left: 5%;
+  color: black;
+  
+  text-align: center;
+  margin-top: 10px; 
 }
 
 .removeCardIcon
@@ -91,6 +95,11 @@
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
+ 
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
 
 }
 
@@ -109,14 +118,14 @@
   position: absolute;
   z-index: 90;
   left: 0;
-  top: 50%;
-  transform: translateY(-30%);
+  top: 45.5%;
+  transform: translateY(-40%);
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0,0.5);
   backdrop-filter: blur(5px);
-
+  
 }
 .editMealsLeft
 {
@@ -183,7 +192,6 @@
   flex-direction: column;
 
   margin-top: 10px;
-
 }
 .popupCreateMealsPortionDivs
 {
@@ -192,7 +200,7 @@
   align-items: center;
   justify-content: space-evenly;
 
-  margin-top: 10px;
+  margin-top: 10px; 
   height:10%;
 }
 .popupCreateMealsPortionFirstSection
@@ -207,6 +215,30 @@
   flex-direction: column;
   width: 30%;
 }
+.popupCreateMealsPortionInput
+{
+  border: 1px solid #999999;
+  color: #666666; 
+}
+.popupCreateMealsPortionRemoveButton
+{
+  width: 75px;
+  height: 30px;
+  
+  background-color: #F10000;
+  color: white;
+
+  align-self: flex-end;
+  margin-right: 20px;
+  border: 2px solid white;
+  padding: 0px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+} 
 .createMealPopupButtonDiv
 {
   display: flex;
@@ -221,18 +253,38 @@
 #popupCreateMealsAddPortion
 {
   margin-top: 15px;
+  
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
 }
 #popupCreateMealsSave
 {
   margin-top: 15px;
+  
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
 }
 #popupCreateMealsCancel
 {
   margin-top: 15px;
+  
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
 }
 #popupCreateMealsAddtocart
 {
   margin-top: 15px;
+  
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 
@@ -245,12 +297,7 @@
 
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  
+  justify-content: space-evenly;  
 }
 .popupCreateMealsRightPortionContainer
 {
@@ -259,18 +306,21 @@
   align-items: center;
   justify-content: space-evenly;
 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
-  font-weight: 300;
-
   margin-top: 10px;
+  padding: 12.5px;
   transform: translateY(27px);
 }
 .popupCreateMealsPortionCal
 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal; 
 }
 .popupCreateMealsPortionPrice
 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: normal; 
 }
 .popupCreateMealsRightPortionTotalContainer
 {
@@ -279,11 +329,19 @@
   align-items: center;
   justify-content: space-evenly;
 
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-
   margin-top: 20px;
   border-top: 3px solid #01ca5e;
+}
+.popupCreateMealsCalories
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+}
+.popupCreateMealsPrice
+{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
 }
 
