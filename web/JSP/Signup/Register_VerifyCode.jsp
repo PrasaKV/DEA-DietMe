@@ -4,9 +4,11 @@
     Author     : adipasith
 --%>
 
+<%@page import="com.teamhydra.Email.EmailSender"%>
 <%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -16,11 +18,11 @@
     <body>
         <div class="center">
             <div class="card">
-                <h2>Hello</h2>
-                <h4>Verify Your Sign Up Account</h4>
+                <h2>Verify Your Account</h2>
+                <h4>A Code Is Already Sent To Your Email Address</h4>
                 <hr>
 
-                <form action="VerifyCode" method="post" class="login-form">
+                <form action="/DEA-DietMe/auth/Verify" method="post" class="login-form">
 
 
                 <div class="form-group">

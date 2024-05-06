@@ -3,20 +3,32 @@
 #yourMealsContainer
 {
     display: flex;
+    flex-wrap: wrap;
+    min-height: 110%;
+    margin-top: 10px;
+    
+    overflow: scroll;
+    overflow-x: hidden;
+     scrollbar-width: none; 
+    -ms-overflow-style: none; 
+
+#yourMealsContainer ::-webkit-scrollbar {
+    display: none;
+}
 }
 
 
 .createMealCard
 {
-  width: 160px;
-  height: 260px;
+  width: 150px;
+  height: 250px;
   
   position: relative;
 
   background-color: white;
   border-radius: 15px;
 
-  margin-right: 20px;
+  margin-left: 15px;
   margin-top: 20px;
 
   box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.3);
@@ -60,6 +72,18 @@
   margin-top: 10px;
   margin-left: 5%;
 }
+
+.removeCardIcon
+{
+    display: none;
+    
+    width:30px;
+    height:30px;
+    
+    position: absolute;
+    right: -10px;
+    top: -10px;
+}
 #createMealCardAddToCartButton
 {
   position: absolute;
@@ -69,6 +93,7 @@
   transform: translateX(-50%);
 
 }
+
 
 
 /* PopUp */
@@ -92,7 +117,6 @@
   background-color: rgba(0, 0, 0,0.5);
   backdrop-filter: blur(5px);
 
-  transition: 1s;
 }
 .editMealsLeft
 {

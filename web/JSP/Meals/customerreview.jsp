@@ -96,7 +96,8 @@
         <div class="customer-reviews-tab">
           <div class="background12"></div>
         </div>
-        <button class="information1">Information</button>
+        <a href="../../JSP/Meals/popup.jsp">
+            <button class="information1">Information</button></a>
         <button class="customer-reviews1">Customer Reviews</button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 
+<%@page import="com.teamhydra.util.commonUtill"%>
 <%@ page pageEncoding="UTF-8" %>
 <%@ page import="com.teamhydra.util.assetsUrl" %>
 <div class="navbarDiv" id="navbar">
@@ -6,10 +7,7 @@
         <a href="<%= assetsUrl.giveUrl(request, "home")%>" ><img class="logo" src="<%= assetsUrl.giveUrl(request, "Common Resources/Assets/DEA-Logo.png")%>" loading="lazy" height="50px" alt="logo"></a>
     </div>
     <div class="selectionsDiv">
-<!--<<<<<<< HEAD
-        <a class="selection selectionUnderline" href="<%= assetsUrl.giveUrl(request, "index.jsp")%>">Home</a>
-        <a class="selection selectionUnderline" href="<%= assetsUrl.giveUrl(request, "/Meals")%>">Meals</a>
-=======-->
+
         <a class="selection selectionUnderline" href="<%= assetsUrl.giveUrl(request, "home")%>">Home</a>
         <a class="selection selectionUnderline" href="<%= assetsUrl.giveUrl(request, "JSP/Meals/meals.jsp")%>">Meals</a>
 
@@ -23,15 +21,24 @@
                                 String currentPage = request.getRequestURI().trim();
                                 String[] words = currentPage.split("/");
                                 String lastWord = words[words.length - 1];
+                                
+                                String profileImageNav = "";
+                                String userNameNav = "";
+                                String userIdNav = "";
 
-                                if (session.getAttribute("userName") == null) {
+                                if (session.getAttribute("userName") == null ) {
                                 %>
                                 <a href="${pageContext.request.contextPath}/auth/login" id="navLogin">
                                     <button class="selection" id="loginButton">Login</button>
                                 </a>
                                 <%
                                 } else {
-                                    if (lastWord.equals("Profile")) {
+
+                                    userIdNav= session.getAttribute("userId").toString();
+                                    userNameNav = session.getAttribute("userName").toString();
+                                    profileImageNav = commonUtill.profileImage(userIdNav);
+                                    
+                                    if (lastWord.equals("Profile") || lastWord.equals("profile.jsp")) {
                                 %>
                                         <a href="${pageContext.request.contextPath}/auth/logOutMethod" id="navLogin">
                                             <button class="selection" id="loginButton">Log Out</button>
@@ -41,9 +48,9 @@
                                 %>
                                         <a href="${pageContext.request.contextPath}/Profile" id="navLogin">
                                             <button class="selection loggedName" id="loginButton">
-                                                <%= session.getAttribute("userName").toString() %>
+                                                <%= userNameNav %>
                                             </button>
-                                            <img class="navProfileImage" src="<%= assetsUrl.giveUrl(request, session.getAttribute("profileImage").toString()) %>" loading="lazy" width="24px" height="24px">
+                                            <img class="navProfileImage" src="<%= assetsUrl.giveUrl(request, profileImageNav) %>" loading="lazy" width="24px" height="24px">
                                         </a>
                                 <%
                                     }
@@ -70,4 +77,4 @@
         </div>
     </div>
 </div>
-                
+            

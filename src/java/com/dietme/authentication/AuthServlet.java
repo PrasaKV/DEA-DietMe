@@ -1,6 +1,7 @@
 package com.dietme.authentication;
 
 import com.dietme.admin.Admin;
+import com.teamhydra.Email.EmailSender;
 import com.teamhydra.Objects.UserInfo;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,10 +16,14 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpSession;
 
 @WebServlet(urlPatterns = {
-    "/auth/register", "/auth/login","/auth/loginMethod","/auth/registerMethod","/auth/logOutMethod"})
+    "/auth/register", "/auth/login","/auth/loginMethod","/auth/registerMethod","/auth/logOutMethod","/auth/Verify"})
 public class AuthServlet extends HttpServlet {
 
     private authDao authDao;
+    private String token;
+    private String authCode;
+    private String email;
+    
 
     public AuthServlet() {
         this.authDao = new authDao();
@@ -53,8 +58,11 @@ public class AuthServlet extends HttpServlet {
             case "/auth/loginMethod":
                 loginUser(request, response);
                 break;
-                case "/auth/logOutMethod":
+            case "/auth/logOutMethod":
                 logOut(request, response);
+                break;
+            case "/auth/Verify":
+                Verify(request, response);
                 break;
             default:
                 response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid action");
@@ -64,7 +72,7 @@ public class AuthServlet extends HttpServlet {
 
     private void showRegisterForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Signup/Sign_In.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/JSP/Signup/Sign_up.jsp");
         dispatcher.forward(request, response);
 
     }
@@ -76,13 +84,15 @@ public class AuthServlet extends HttpServlet {
         dispatcher.forward(request, response);
     }
 
-    private void registerUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    private void registerUser(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         // Get user data from request
         UserInfo user = new UserInfo();
         user.setName(request.getParameter("name"));
         user.setEmail(request.getParameter("email"));
         user.setPassword(request.getParameter("password"));
 
+        email = request.getParameter("email");
+        
         // Check if password matches confirm password
         String confirmPassword = request.getParameter("confirmpassword");
         if (!user.getPassword().equals(confirmPassword)) {
@@ -92,12 +102,15 @@ public class AuthServlet extends HttpServlet {
 
         try {
             if (authDao.registerUser(user)) {
-                response.sendRedirect("register"); // Redirect to success page
+                 token =  EmailSender.sendVerificationEmail(request.getParameter("email"));
+                    response.sendRedirect("/DEA-DietMe/GetVerify");
+
+//                    response.sendRedirect("login");
             } else {
                 response.sendRedirect("register"); // Redirect to error page
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
             response.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Registration failed");
         }
     }
@@ -112,12 +125,18 @@ public class AuthServlet extends HttpServlet {
         try {
             UserInfo user = authDao.loginUser(email, password);
             Admin admin = authDao.loginAdmin(email, password);
-
-            if (user != null) {
+            int active = user.getActive();
+            if (user != null && active == 1 ) {
                 // User login successful, set session attributes and redirect
                 session.setAttribute("userId", user.getId());
 
-                response.sendRedirect(request.getContextPath() + "/home");
+                session.setAttribute("userName", user.getName());
+                session.setAttribute("userEmail", user.getEmail());
+                session.setAttribute("userPhone", user.getPhone());
+                session.setAttribute("userAddress", user.getAddress());
+                session.setAttribute("profileImage", user.getProfileImage());
+               response.sendRedirect(request.getContextPath() + "/home");
+
 
             } else if (admin != null) {
                 // Admin login successful, set session attributes and redirect
@@ -140,6 +159,16 @@ public class AuthServlet extends HttpServlet {
                 session.invalidate();
                 
                 response.sendRedirect("/DEA-DietMe/home");
+        
+    }
+            private void Verify(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+
+                authCode = request.getParameter("authcode");
+                request.setAttribute("authCode", authCode);
+                request.setAttribute("token", token);
+                request.setAttribute("email", email);
+//                System.out.println("tags - " + authCode + "------" + token);
+                request.getRequestDispatcher("/UserVerify").forward(request, response);
         
     }
 }
