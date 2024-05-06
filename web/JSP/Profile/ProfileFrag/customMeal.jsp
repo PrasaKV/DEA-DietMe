@@ -1,3 +1,4 @@
+<%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page import="java.sql.ResultSet"%>
 <%@page import="java.util.List"%>
 <%@page import="com.teamhydra.util.commonUtill"%>
@@ -6,11 +7,11 @@
     List<String> portionName = commonUtill.mealPortionName();
     List<Integer> portionSize = commonUtill.mealPortionSize();
     List<Integer> portionCal = commonUtill.mealPortionCal();
-    ResultSet result = commonUtill.getAllWhereUser("custommeal", Integer.parseInt(session.getAttribute("userId").toString()));
+    ResultSet result = null;
 
     try {
         userId = session.getAttribute("userId").toString();
-
+        result = commonUtill.getAllWhereUser("custommeal", Integer.parseInt(userId));
         if (userId == null) {
             response.sendRedirect("/DEA-DietMe/Home");
             System.out.println("ProfileInfo If Redirect");
@@ -43,6 +44,7 @@
                                         class="popupCreateMealNameInput"
                                         id="popupCreateMealNameInput"
                                         placeholder=""
+                                        data-meal-Id=""
                                         />
                                 </div>
                                 <div class="popupCreateMealDiscriptionContainer">
@@ -68,9 +70,9 @@
                                             id="popUpfirstPortionList"
                                             class="popupCreateMealsPortionInput popupCreateMealsFirstSectionPortionTypeInput"
                                             >
-                                            <option value="0"></option>
+                                            <option value="0">Select a Portion</option>
                                             <% for (int num = 0; num < portionName.size(); num++) {%>
-                                            <option value="<%= portionName.get(0)%>"><%= portionName.get(num)%></option>
+                                            <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -84,9 +86,9 @@
                                             class="popupCreateMealsPortionInput popupCreateMealsSecondSectionPortionType"
                                             id="popUpfirstPortionSize"
                                             >
-                                            <option value="0"></option>
+                                             <option value="0">Select a Size</option>
                                             <% for (int num = 0; num < portionSize.size(); num++) {%>
-                                            <option value="<%= portionSize.get(0)%>"><%= portionSize.get(num)%></option>
+                                            <option value="<%= portionSize.get(num)%>"><%= portionSize.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -111,9 +113,9 @@
                                             id="popUpsecondPortionList"
                                             class="popupCreateMealsPortionInput popupCreateMealsFirstSectionPortionTypeInput"
                                             >
-                                            <option value="0"></option>
+                                            <option value="0">Select a Portion</option>
                                             <% for (int num = 0; num < portionName.size(); num++) {%>
-                                            <option value="<%= portionName.get(0)%>"><%= portionName.get(num)%></option>
+                                            <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -127,9 +129,9 @@
                                             class="popupCreateMealsPortionInput popupCreateMealsSecondSectionPortionType"
                                             id="popUpsecondPortionSize"
                                             >
-                                            <option value="0"></option>
+                                             <option value="0">Select a Size</option>
                                             <% for (int num = 0; num < portionSize.size(); num++) {%>
-                                            <option value="<%= portionSize.get(0)%>"><%= portionSize.get(num)%></option>
+                                            <option value="<%= portionSize.get(num)%>"><%= portionSize.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -154,9 +156,9 @@
                                             id="popUpthirdPortionList"
                                             class="popupCreateMealsPortionInput popupCreateMealsFirstSectionPortionTypeInput"
                                             >
-                                            <option value="0"></option>
+                                            <option value="0">Select a Portion</option>
                                             <% for (int num = 0; num < portionName.size(); num++) {%>
-                                            <option value="<%= portionName.get(0)%>"><%= portionName.get(num)%></option>
+                                            <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -170,9 +172,9 @@
                                             class="popupCreateMealsPortionInput popupCreateMealsSecondSectionPortionType"
                                             id="popUpthirdPortionSize"
                                             >
-                                            <option value="0"></option>
+                                             <option value="0">Select a Size</option>
                                             <% for (int num = 0; num < portionSize.size(); num++) {%>
-                                            <option value="<%= portionSize.get(0)%>"><%= portionSize.get(num)%></option>
+                                            <option value="<%= portionSize.get(num)%>"><%= portionSize.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -197,9 +199,9 @@
                                             id="popUpfourthPortionList"
                                             class="popupCreateMealsPortionInput popupCreateMealsFirstSectionPortionTypeInput"
                                             >
-                                            <option value="0"></option>
+                                            <option value="0">Select a Portion</option>
                                             <% for (int num = 0; num < portionName.size(); num++) {%>
-                                            <option value="<%= portionName.get(0)%>"><%= portionName.get(num)%></option>
+                                            <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -213,9 +215,9 @@
                                             class="popupCreateMealsPortionInput popupCreateMealsSecondSectionPortionType"
                                             id="popUpfourthPortionSize"
                                             >
-                                            <option value="0"></option>
+                                             <option value="0">Select a Size</option>
                                             <% for (int num = 0; num < portionSize.size(); num++) {%>
-                                            <option value="<%= portionSize.get(0)%>"><%= portionSize.get(num)%></option>
+                                            <option value="<%= portionSize.get(num)%>"><%= portionSize.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -240,9 +242,9 @@
                                             id="popUpfifthPortionList"
                                             class="popupCreateMealsPortionInput popupCreateMealsFirstSectionPortionTypeInput"
                                             >
-                                            <option value="0"></option>
+                                            <option value="0">Select a Portion</option>
                                             <% for (int num = 0; num < portionName.size(); num++) {%>
-                                            <option value="<%= portionName.get(0)%>"><%= portionName.get(num)%></option>
+                                            <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -256,9 +258,9 @@
                                             class="popupCreateMealsPortionInput popupCreateMealsSecondSectionPortionType"
                                             id="popUpfifthPortionSize"
                                             >
-                                            <option value="0"></option>
+                                             <option value="0">Select a Size</option>
                                             <% for (int num = 0; num < portionSize.size(); num++) {%>
-                                            <option value="<%= portionSize.get(0)%>"><%= portionSize.get(num)%></option>
+                                            <option value="<%= portionSize.get(num)%>"><%= portionSize.get(num)%></option>
                                             <% } %>
                                         </select>
                                     </div>
@@ -392,28 +394,22 @@
             <% while (result.next()) {%>
 
 
-            <div class="mealCardContainer" id="mealCardContainerId">
-                <div class="createMealCard" id="createMealCard">
+            <div class="mealCardContainer" id="mealCardContainerId" >
+                <div class="createMealCard" id="createMealCard" data-meal-name="<%=result.getString("mealName")%>" data-meal-Id="<%=result.getString("mealId")%>"
+                      data-meal-discription="<%=result.getString("mealDiscription")%>" data-first-portion="<%=result.getString("firstPortion")%>" data-first-portion-size="<%=result.getString("firstPortionSize")%>"
+                     data-second-portion="<%=result.getString("secondPortion")%>" data-second-portion-size="<%=result.getString("secondPortionSize")%>"
+                     data-third-portion="<%=result.getString("thirdPortion")%>" data-third-portion-size="<%=result.getString("thirdPortionSize")%>"
+                      data-fourth-portion="<%=result.getString("fourthPortion")%>" data-fourth-portion-size="<%=result.getString("fourthPortionSize")%>"
+                      data-fifth-portion="<%=result.getString("fifthPortion")%>" data-fifth-portion-size="<%=result.getString("fifthPortionSize")%>">
+                    <img class="removeCardIcon" src="<%= assetsUrl.giveUrl(request, "Common Resources/Assets/close.png") %>" data-meal-Id="<%=result.getString("mealId")%>">
                     <img
                         src="https://media.istockphoto.com/id/168340083/photo/choosemyplate-healthy-food-and-plate-of-usda-balanced-diet-recommendation.jpg?s=612x612&w=0&k=20&c=S5OYuPg-n1fuOOgReQf9xPuFgA1i-UO54Uj2u1RD7iU="
                         alt="meal image"
                         class="createMealCardImage"
                         />
                     <div class="createMealCardContent">
-                        <h3 class="createMealCardName" id="createMealCardName" data-mealName="<%=result.getString("mealName")%>"><%=result.getString("mealName")%></h3>
+                        <h3 class="createMealCardName" id="createMealCardName" ><%=result.getString("mealName")%></h3>
                         <h3 class="createMealCardPrice" id="createMealCardPrice">Rs.10</h3>
-                        <input class="hiddenData" data-mealId="<%=result.getString("mealId")%>"/>
-                        <input class="hiddenData" data-mealDiscription="<%=result.getString("mealDiscription")%>"/>
-                        <input class="hiddenData" data-firstPortion="<%=result.getString("firstPortion")%>"/>
-                        <input class="hiddenData" data-firstPortionSize="<%=result.getString("firstPortionSize")%>"/>
-                        <input class="hiddenData" data-secondPortion="<%=result.getString("secondPortion")%>"/>
-                        <input class="hiddenData" data-secondPortionSize="<%=result.getString("secondPortionSize")%>"/>
-                        <input class="hiddenData" data-thirdPortion="<%=result.getString("thirdPortion")%>"/>
-                        <input class="hiddenData" data-thirdPortionSize="<%=result.getString("thirdPortionSize")%>"/>
-                        <input class="hiddenData" data-fourthPortion="<%=result.getString("fourthPortion")%>"/>
-                        <input class="hiddenData" data-fourthPortionSize="<%=result.getString("fourthPortionSize")%>"/>
-                        <input class="hiddenData" data-fifthPortion="<%=result.getString("fifthPortion")%>"/>
-                        <input class="hiddenData" data-fifthPortionSize="<%=result.getString("fifthPortionSize")%>">
 
 
                         <button class="buttonGreen" id="createMealCardAddToCartButton">
@@ -456,7 +452,7 @@
                                 id="firstPortionList"
                                 class="createMealsPortionInput createMealsFirstSectionPortionTypeInput"
                                 >
-                                <option value="">Select a Portion</option>
+                                <option value="0">Select a Portion</option>
                                 <% for (int num = 0; num < portionName.size(); num++) {%>
                                 <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                 <% } %>
@@ -539,7 +535,7 @@
                                 id="thirdPortionList"
                                 class="createMealsPortionInput createMealsFirstSectionPortionTypeInput"
                                 >
-                                <option value="">Select a Portion</option>
+                                <option value="0">Select a Portion</option>
                                 <% for (int num = 0; num < portionName.size(); num++) {%>
                                 <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                 <% } %>
@@ -580,7 +576,7 @@
                                 id="fourthPortionList"
                                 class="createMealsPortionInput createMealsFirstSectionPortionTypeInput"
                                 >
-                                <option value="">Select a Portion</option>
+                                <option value="0">Select a Portion</option>
                                 <% for (int num = 0; num < portionName.size(); num++) {%>
                                 <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                 <% } %>
@@ -621,7 +617,7 @@
                                 id="fifthPortionList"
                                 class="createMealsPortionInput createMealsFirstSectionPortionTypeInput"
                                 >
-                                <option value="">Select a Portion</option>
+                                <option value="0">Select a Portion</option>
                                 <% for (int num = 0; num < portionName.size(); num++) {%>
                                 <option value="<%= portionName.get(num)%>"><%= portionName.get(num)%></option>
                                 <% } %>
@@ -744,7 +740,6 @@
 // <====================================== Defined Variables ======================================>
     window.onload = function () {
 
-
         const createMealsPortionFirstDiv = document.getElementById("createMealsPortionFirstDiv");
         const createMealsPortionSecondDiv = document.getElementById("createMealsPortionSecondDiv");
         const createMealsPortionThirdDiv = document.getElementById("createMealsPortionThirdDiv");
@@ -804,134 +799,8 @@
 
         const yourMealsContainer = document.getElementById("yourMealsContainer");
         const createMealsContainer = document.getElementById("createMealsContainer");
-
-        createMealsPortionFirstDiv.style.display = "none";
-        createMealsPortionSecondDiv.style.display = "none";
-        createMealsPortionThirdDiv.style.display = "none";
-        createMealsPortionFourthDiv.style.display = "none";
-        createMealsPortionFifthDiv.style.display = "none";
-
-        createMealsPortion1Cal.style.display = "none";
-        createMealsPortion2Cal.style.display = "none";
-        createMealsPortion3Cal.style.display = "none";
-        createMealsPortion4Cal.style.display = "none";
-        createMealsPortion5Cal.style.display = "none";
-
-        createMealsPortion1Price.style.display = "none";
-        createMealsPortion2Price.style.display = "none";
-        createMealsPortion3Price.style.display = "none";
-        createMealsPortion4Price.style.display = "none";
-        createMealsPortion5Price.style.display = "none";
-
-        createMealsAddPortion.addEventListener("click", () => {
-            if (createMealsPortionFirstDiv.style.display === "none") {
-                createMealsPortionFirstDiv.style.display = "flex";
-                createMealsPortion1Cal.style.display = "block";
-                createMealsPortion1Price.style.display = "block";
-                createMealsFirstPortionRemoveButton.style.display = "block";
-            } else if (createMealsPortionSecondDiv.style.display === "none") {
-                createMealsPortionSecondDiv.style.display = "flex";
-                createMealsPortion2Cal.style.display = "block";
-                createMealsPortion2Price.style.display = "block";
-                createMealsSecondPortionRemoveButton.style.display = "block";
-            } else if (createMealsPortionThirdDiv.style.display === "none") {
-                createMealsPortionThirdDiv.style.display = "flex";
-                createMealsPortion3Cal.style.display = "block";
-                createMealsPortion3Price.style.display = "block";
-                createMealsThirdPortionRemoveButton.style.display = "block";
-            } else if (createMealsPortionFourthDiv.style.display === "none") {
-                createMealsPortionFourthDiv.style.display = "flex";
-                createMealsPortion4Cal.style.display = "block";
-                createMealsPortion4Price.style.display = "block";
-                createMealsFourthPortionRemoveButton.style.display = "block";
-            } else if (createMealsPortionFifthDiv.style.display === "none") {
-                createMealsPortionFifthDiv.style.display = "flex";
-                createMealsPortion5Cal.style.display = "block";
-                createMealsPortion5Price.style.display = "block";
-                createMealsFifthPortionRemoveButton.style.display = "block";
-            }
-        });
-
-        createMealsFirstPortionRemoveButton.addEventListener("click", () => {
-            createMealsPortionFirstDiv.style.display = "none";
-            createMealsPortion1Cal.style.display = "none";
-            createMealsPortion1Price.style.display = "none";
-            createMealsFirstPortionRemoveButton.style.display = "none";
-
-            firstPortionList.selectedIndex = -1;
-            firstPortionSize.selectedIndex = -1;
-        });
-
-        createMealsSecondPortionRemoveButton.addEventListener("click", () => {
-            createMealsPortionSecondDiv.style.display = "none";
-            createMealsPortion2Cal.style.display = "none";
-            createMealsPortion2Price.style.display = "none";
-            createMealsSecondPortionRemoveButton.style.display = "none";
-
-            secondPortionList.selectedIndex = -1;
-            secondPortionSize.selectedIndex = -1;
-        });
-
-        createMealsThirdPortionRemoveButton.addEventListener("click", () => {
-            createMealsPortionThirdDiv.style.display = "none";
-            createMealsPortion3Cal.style.display = "none";
-            createMealsPortion3Price.style.display = "none";
-            createMealsThirdPortionRemoveButton.style.display = "none";
-
-            thirdPortionList.selectedIndex = -1;
-            thirdPortionSize.selectedIndex = -1;
-        });
-
-        createMealsFourthPortionRemoveButton.addEventListener("click", () => {
-            createMealsPortionFourthDiv.style.display = "none";
-            createMealsPortion4Cal.style.display = "none";
-            createMealsPortion4Price.style.display = "none";
-            createMealsFourthPortionRemoveButton.style.display = "none";
-
-            fourthPortionList.selectedIndex = -1;
-            fourthPortionSize.selectedIndex = -1;
-        });
-
-        createMealsFifthPortionRemoveButton.addEventListener("click", () => {
-            createMealsPortionFifthDiv.style.display = "none";
-            createMealsPortion5Cal.style.display = "none";
-            createMealsPortion5Price.style.display = "none";
-            createMealsFifthPortionRemoveButton.style.display = "none";
-
-            fifthPortionList.selectedIndex = -1;
-            fifthPortionSize.selectedIndex = -1;
-        });
-
-        yourMeals.addEventListener("click", () => {
-            createMealsContainer.style.display = "none";
-            yourMealsContainer.style.display = "flex";
-
-            yourMeals.style.borderLeft = "3px solid #01ca5e";
-            yourMeals.style.borderTop = "3px solid #01ca5e";
-            yourMeals.style.borderRight = "3px solid #01ca5e";
-            yourMeals.style.borderBottom = "3px solid #F0EFF4";
-
-            createMeals.style.borderLeft = "none";
-            createMeals.style.borderTop = "none";
-            createMeals.style.borderRight = "none";
-            createMeals.style.borderBottom = "3px solid #01ca5e";
-        });
-
-        createMeals.addEventListener("click", () => {
-            yourMealsContainer.style.display = "none";
-            createMealsContainer.style.display = "flex";
-
-            createMeals.style.borderLeft = "3px solid #01ca5e";
-            createMeals.style.borderTop = "3px solid #01ca5e";
-            createMeals.style.borderRight = "3px solid #01ca5e";
-            createMeals.style.borderBottom = "3px solid #F0EFF4";
-
-            yourMeals.style.borderLeft = "none";
-            yourMeals.style.borderTop = "none";
-            yourMeals.style.borderRight = "none";
-            yourMeals.style.borderBottom = "3px solid #01ca5e";
-        });
-
+        
+        
         const mealsPopupContainer = document.getElementById("mealsPopupContainerId");
         const createMealCard = document.getElementById("createMealCard");
         const createMealCardContainer = document.getElementById("mealCardContainerId");
@@ -971,8 +840,8 @@
         const popupCreateMealNameInput = document.getElementById("popupCreateMealNameInput");
         const popupCreateMealDiscriptionInput = document.getElementById("popupCreateMealDiscriptionInput");
 
-/////////////////////////////////////// variables ///////////////////////////////////
 
+        const removeCardIcon = document.querySelectorAll(".removeCardIcon");
 
         popupCreateMealsPortionFirstDiv.style.display = "none";
         popupCreateMealsPortionSecondDiv.style.display = "none";
@@ -994,29 +863,242 @@
 
         mealsPopupContainer.style.display = "none";
 
-        const createMealCards = document.querySelectorAll(".createMealCard");
+        createMealsPortionFirstDiv.style.display = "none";
+        createMealsPortionSecondDiv.style.display = "none";
+        createMealsPortionThirdDiv.style.display = "none";
+        createMealsPortionFourthDiv.style.display = "none";
+        createMealsPortionFifthDiv.style.display = "none";
 
-        createMealCards.forEach(function (card) {
-            card.addEventListener("click", (event) => {
-                mealsPopupContainer.style.display = "flex";
+        createMealsPortion1Cal.style.display = "none";
+        createMealsPortion2Cal.style.display = "none";
+        createMealsPortion3Cal.style.display = "none";
+        createMealsPortion4Cal.style.display = "none";
+        createMealsPortion5Cal.style.display = "none";
 
-                alert(event.target.dataset.mealName);
+        createMealsPortion1Price.style.display = "none";
+        createMealsPortion2Price.style.display = "none";
+        createMealsPortion3Price.style.display = "none";
+        createMealsPortion4Price.style.display = "none";
+        createMealsPortion5Price.style.display = "none";
+        
+        removeCardIcon.display = "none";
 
-                popupCreateMealNameInput.placeholder = event.target.dataset.mealName?.toString() || '';
-                popupCreateMealDiscriptionInput.placeholder = event.target.dataset.mealDiscription?.toString() || '';
-                popUpfirstPortionList.options[0].innerHTML = "Selected - " + (event.target.dataset.firstPortion || '');
-                popUpfirstPortionSize.options[0].innerHTML = "Selected - " + parseInt(event.target.dataset.firstPortionSize);
-                popUpsecondPortionList.options[0].innerHTML = "Selected - " + (event.target.dataset.secondPortion || '');
-                popUpsecondPortionSize.options[0].innerHTML = "Selected - " + parseInt(event.target.dataset.secondPortionSize);
-                popUpthirdPortionList.options[0].innerHTML = "Selected - " + (event.target.dataset.thirdPortion || '');
-                popUpthirdPortionSize.options[0].innerHTML = "Selected - " + parseInt(event.target.dataset.thirdPortionSize);
-                popUpfourthPortionList.options[0].innerHTML = "Selected - " + (event.target.dataset.fourthPortion || '');
-                popUpfourthPortionSize.options[0].innerHTML = "Selected - " + parseInt(event.target.dataset.fourthPortionSize);
-                popUpfifthPortionList.options[0].innerHTML = "Selected - " + (event.target.dataset.fifthPortion || '');
-                popUpfifthPortionSize.options[0].innerHTML = "Selected - " + parseInt(event.target.dataset.fifthPortionSize);
-            });
+        createMealsAddPortion.addEventListener("click", () => {
+            if (createMealsPortionFirstDiv.style.display === "none") {
+                createMealsPortionFirstDiv.style.display = "flex";
+                createMealsPortion1Cal.style.display = "block";
+                createMealsPortion1Price.style.display = "block";
+                createMealsFirstPortionRemoveButton.style.display = "block";
+            } else if (createMealsPortionSecondDiv.style.display === "none") {
+                createMealsPortionSecondDiv.style.display = "flex";
+                createMealsPortion2Cal.style.display = "block";
+                createMealsPortion2Price.style.display = "block";
+                createMealsSecondPortionRemoveButton.style.display = "block";
+            } else if (createMealsPortionThirdDiv.style.display === "none") {
+                createMealsPortionThirdDiv.style.display = "flex";
+                createMealsPortion3Cal.style.display = "block";
+                createMealsPortion3Price.style.display = "block";
+                createMealsThirdPortionRemoveButton.style.display = "block";
+            } else if (createMealsPortionFourthDiv.style.display === "none") {
+                createMealsPortionFourthDiv.style.display = "flex";
+                createMealsPortion4Cal.style.display = "block";
+                createMealsPortion4Price.style.display = "block";
+                createMealsFourthPortionRemoveButton.style.display = "block";
+            } else if (createMealsPortionFifthDiv.style.display === "none") {
+                createMealsPortionFifthDiv.style.display = "flex";
+                createMealsPortion5Cal.style.display = "block";
+                createMealsPortion5Price.style.display = "block";
+                createMealsFifthPortionRemoveButton.style.display = "block";
+            }
         });
 
+        createMealsFirstPortionRemoveButton.addEventListener("click", () => {
+            createMealsPortionFirstDiv.style.display = "none";
+            createMealsPortion1Cal.style.display = "none";
+            createMealsPortion1Price.style.display = "none";
+            createMealsFirstPortionRemoveButton.style.display = "none";
+
+            firstPortionList.selectedIndex = 0;
+            firstPortionSize.selectedIndex = 0;
+        });
+
+        createMealsSecondPortionRemoveButton.addEventListener("click", () => {
+            createMealsPortionSecondDiv.style.display = "none";
+            createMealsPortion2Cal.style.display = "none";
+            createMealsPortion2Price.style.display = "none";
+            createMealsSecondPortionRemoveButton.style.display = "none";
+
+            secondPortionList.selectedIndex = 0;
+            secondPortionSize.selectedIndex = 0;
+        });
+
+        createMealsThirdPortionRemoveButton.addEventListener("click", () => {
+            createMealsPortionThirdDiv.style.display = "none";
+            createMealsPortion3Cal.style.display = "none";
+            createMealsPortion3Price.style.display = "none";
+            createMealsThirdPortionRemoveButton.style.display = "none";
+
+            thirdPortionList.selectedIndex = 0;
+            thirdPortionSize.selectedIndex = 0;
+        });
+
+        createMealsFourthPortionRemoveButton.addEventListener("click", () => {
+            createMealsPortionFourthDiv.style.display = "none";
+            createMealsPortion4Cal.style.display = "none";
+            createMealsPortion4Price.style.display = "none";
+            createMealsFourthPortionRemoveButton.style.display = "none";
+
+            fourthPortionList.selectedIndex = 0;
+            fourthPortionSize.selectedIndex = 0;
+        });
+
+        createMealsFifthPortionRemoveButton.addEventListener("click", () => {
+            createMealsPortionFifthDiv.style.display = "none";
+            createMealsPortion5Cal.style.display = "none";
+            createMealsPortion5Price.style.display = "none";
+            createMealsFifthPortionRemoveButton.style.display = "none";
+
+            fifthPortionList.selectedIndex = 0;
+            fifthPortionSize.selectedIndex = 0;
+        });
+
+        yourMeals.addEventListener("click", () => {
+            createMealsContainer.style.display = "none";
+            yourMealsContainer.style.display = "flex";
+
+            yourMeals.style.borderLeft = "3px solid #01ca5e";
+            yourMeals.style.borderTop = "3px solid #01ca5e";
+            yourMeals.style.borderRight = "3px solid #01ca5e";
+            yourMeals.style.borderBottom = "3px solid #F0EFF4";
+
+            createMeals.style.borderLeft = "none";
+            createMeals.style.borderTop = "none";
+            createMeals.style.borderRight = "none";
+            createMeals.style.borderBottom = "3px solid #01ca5e";
+        });
+
+        createMeals.addEventListener("click", () => {
+            yourMealsContainer.style.display = "none";
+            createMealsContainer.style.display = "flex";
+
+            createMeals.style.borderLeft = "3px solid #01ca5e";
+            createMeals.style.borderTop = "3px solid #01ca5e";
+            createMeals.style.borderRight = "3px solid #01ca5e";
+            createMeals.style.borderBottom = "3px solid #F0EFF4";
+
+            yourMeals.style.borderLeft = "none";
+            yourMeals.style.borderTop = "none";
+            yourMeals.style.borderRight = "none";
+            yourMeals.style.borderBottom = "3px solid #01ca5e";
+        });
+        
+        
+        removeCardIcon.forEach( (removeCardIcon) => {
+            
+            removeCardIcon.addEventListener("click",() => {
+            if(confirm("are you sure about this")){
+               
+                        const XMLRequest = new XMLHttpRequest();
+
+                        XMLRequest.onreadystatechange = ()=> {
+                            if(XMLRequest.readyState === XMLHttpRequest.DONE){
+
+                                if(XMLRequest.status === 200){
+
+                                    if(XMLRequest.responseText === "success")
+                                    {
+                                        window.location.reload(true);
+                                    }
+                                else {
+                                    alert("Somthing Went Wrong");
+                                }
+                            }
+                             else if (XMLRequest.status === 400){
+                                    alert("Somthing Went Wrong Horribly");
+                                }         
+                        }
+                    };
+            
+                XMLRequest.open("POST","/DEA-DietMe/createMealController?userId=<%=userId%>&type=delete&mealId="+removeCardIcon.dataset.mealId, true);
+                XMLRequest.send();
+
+            } 
+            });
+        });
+        
+
+
+        
+        const createMealCards = document.querySelectorAll(".createMealCard");
+        
+        createMealCards.forEach(function (card) {
+        
+        const removeCardIcon = card.querySelector(".removeCardIcon");
+
+            card.addEventListener("mouseover", function() {
+                removeCardIcon.style.display = "initial";
+            });
+
+            card.addEventListener("mouseout", function() {
+                removeCardIcon.style.display = "none";
+            });
+
+            card.addEventListener("click", () => {
+
+                setTimeout(()=>{
+              
+                            mealsPopupContainer.style.display = "flex";
+
+                            popupCreateMealNameInput.dataset.mealId = card.dataset.mealId;
+                            popupCreateMealNameInput.placeholder = card.dataset.mealName;    
+                            popupCreateMealDiscriptionInput.placeholder = card.dataset.mealDiscription;    
+
+                           for (let i = 0; i < popUpfirstPortionList.options.length; i++) {
+
+
+                                    if (popUpfirstPortionList.options[i].value === card.dataset.firstPortion) {
+                                        popUpfirstPortionList.selectedIndex = i;
+                                    }
+
+                                    if (popUpsecondPortionList.options[i].value=== card.dataset.secondPortion) {
+                                        popUpsecondPortionList.selectedIndex = i;
+                                    }
+
+                                    if (popUpthirdPortionList.options[i].value === card.dataset.thirdPortion) {
+                                        popUpthirdPortionList.selectedIndex = i;
+                                    }
+
+                                    if (popUpfourthPortionList.options[i].value === card.dataset.fourthPortion) {
+                                        popUpfourthPortionList.selectedIndex = i;
+                                    }
+
+                                    if (popUpfifthPortionList.options[i].value === card.dataset.fifthPortion) {
+                                        popUpfifthPortionList.selectedIndex = i;
+                                    }
+
+                                    if (popUpfirstPortionSize.options[i].value === card.dataset.firstPortionSize) {
+                                        popUpfirstPortionSize.selectedIndex = i;
+                                    }
+
+                                    if (popUpsecondPortionSize.options[i].value === card.dataset.secondPortionSize) {
+                                        popUpsecondPortionSize.selectedIndex = i;
+                                    }
+
+                                    if (popUpthirdPortionSize.options[i].value === card.dataset.thirdPortionSize) {
+                                        popUpthirdPortionSize.selectedIndex = i;
+                                    }
+
+                                    if (popUpfourthPortionSize.options[i].value === card.dataset.fourthPortionSize) {
+                                        popUpfourthPortionSize.selectedIndex = i;
+                                    }
+
+                                    if (popUpfifthPortionSize.options[i].value === card.dataset.fifthPortionSize) {
+                                        popUpfifthPortionSize.selectedIndex = i;
+                                    }
+                                    }
+                            },300);
+                });
+        });
 
         popupCreateMealsCancel.addEventListener("click", () => {
             mealsPopupContainer.style.display = "none";
@@ -1057,8 +1139,8 @@
             popupCreateMealsPortion1Price.style.display = "none";
             popupCreateMealsFirstPortionRemoveButton.style.display = "none";
 
-            firstPortionList.selectedIndex = -1;
-            firstPortionSize.selectedIndex = -1;
+            firstPortionList.selectedIndex = 0;
+            firstPortionSize.selectedIndex = 0;
         });
 
         popupCreateMealsSecondPortionRemoveButton.addEventListener("click", () => {
@@ -1067,8 +1149,8 @@
             popupCreateMealsPortion2Price.style.display = "none";
             popupCreateMealsSecondPortionRemoveButton.style.display = "none";
 
-            secondPortionList.selectedIndex = -1;
-            secondPortionSize.selectedIndex = -1;
+            secondPortionList.selectedIndex = 0;
+            secondPortionSize.selectedIndex = 0;
         });
 
         popupCreateMealsThirdPortionRemoveButton.addEventListener("click", () => {
@@ -1077,8 +1159,8 @@
             popupCreateMealsPortion3Price.style.display = "none";
             popupCreateMealsThirdPortionRemoveButton.style.display = "none";
 
-            thirdPortionList.selectedIndex = -1;
-            thirdPortionSize.selectedIndex = -1;
+            thirdPortionList.selectedIndex = 0;
+            thirdPortionSize.selectedIndex = 0;
         });
 
         popupCreateMealsFourthPortionRemoveButton.addEventListener("click", () => {
@@ -1087,8 +1169,8 @@
             popupCreateMealsPortion4Price.style.display = "none";
             popupCreateMealsFourthPortionRemoveButton.style.display = "none";
 
-            fourthPortionList.selectedIndex = -1;
-            fourthPortionSize.selectedIndex = -1;
+            fourthPortionList.selectedIndex = 0;
+            fourthPortionSize.selectedIndex = 0;
         });
 
         popupCreateMealsFifthPortionRemoveButton.addEventListener("click", () => {
@@ -1097,8 +1179,8 @@
             popupCreateMealsPortion5Price.style.display = "none";
             popupCreateMealsFifthPortionRemoveButton.style.display = "none";
 
-            fifthPortionList.selectedIndex = -1;
-            fifthPortionSize.selectedIndex = -1;
+            fifthPortionList.selectedIndex = 0;
+            fifthPortionSize.selectedIndex = 0;
         });
 
 
@@ -1111,9 +1193,11 @@
 
             if (createMealNameInput.value === "") {
                 alert("Please Fill Meal Name");
-            } else if (firstPortionList.value === -1 && firstPortionSize.value === -1) {
-                alert("Please Fill FirstPortion");
-            } else {
+            } 
+            else if (firstPortionList.selectedIndex === 0 || firstPortionSize.selectedIndex === 0) {
+                alert("Please Fill First Portion");
+            } 
+            else {
                 submitValue = JSON.stringify({
                     mealName: createMealNameInput.value,
                     mealDiscription: createMealDiscriptionInput.value,
@@ -1128,21 +1212,83 @@
                     fifthPortion: fifthPortionList.value,
                     fifthPortionSize: fifthPortionSize.value
                 });
-            }
+            
 
             xmlReq.onreadystatechange = function () {
                 if (xmlReq.readyState === XMLHttpRequest.DONE) {
                     if (xmlReq.status === 200) {
                         const mes = xmlReq.responseText;
+                        if(mes === "success")
+                        {
+                            alert("Meal Creation is Succesfull");
+                            window.location.reload(false);
+                        }
                     } else if (xmlReq.status === 400) {
                         console.log("Request Failed");
                     }
                 }
             };
 
-            xmlReq.open("POST", "/DEA-DietMe/createMealController?userId=<%= userId%>", true);
+            xmlReq.open("POST", "/DEA-DietMe/createMealController?userId=<%= userId%>&type=add", true);
             xmlReq.setRequestHeader("Content-Type", "application/json");
             xmlReq.send(submitValue);
+        }
+        }
+        
+         popupCreateMealsSave.addEventListener("click", popupUpdateMeal);
+
+        function popupUpdateMeal() {
+            const xmlReq = new XMLHttpRequest();
+
+            let mealName = popupCreateMealNameInput.placeholder;
+            let mealDiscription = popupCreateMealDiscriptionInput.placeholder;
+
+            if (popupCreateMealNameInput.value !== "") {
+                mealName = popupCreateMealNameInput.value;
+            }
+            if (popupCreateMealDiscriptionInput.value !== "") {
+                mealDiscription = popupCreateMealDiscriptionInput.value;
+            } 
+            else if (popUpfirstPortionList.selectedIndex === 0 || popUpfirstPortionSize.selectedIndex === 0) {
+                alert("Please Fill First Portion");
+            } 
+            else {
+                submitValue = JSON.stringify({
+                    mealName: mealName,
+                    mealDiscription: mealDiscription,
+                    firstPortion: popUpfirstPortionList.value,
+                    firstPortionSize: popUpfirstPortionSize.value,
+                    secondPortion: popUpsecondPortionList.value,
+                    secondPortionSize: popUpsecondPortionSize.value,
+                    thirdPortion: popUpthirdPortionList.value,
+                    thirdPortionSize: popUpthirdPortionSize.value,
+                    fourthPortion: popUpfourthPortionList.value,
+                    fourthPortionSize: popUpfourthPortionSize.value,
+                    fifthPortion: popUpfifthPortionList.value,
+                    fifthPortionSize: popUpfifthPortionSize.value
+                });
+
+
+            xmlReq.onreadystatechange = function () {
+                if (xmlReq.readyState === XMLHttpRequest.DONE) {
+                    if (xmlReq.status === 200) {
+                        const mes = xmlReq.responseText;
+                        if(mes === "success")
+                        {
+                            alert("Meal Succesfully Updated");
+                            
+                            window.location.reload(false);
+                        }
+                    } else if (xmlReq.status === 400) {
+                        console.log("Request Failed");
+                    }
+                }
+            };
+
+            xmlReq.open("POST", "/DEA-DietMe/createMealController?userId=<%=userId%>&type=update&mealId="+popupCreateMealNameInput.dataset.mealId, true);
+            xmlReq.setRequestHeader("Content-Type", "application/json");
+            xmlReq.send(submitValue);
+        }
         }
     };
 </script>

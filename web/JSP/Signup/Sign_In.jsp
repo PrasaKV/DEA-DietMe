@@ -6,7 +6,7 @@
 
 <%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+ 
 
 <!DOCTYPE html>
 <html>
@@ -23,7 +23,6 @@
                 <hr>
 
                 <form action="${pageContext.request.contextPath}/auth/loginMethod" method="post" class="login-form">
-
 
                 <div class="form-group">
                     <label for="email">Email:</label>

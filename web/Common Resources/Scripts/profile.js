@@ -46,17 +46,12 @@ document.addEventListener("DOMContentLoaded", function () {
     addImageInput.addEventListener("change", () => {    
     profileImageForm.submit();
     
-    setTimeout( ()=> {
-        
-        profileImage.src = " ";
 
-    },300);
-    
        setTimeout( ()=> {
         
         window.location.reload(true);
-
-    },400);
+        
+    },100);
 
     });
 

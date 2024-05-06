@@ -1,5 +1,6 @@
-//ashani
-
+/*
+    @Author : Ashani
+*/
 package com.teamhydra.util;
 
 import java.sql.Connection;
