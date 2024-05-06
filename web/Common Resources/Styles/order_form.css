@@ -1,0 +1,105 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : May 5, 2024, 9:14:09 PM
+    Author     : adipasith
+*/
+
+h2 {
+    text-align: center;
+}
+
+input[type="text"],
+        input[type="number"],
+        select {
+            width: 70%; 
+        }
+
+        .main-card {
+            border: 2px solid #4CAF50; 
+            padding: 20px; 
+            border-radius: 15px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+            cursor: pointer;
+            width: 900px;
+        }
+
+        .meal-btn {
+            display: flex; 
+            justify-content: flex-end; 
+        }
+
+        .Clear-btn,
+        .Order-btn {
+    background-color: #4CAF50; 
+    color: white;
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 16px; 
+    margin: 4px 2px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+}
+
+        .styled-hr {
+            border-top: 2px solid #4CAF50; 
+            width: 100%; 
+        }
+
+        .card {
+            display: flex; 
+        }
+
+        .left-card,
+        .right-card {
+            flex: 1;
+            border-right: 2px solid #4CAF50; 
+        }
+
+        .left-card {
+            display: flex; 
+            flex-direction: column;
+            border: 2px solid #4CAF50; 
+            border-radius: 10px;
+        }
+
+        .right-card {
+            flex: 1; 
+            border-right: 2px solid #4CAF50; 
+            border: 2px solid #4CAF50; 
+            margin-left: 20px;
+            border-radius: 10px;
+            white-space: nowrap; 
+        }
+        
+
+        .meal-deitals-info {
+            margin-top: 20px;
+            margin-bottom: 20px; 
+        }
+
+        .user-details-info {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            margin: 20px;
+        }
+
+        input {
+            margin: 20px;
+        }
+
+        .year,
+        .month {
+            margin-top: 10px; 
+            width: calc(50% - 20px); 
+        }
+

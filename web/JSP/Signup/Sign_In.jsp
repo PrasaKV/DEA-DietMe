@@ -6,7 +6,7 @@
 
 <%@page import="com.teamhydra.util.assetsUrl"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
+ 
 
 <!DOCTYPE html>
 <html>
@@ -26,15 +26,14 @@
 
             <form action="" method="post" class="login-form">
 
-
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
 
 
             <div class="forgot-password-link">
