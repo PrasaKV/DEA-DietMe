@@ -7,9 +7,15 @@
 
 
     <group>
-            <file>file:/C:/Users/ashan/OneDrive/Documents/NetBeansProjects/DEA-DietMe/web/Common%20Resources/Styles/customMeal.css</file>
-            <file>file:/C:/Users/ashan/OneDrive/Documents/NetBeansProjects/DEA-DietMe/web/Common%20Resources/Styles/global.css</file>
-            <file>file:/C:/Users/ashan/OneDrive/Documents/NetBeansProjects/DEA-DietMe/web/JSP/Profile/ProfileFrag/customMeal.jsp</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Scripts/notificationMassage.js</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Scripts/sign_up_in.js</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Styles/styles.css</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Scripts/profileInfo.js</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Scripts/cart.js</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Scripts/index.js</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Styles/index.css</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Scripts/navbar.js</file>
+            <file>file:/D:/Group%20Project/DEA-DietMe/web/Common%20Resources/Styles/popup.css</file>
         </group>
 
     </open-files>

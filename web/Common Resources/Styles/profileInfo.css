@@ -53,8 +53,9 @@
 .profileInfoLable
 {
   font-size: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #444444;
+  font-family: cursive;
+  color: black;
+  font-size: medium;
 }
 
 .profileInfoInsideDiv
@@ -64,6 +65,8 @@
   display: flex;
   align-items: center;  
   height: 50px;
+  font-family: monospace;
+  font-size: BOLT;
 }
 
 .profileInfoEdit
