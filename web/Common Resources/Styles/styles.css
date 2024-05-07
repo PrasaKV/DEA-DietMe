@@ -13,8 +13,24 @@ and open the template in the editor.
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #404040
-  }
+
+    background-image:url(diet2.jpg) ;
+    background-repeat: no-repeat;
+    
+     
+}
+
+.backblur{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+}
+
 
 .card {
   border-radius: 2.5%; 
@@ -27,15 +43,6 @@ and open the template in the editor.
   margin-right: 10px; 
 }
 
-.carousel-card {
-  border-radius: 2.5%; 
-  background-color: rgb(218, 213, 213);
-  padding: 20px;
-  width: 300px;
-  text-align: center;
-  border: 2px solid #ccc; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
 h2, h4 {
   margin: 0;
@@ -51,17 +58,21 @@ hr {
 label {
   display: block;
   margin-bottom: 5px;
+  text-align: left;
+  
  
 }
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-  width: 100%;
+  width: 97%;
   padding: 8px; 
   margin-bottom: 30px;
+  margin-left: -5px;;
   border: 1px solid #ccc;
   border-radius: 5px;
+  
 }
 
 a {
@@ -86,6 +97,7 @@ button:hover {
 
 .register-text {
   margin-top: 20px;
+  text-align: left;
 }
 
 .forgot-password-link {

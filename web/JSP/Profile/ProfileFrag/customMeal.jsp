@@ -282,7 +282,7 @@
                                         Add To Cart
                                     </button>
                                     <button id="popupCreateMealsCancel" class="buttonGreen">
-                                        Cancel
+                                        Close
                                     </button>
                                 </div>
                             </div>
@@ -475,7 +475,7 @@
                             </select>
                         </div>
                         <button
-                            class="createMealsPortionRemoveButton buttonRed"
+                            class="createMealsPortionRemoveButton"
                             id="createMealsFirstPortionRemoveButton"
                             >
                             Remove
@@ -516,7 +516,7 @@
                             </select>
                         </div>
                         <button
-                            class="createMealsPortionRemoveButton buttonRed"
+                            class="createMealsPortionRemoveButton"
                             id="createMealsSecondPortionRemoveButton"
                             >
                             Remove
@@ -557,7 +557,7 @@
                             </select>
                         </div>
                         <button
-                            class="createMealsPortionRemoveButton buttonRed"
+                            class="createMealsPortionRemoveButton"
                             id="createMealsThirdPortionRemoveButton"
                             >
                             Remove
@@ -598,7 +598,7 @@
                             </select>
                         </div>
                         <button
-                            class="createMealsPortionRemoveButton buttonRed"
+                            class="createMealsPortionRemoveButton"
                             id="createMealsFourthPortionRemoveButton"
                             >
                             Remove
@@ -639,7 +639,7 @@
                             </select>
                         </div>
                         <button
-                            class="createMealsPortionRemoveButton buttonRed "
+                            class="createMealsPortionRemoveButton"
                             id="createMealsFifthPortionRemoveButton"
                             >
                             Remove
